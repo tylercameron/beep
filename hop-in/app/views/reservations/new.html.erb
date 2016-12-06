@@ -1,0 +1,13 @@
+<%= link_to "Back to Reservation", reservation_url %>
+
+<h1>When do you need vehicle?</h1>
+
+<% if @reservation.errors.any %>
+  <div>
+    <h2><%= pluralize(@reservation.errors.count, "error") %></h2>
+
+    <ul>
+      <% @reservation.errors.full_message.each do |msg| %>
+        <li><%= msg %></li>
+    </ul>
+  </div>
