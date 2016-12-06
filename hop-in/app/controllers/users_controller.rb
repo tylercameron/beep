@@ -10,6 +10,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    @user.date_of_birth = Date.new(params[:date][:year], params[:date][:month], params[:date][:day])
     if @user.save
       redirect_to users_url
     else
