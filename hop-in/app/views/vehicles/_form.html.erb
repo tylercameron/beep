@@ -1,0 +1,41 @@
+<%= form_for @vehicle do |f| %>
+	<% if @vehicle.errors.any? %>
+		<div class="error_messages">
+			<ul>
+				<% @vehicle.errors.full_messages.each do |message| %>
+					<li><%= message %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+
+	<div class="">
+		<%= f.label :vehicle_year %><br>
+		<%= f.number_field :vehicle_year %>
+	</div>
+	<div class="">
+		<%= f.label :vehicle_make %><br>
+		<%= f.text_field :vehicle_make %>
+	</div>
+	<div class="">
+		<%= f.label :vehicle_model %><br>
+		<%= f.text_field :vehicle_model %>
+	</div>
+	<div class="">
+		<%= f.label :street_address %><br>
+		<%= f.text_field :street_address %>
+	</div>
+	<div class="">
+		<%= f.label :city %><br>
+		<%= f.text_field :city %>
+	</div>
+	<div class="">
+		<%= f.label :province %><br>
+		<%= f.text_field :province %>
+	</div>
+	<div class="">
+		<%= f.label :postal_code %><br>
+		<%= f.text_field :postal_code %>
+	</div>
+	<div class=""><%= f.submit %></div>
+<% end %>
