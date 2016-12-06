@@ -2,44 +2,4 @@
 
 <h1>When do you need vehicle?</h1>
 
-<% if @reservation.errors.any? %>
-  <div>
-    <h2><%= pluralize(@reservation.errors.count, "error") %></h2>
-
-    <ul>
-      <% @reservation.errors.full_message.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-    </ul>
-  </div>
-<% end %>
-
-<div>
-<%= form_for  (@reservation) do |f| %>
-
-  <div>
-    <%= f.label "Date:" %>
-    <%= f.date_field :date %>
-  </div>
-
-  <div>
-    <%= f.label "Start Time:" %>
-    <%= f.time_field :start_time %>
-  </div>
-
-  <div>
-    <%= f.label "Star Location:" %>
-    <%= f.text_field :start_location %>
-  </div>
-
-  <div>
-    <%= f.label "Destination:" %>
-    <%= f.text_field :destination %>
-  </div>
-
-  <div>
-    <%= f.submit %>
-  </div>
-
-<% end %>
-</div>
+<%= render 'form', reservation: @reservation %>
