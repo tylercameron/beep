@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
 			session[:user_id] = user.id
 			redirect_to vehicles_url, alert: "You are now logged In :)"
 		else
-			render :new
+			redirect_to users_url
 		end
 	end
 
