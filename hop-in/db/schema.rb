@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 20161206141544) do
 
   create_table "reservations", force: :cascade do |t|
-    t.integer  "user_id"
+    t.integer  "passenger_id"
     t.integer  "vehicle_id"
     t.integer  "start_time"
     t.string   "start_location"
@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 20161206141544) do
     t.string   "city"
     t.string   "province"
     t.string   "postal_code"
-    t.integer  "user_id"
+    t.integer  "owner_id"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
   end
