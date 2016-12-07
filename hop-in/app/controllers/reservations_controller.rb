@@ -15,13 +15,13 @@ class ReservationsController < ApplicationController
 		@reservation = Reservation.new(reservation_params)
 		@vehicle = Vehicle.find(params[:vehicle_id])
 
-		if @vehicle.available(reservation_params[:seats].to_i, params[:vehicle_id])
+		# if @vehicle.available(reservation_params[:seats].to_i, reservation_params[:start_time].to_time, params[:vehicle_id])
 			if @reservation.save
 				redirect_to reservation_url(@reservation)
 			else
 				render :new
 			end
-		end
+		# end
 	end
 
 	def update
