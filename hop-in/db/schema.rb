@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20161206231844) do
     t.integer  "vehicle_id"
     t.integer  "start_time"
     t.string   "start_location"
-    t.integer  "date"
+    t.datetime "date"
     t.string   "destination"
     t.string   "comment"
     t.datetime "created_at",     null: false

@@ -1,43 +1,47 @@
 class ReservationsController < ApplicationController
-  def new
-    @reservation = Reservation.new
-  end
+	def new
+		@reservation = Reservation.new
+	end
 
-  def show
-    @reservation = Reservation.find(params[:id])
-  end
+	def show
+		@reservation = Reservation.find(params[:id])
+	end
 
-  def edit
-    @reservation = Reservation.find(params[:id])
-  end
+	def edit
+		@reservation = Reservation.find(params[:id])
+	end
 
-  def create
-    @reservation = Reservation.new(reservation_params)
-    if @reservation.save
-      redirect_to reservation_url(@reservation)
-    else
-      render :new
-    end
-  end
+	def create
+		@reservation = Reservation.new(reservation_params)
+		@vehicle = Vehicle.find(params[:vehicle_id])
 
-  def update
-    @reservation = Reservation.find(params[:id])
-    if @reservation.update_attributes(reservation_params)
-      redirect_to reservation_url(@reservation)
-    else
-      render :edit
-    end
-  end
+		# if @vehicle.available(reservation_params[:seats].to_i, reservation_params[:start_time].to_time, params[:vehicle_id])
+			if @reservation.save
+				redirect_to reservation_url(@reservation)
+			else
+				render :new
+			end
+		# end
+	end
 
-  def destroy
-    @reservation = Reservation.find(params[:id])
-    @reservation.destroy
-    redirect_to reservations_url
-  end
+	def update
+		@reservation = Reservation.find(params[:id])
+		if @reservation.update_attributes(reservation_params)
+			redirect_to reservation_url(@reservation)
+		else
+			render :edit
+		end
+	end
 
-  private
-  def reservation_params
-    params.require(:reservation).permit(:start_time, :start_location, :date, :destination, :comment)
+	def destroy
+		@reservation = Reservation.find(params[:id])
+		@reservation.destroy
+		redirect_to reservations_url
+	end
 
-  end
+	private
+	def reservation_params
+		params.require(:reservation).permit(:start_time, :start_location, :date, :destination, :comment)
+
+	end
 end
