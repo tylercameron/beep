@@ -3,7 +3,7 @@
     <h2><%= pluralize(@reservation.errors.count, "error") %></h2>
 
     <ul>
-      <% @reservation.errors.full_message.each do |msg| %>
+      <% @reservation.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
     </ul>
