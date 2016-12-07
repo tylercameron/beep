@@ -10,6 +10,9 @@
 	<% end %>
 
 	<div class="">
+		<% f.hidden_field :owner_id, value: @owner_id %>
+	</div>
+	<div class="">
 		<%= f.label :vehicle_year %><br>
 		<%= f.number_field :vehicle_year %>
 	</div>

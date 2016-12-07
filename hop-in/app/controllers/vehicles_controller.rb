@@ -1,4 +1,5 @@
 class VehiclesController < ApplicationController
+	before_action :current_user, only: [:create, :destroy]
 
 	def index
 		@vehicles = Vehicle.all
@@ -10,6 +11,7 @@ class VehiclesController < ApplicationController
 
 	def create
 		@vehicle = Vehicle.new(vehicle_params)
+		@vehicle.owner_id = current_user.id
 
 		if @vehicle.save
 			redirect_to vehicle_url(@vehicle)
@@ -45,6 +47,7 @@ class VehiclesController < ApplicationController
 	private
 
 	def vehicle_params
-		params.require(:vehicle).permit(:vehicle_year, :vehicle_make, :vehicle_model, :street_address, :city, :province, :postal_code, :seats)
+		params.require(:vehicle).permit(:vehicle_year, :vehicle_make, :vehicle_model, :street_address, :city, :province, :postal_code, :seats, :owner_id)
 	end
+
 end
