@@ -1,6 +1,7 @@
 class ReservationsController < ApplicationController
 	def new
 		@reservation = Reservation.new
+    @vehicle = Vehicle.find(params[:vehicle_id])
 	end
 
 	def show
@@ -17,7 +18,7 @@ class ReservationsController < ApplicationController
 
 		# if @vehicle.available(reservation_params[:seats].to_i, reservation_params[:start_time].to_time, params[:vehicle_id])
 			if @reservation.save
-				redirect_to reservation_url(@reservation)
+				redirect_to vehicles_url
 			else
 				render :new
 			end

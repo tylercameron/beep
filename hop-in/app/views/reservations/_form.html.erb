@@ -11,7 +11,8 @@
 <% end %>
 
 <div>
-<%= form_for @reservation do |f| %>
+<%= form_for [@vehicle, @reservation] do |f| %>
+<% f.hidden_field :vehicle_id, value: @vehicle.id %>
 
   <div>
     <%= f.label "Date:" %>
