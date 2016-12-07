@@ -10,9 +10,10 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    @user.date_of_birth = Date.new(params[:date][:year], params[:date][:month], params[:date][:day])
+    @user.date_of_birth = Date.new(params[:date][:year].to_i, params[:date][:day].to_i, params[:date][:month].to_i)
     if @user.save
-      redirect_to users_url
+      session[:user_id] = @user.id
+      redirect_to vehicles_url
     else
       render :new
     end

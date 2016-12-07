@@ -7,8 +7,9 @@ class SessionsController < ApplicationController
 		user = User.find_by(email: session_params[:email])
 		if user && user.authenticate(session_params[:password])
 			session[:user_id] = user.id
-			redirect_to vehicles_url, alert: "You are now logged In :)"
+			redirect_to vehicles_url, notice: "You are now logged In :)"
 		else
+			flash[:notice] = "Invalid Email or Password"
 			redirect_to users_url
 		end
 	end
