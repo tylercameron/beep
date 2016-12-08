@@ -1,11 +1,19 @@
 class ReservationsController < ApplicationController
+before_action :load_vehicle
+
+	def index
+		@reservations = Reservation.all
+	end
+
 	def new
 		@reservation = Reservation.new
-    @vehicle = Vehicle.find(params[:vehicle_id])
+		@vehicle = Vehicle.find(params[:vehicle_id])
 	end
 
 	def show
 		@reservation = Reservation.find(params[:id])
+		@vehicle = Vehicle.find(params[:vehicle_id])
+		# @reservation.passenger = current_user
 	end
 
 	def edit
@@ -14,15 +22,16 @@ class ReservationsController < ApplicationController
 
 	def create
 		@reservation = Reservation.new(reservation_params)
-		@vehicle = Vehicle.find(params[:vehicle_id])
+		@reservation.vehicle = Vehicle.find(params[:vehicle_id])
+		@reservation.passenger = current_user
 
-		# if @vehicle.available(reservation_params[:seats].to_i, reservation_params[:start_time].to_time, params[:vehicle_id])
+		if @vehicle.available(reservation_params[:seats].to_i, reservation_params[:start_time].to_time, params[:vehicle_id])
 			if @reservation.save
 				redirect_to vehicles_url
 			else
 				render :new
 			end
-		# end
+		end
 	end
 
 	def update
@@ -42,7 +51,11 @@ class ReservationsController < ApplicationController
 
 	private
 	def reservation_params
-		params.require(:reservation).permit(:start_time, :start_location, :date, :destination, :comment)
+		params.require(:reservation).permit(:start_time, :start_location, :date, :destination, :comment, :vehicle_id, :passenger_id)
 
+	end
+
+	def load_vehicle
+		@vehicle = Vehicle.find(params[:vehicle_id])
 	end
 end

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
 	 resource :users
 	 resources :vehicles do
-		 resource  :reservations
+		 resources :reservations
 	 end
 	 resource :sessions, only: [:new, :create, :destroy]
 end
