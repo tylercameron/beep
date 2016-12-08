@@ -1,6 +1,10 @@
 class ReservationsController < ApplicationController
 before_action :load_vehicle
 
+	def index
+		@reservations = Reservation.all
+	end
+
 	def new
 		@reservation = Reservation.new
 		@vehicle = Vehicle.find(params[:vehicle_id])
