@@ -7,7 +7,7 @@ before_action :load_vehicle
 	end
 
 	def show
-		@reservation = Reservation.where(params[:vehicle_id])
+		@reservation = Reservation.find(params[:id])
 		@vehicle = Vehicle.find(params[:vehicle_id])
 		# @reservation.passenger = current_user
 	end
