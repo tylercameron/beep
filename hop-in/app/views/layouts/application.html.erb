@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>HopIn</title>
-    <%= csrf_meta_tags %>
+	<head>
+		<title>Beep</title>
+		<%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+		<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+		<style>
+			#map {
+				width: 100%;
+				height: 400px;
+				background-color: grey;
+			}
+		</style>
+	</head>
 
-  <body>
-    <% if flash[:notice]%>
-      <p><%=flash[:notice]%></p>
-    <% end %>
-    <%= yield %>
-  </body>
+	<body>
+		<% if flash[:notice]%>
+			<p><%=flash[:notice]%></p>
+		<% end %>
+		<%= yield %>
+	</body>
 </html>
