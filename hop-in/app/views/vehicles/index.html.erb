@@ -16,6 +16,7 @@
 <div id="map"></div>
 <script>
 	function initMap() {
+		console.log("inside initMap function");
 		var uluru = {lat: -25.363, lng: 131.044};
 		var map = new google.maps.Map(document.getElementById('map'), {
 			zoom: 4,
@@ -24,6 +25,18 @@
 		var marker = new google.maps.Marker({
 			position: uluru,
 			map: map
+		});
+		var geocoder = new google.maps.Geocoder();
+		console.log(geocoder);
+		geocoder.geocode({'address': "220 King St W, Toronto, ON"}, function(results, status) {
+			console.log(results);
+			console.log(status);
+			console.log(map);
+			map.setCenter(results[0].geometry.location);
+			var marker = new google.maps.Marker({
+				map: map,
+				position: results[0].geometry.location
+			});
 		});
 	}
 </script>
