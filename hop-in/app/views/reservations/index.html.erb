@@ -1,9 +1,11 @@
 <h1><%= @vehicle.owner.first_name %>'s Vehicle's Reservations</h1>
 
 <% @vehicle.reservations.each do |reservation| %>
-	<%= reservation.start_time %>
-	<%= reservation.start_location %>
-	<%= reservation.date %>
-	<%= reservation.destination %>
+  <p>Date: <%= reservation.date.to_date %></p>
+  <p>Start Time: <%= reservation.start_time %></p>
+  <p>Start Location: <%= reservation.start_location %></p>
+	<p>Destination: <%= reservation.destination %></p>
 
 <% end %>
+
+<%= link_to 'Reserve', new_vehicle_reservation_path %>
