@@ -8,41 +8,42 @@
 			</ul>
 		</div>
 	<% end %>
-
-	<div class="">
-		<% f.hidden_field :owner_id, value: @owner_id %>
-	</div>
-	<div class="">
-		<%= f.label :vehicle_year %><br>
-		<%= f.number_field :vehicle_year %>
-	</div>
-	<div class="">
-		<%= f.label :vehicle_make %><br>
-		<%= f.text_field :vehicle_make %>
-	</div>
-	<div class="">
-		<%= f.label :vehicle_model %><br>
-		<%= f.text_field :vehicle_model %>
-	</div>
-	<div class="">
-		<%= f.label :seats %><br>
-		<%= f.number_field :seats %>
-	</div>
-	<div class="">
-		<%= f.label :street_address %><br>
-		<%= f.text_field :street_address %>
-	</div>
-	<div class="">
-		<%= f.label :city %><br>
-		<%= f.text_field :city %>
-	</div>
-	<div class="">
-		<%= f.label :province %><br>
-		<%= f.text_field :province %>
-	</div>
-	<div class="">
-		<%= f.label :postal_code %><br>
-		<%= f.text_field :postal_code %>
-	</div>
-	<div class=""><%= f.submit %></div>
+  <div class="vehicle_form">
+  	<div class="">
+  		<% f.hidden_field :owner_id, value: @owner_id %>
+  	</div>
+  	<div class="">
+  		<%= f.label :vehicle_year %><br>
+  		<%= f.number_field :vehicle_year %>
+  	</div>
+  	<div class="">
+  		<%= f.label :vehicle_make %><br>
+  		<%= f.text_field :vehicle_make %>
+  	</div>
+  	<div class="">
+  		<%= f.label :vehicle_model %><br>
+  		<%= f.text_field :vehicle_model %>
+  	</div>
+  	<div class="">
+  		<%= f.label :seats %><br>
+  		<%= f.number_field :seats %>
+  	</div>
+  	<div class="" id="vehicle_street_address">
+  		<%= f.label :street_address %><br>
+  		<%= f.text_field :street_address %>
+  	</div>
+  	<div class="" id="vehicle_city">
+  		<%= f.label :city %><br>
+  		<%= f.text_field :city %>
+  	</div>
+  	<div class="" id="vehicle_province">
+  		<%= f.label :province %><br>
+  		<%= f.text_field :province %>
+  	</div>
+  	<div class="" id="vehicle_postal_code">
+  		<%= f.label :postal_code %><br>
+  		<%= f.text_field :postal_code %>
+  	</div>
+  	<div class=""><%= f.submit %></div>
+  </div>
 <% end %>
