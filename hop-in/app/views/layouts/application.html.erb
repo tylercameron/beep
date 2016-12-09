@@ -6,19 +6,12 @@
 
 		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 		<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-		<style>
-			#map {
-				width: 100%;
-				height: 400px;
-				background-color: grey;
-			}
-		</style>
 	</head>
 
 	<body>
 		<header>
-			<h1>Beep</h1>
-			<ul>
+			<h1 class="app-title">Beep</h1>
+			<ul class="navigation-bar">
 				<li><a href="/vehicles">Vehicles</a></li>
 				<li><a href="/users">Profile</a></li>
 				<li><a href="/users/new">Log In</a></li>
