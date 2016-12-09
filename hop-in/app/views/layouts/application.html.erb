@@ -12,13 +12,13 @@
 		<header>
 			<h1 class="beep-title">Beep</h1>
 			<ul class="navigation-bar">
-				<li><a href="/vehicles">Vehicles</a></li>
-				<li><a href="/users">Profile</a></li>
 				<% if current_user %>
-					<li><p>Hello <%= current_user.first_name %> | <%= link_to 'Log Out', sessions_path, method: :delete %></p></li>
+					<p>Hello <%= current_user.first_name %> | <%= link_to 'Log Out', sessions_path, method: :delete %></p>
 				<% else %>
-					<li><p><%= link_to 'Log In/Sign Up', new_users_path %></p></li>
+					<p><%= link_to 'Log In/Sign Up', new_users_path %></p>
 				<% end %>
+
+				<a href="/vehicles">Vehicles</a> | <a href="/users">Profile</a>
 			</ul>
 		</header>
 		<% if flash[:notice]%>
