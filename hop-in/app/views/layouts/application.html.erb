@@ -17,6 +17,11 @@
 				<li><a href="/users/new">Log In</a></li>
 				<li><a href="/users/new">Sign Up</a></li>
 			</ul>
+			<% if current_user %>
+				<div class="user-logged-in">
+					Hello <%= current_user.first_name %>
+				</div>
+			<% end %>
 		</header>
 		<% if flash[:notice]%>
 			<p><%=flash[:notice]%></p>
