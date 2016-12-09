@@ -14,14 +14,12 @@
 			<ul class="navigation-bar">
 				<li><a href="/vehicles">Vehicles</a></li>
 				<li><a href="/users">Profile</a></li>
-				<li><a href="/users/new">Log In</a></li>
-				<li><a href="/users/new">Sign Up</a></li>
+				<% if current_user %>
+					<li><p>Hello <%= current_user.first_name %> | <%= link_to 'Log Out', sessions_path, method: :delete %></p></li>
+				<% else %>
+					<li><p><%= link_to 'Log In/Sign Up', new_users_path %></p></li>
+				<% end %>
 			</ul>
-			<% if current_user %>
-				<div class="user-logged-in">
-					Hello <%= current_user.first_name %>
-				</div>
-			<% end %>
 		</header>
 		<% if flash[:notice]%>
 			<p><%=flash[:notice]%></p>
