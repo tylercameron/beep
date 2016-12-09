@@ -19,7 +19,7 @@
 		console.log("inside initMap function");
 		var uluru = {lat: -25.363, lng: 131.044};
 		var map = new google.maps.Map(document.getElementById('map'), {
-			zoom: 4,
+			zoom: 14,
 			center: uluru
 		});
 		var marker = new google.maps.Marker({
@@ -28,10 +28,7 @@
 		});
 		var geocoder = new google.maps.Geocoder();
 		console.log(geocoder);
-		// var vehicles = <% @vehicles %>
-		for (var i = 0; i < array.length; i++) {
-			array[i]
-		}
+		console.log("<%= @vehicles %>");
 		geocoder.geocode({'address': "220 King St W, Toronto, ON"}, function(results, status) {
 			console.log(results);
 			console.log(status);
