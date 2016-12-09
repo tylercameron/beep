@@ -16,6 +16,15 @@
 	</head>
 
 	<body>
+		<header>
+			<h1>Beep</h1>
+			<ul>
+				<li><a href="/vehicles">Vehicles</a></li>
+				<li><a href="/users">Profile</a></li>
+				<li><a href="/users/new">Log In</a></li>
+				<li><a href="/users/new">Sign Up</a></li>
+			</ul>
+		</header>
 		<% if flash[:notice]%>
 			<p><%=flash[:notice]%></p>
 		<% end %>
