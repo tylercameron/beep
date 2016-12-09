@@ -13,3 +13,17 @@
  *= require_tree .
  *= require_self
  */
+
+.beep-title {
+  background-color: green;
+  color: green;
+  font-size: 36pt;
+  padding-left: 20px;
+  text-align: left;
+
+}
+
+body {
+  color: green;
+  text-align: center;
+}
