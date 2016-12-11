@@ -14,6 +14,8 @@
     <% if current_user.owned_vehicles.any? do |vehicle| %>
       <h2><%= current_user.first_name %>'s Vehicle</h2>
         <li><h3><%= vehicle.vehicle_year %> <%= vehicle.vehicle_make %> <%= vehicle.vehicle_model %></h3></li>
+        <p><%= link_to 'Vehicle Page', vehicle_path(vehicle) %></p>
+        <p><%= link_to 'Edit Vehicle', edit_vehicle_path(vehicle) %></p>
       <% end %>
     <% end %>
   </section>
