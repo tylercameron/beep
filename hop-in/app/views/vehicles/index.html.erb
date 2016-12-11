@@ -1,5 +1,3 @@
-<%= link_to 'Add Your Vehicle', new_vehicle_path %> | <%= link_to 'Profile', users_path %> 
-
 <h1>Available Vehicles</h1>
 
 <% @vehicles.each do |vehicle| %>
@@ -14,77 +12,33 @@
 <h3>My Google Maps Demo</h3>
 <div id="map"></div>
 
-<% vehicles = [] %>
-<% @vehicles.each do |vehicle| %>
-	<% vehicle = [vehicle.street_address, vehicle.city, vehicle.province] %>
-	<% vehicles << vehicle %>
-<% end %>
-<%= vehicles %>
-
 	<script>
-
 		function initMap() {
-			console.log("inside initMap function");
 			var toronto = {lat: 43.7184038, lng: -79.5181441};
 			var map = new google.maps.Map(document.getElementById('map'), {
 				zoom: 12,
 				center: toronto
 			});
-			// function placeMarker(index, vehicle) {
-			//
-			// 	geocoder.geocode({'address': vehicle.innerHTML}, function(results, status) {
-			// 		console.log(results);
-			// 		console.log(status);
-			// 		console.log(map);
-			// 		map.setCenter(results[0].geometry.location);
-			// 		var marker = new google.maps.Marker({
-			// 			map: map,
-			// 			position: results[0].geometry.location
-			// 		});
-			// 	});
-			// }
+
 			var geocoder = new google.maps.Geocoder();
 			var vehicles = [];
-			$.each($('.vehicle-address'), function placeMarker(index, vehicle) {
+			$.each($('.vehicle-address'), function (index, vehicle) {
 				vehicles.push(vehicle.innerHTML);
 			});
-			console.log(vehicles);
-			var markers = [];
-				for (var i = 0; i < vehicles.length; i++) {
-					console.log(vehicles[i]);
+
+			for (var i = 0; i < vehicles.length; i++) {
 				geocoder.geocode({'address': vehicles[i]}, function(results, status) {
-					markers.push(results[0].geometry.location)
-					console.log(results);
-					console.log(status);
-					console.log(map);
-					map.setCenter(results[0].geometry.location);
-					var marker = new google.maps.Marker({
-						map: map,
-						position: results[0].geometry.location
-
-					});
-					// markers.push(addMarker(map, results[0].geometry.location));
-					// console.log(markers);
+					if (status === 'OK') {
+						map.setCenter(results[0].geometry.location);
+						var marker = new google.maps.Marker({
+							map: map,
+							position: results[0].geometry.location
+							});
+					} else {
+						alert('Geocode was not successful for the following reason: ' + status);
+					}
 				});
-				console.log(markers);
 			}
-
-			// function addMarker(map, location) {
-			// 	var marker = new google.maps.Marker({
-			// 		map: map,
-			// 		position: location
-			// 	});
-			// 	return marker;
-			// }
-			// $.each($('.vehicle-address'), function(index, vehicle) {
-			// 	console.log(vehicle);
-			// });
-			// var marker = new google.maps.Marker({
-			// 	position: uluru,
-			// 	map: map
-			// });
-			// console.log(geocoder);
-
 		}
 	</script>
 
