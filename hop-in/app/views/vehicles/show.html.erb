@@ -10,3 +10,9 @@
 </article>
 
 <p><%= link_to 'Make a Reservation', new_vehicle_reservation_path(@vehicle) %></p>
+<% if current_user.id == @vehicle.owner_id %>
+  <p><%= link_to 'Edit Vehicle Details', edit_vehicle_path(@vehicle) %></p>
+<% end %>
+
+
+<!--  list reservations -->
