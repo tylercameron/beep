@@ -1,9 +1,11 @@
 <section>
-  <h2>Reservations</h2>
-  <% current_user.trips.each do |trip| %>
-    <h3>Date: <%= trip.date.to_date %></h3><h3>Time: <%= trip.start_time %></h3>
-    <h3>From: <%= trip.start_location %></h3>
-    <h3>To: <%= trip.destination %></h3>
-    <p><%= link_to 'Edit Reservation', edit_vehicle_reservation_path(trip.vehicle_id, trip) %></p>
+  <% if current_user %>
+    <h2>Reservations</h2>
+    <% current_user.trips.each do |trip| %>
+      <h3>Date: <%= trip.date.to_date %></h3><h3>Time: <%= trip.start_time %></h3>
+      <h3>From: <%= trip.start_location %></h3>
+      <h3>To: <%= trip.destination %></h3>
+      <p><%= link_to 'Edit Reservation', edit_vehicle_reservation_path(trip.vehicle_id, trip) %></p>
+    <% end %>
   <% end %>
 </section>
