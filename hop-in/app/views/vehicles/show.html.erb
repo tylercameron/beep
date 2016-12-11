@@ -16,3 +16,15 @@
 
 
 <!--  list reservations -->
+<section>
+  <% if current_user == @vehicle.owner %>
+    <h2>Vehicle Reservations</h2>
+    <% @vehicle.reservations.each do |reservation| %>
+      <ul>
+        <li><%= reservation.start_time %> : <%= reservation.date.to_date %></li>
+        <li><%= reservation.start_location %></li>
+        <li><%= reservation.destination %></li>
+      </ul>
+    <% end %>
+  <% end %>
+</section>
