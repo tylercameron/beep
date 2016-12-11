@@ -1,11 +1,21 @@
-<section>
-  <% if current_user %>
-    <h2>Reservations</h2>
-    <% current_user.trips.each do |trip| %>
-      <h3>Date: <%= trip.date.to_date %></h3><h3>Time: <%= trip.start_time %></h3>
-      <h3>From: <%= trip.start_location %></h3>
-      <h3>To: <%= trip.destination %></h3>
-      <p><%= link_to 'Edit Reservation', edit_vehicle_reservation_path(trip.vehicle_id, trip) %></p>
+<% if current_user %>
+
+  <section>
+      <h2>Reservations</h2>
+      <% current_user.trips.each do |trip| %>
+        <h3>Date: <%= trip.date.to_date %></h3><h3>Time: <%= trip.start_time %></h3>
+        <h3>From: <%= trip.start_location %></h3>
+        <h3>To: <%= trip.destination %></h3>
+        <p><%= link_to 'Edit Reservation', edit_vehicle_reservation_path(trip.vehicle_id, trip) %></p>
+      <% end %>
+  </section>
+
+  <section>
+    <% if current_user.owned_vehicles.any? do |vehicle| %>
+      <h2><%= current_user.first_name %>'s Vehicle</h2>
+        <li><h3><%= vehicle.vehicle_year %> <%= vehicle.vehicle_make %> <%= vehicle.vehicle_model %></h3></li>
+      <% end %>
     <% end %>
-  <% end %>
-</section>
+  </section>
+
+<% end %>
