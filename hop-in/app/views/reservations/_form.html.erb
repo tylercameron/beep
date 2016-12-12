@@ -14,11 +14,14 @@
 <%= form_for [@vehicle, @reservation] do |f| %>
 <% f.hidden_field :vehicle_id, value: @vehicle.id %>
 
-
-
   <div>
     <%= f.label "Date:" %>
     <%= f.date_field :date %>
+  </div>
+
+  <div>
+    <%= f.label "Number of People:" %>
+    <%= f.number_field :seats %>
   </div>
 
   <div>

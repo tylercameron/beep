@@ -24,7 +24,7 @@ before_action :load_vehicle
 		@reservation = Reservation.new(reservation_params)
 		@reservation.vehicle = Vehicle.find(params[:vehicle_id])
 		@reservation.passenger = current_user
-	
+
 
 		# if @vehicle.available(reservation_params[:seats].to_i, reservation_params[:start_time].to_time, params[:vehicle_id])
 			if @reservation.save
@@ -52,8 +52,7 @@ before_action :load_vehicle
 
 	private
 	def reservation_params
-		params.require(:reservation).permit(:start_time, :start_location, :date, :destination, :comment, :vehicle_id, :passenger_id)
-
+		params.require(:reservation).permit(:start_time, :start_location, :date, :destination, :comment, :vehicle_id, :passenger_id, :seats)
 	end
 
 	def load_vehicle
