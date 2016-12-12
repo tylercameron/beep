@@ -24,6 +24,7 @@
         <li><%= reservation.destination %></li>
       </ul>
     <% end %>
+    <p><%= link_to 'Delete Vehicle', vehicle_path(@vehicle), method: :delete %></p>
   <% end %>
 </section>
 
