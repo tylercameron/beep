@@ -1,5 +1,6 @@
 class ReservationsController < ApplicationController
 before_action :load_vehicle
+before_action :current_user
 
 	def index
 		@reservations = Reservation.all
