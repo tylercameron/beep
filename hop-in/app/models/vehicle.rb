@@ -11,7 +11,7 @@ class Vehicle < ApplicationRecord
 
 private
 	def seat_capacity(vehicle_id)
-		Vehicle.find(id: vehicle_id).seats #- reservation_at(time).sum(:seats)
+		Vehicle.find_by(id: vehicle_id).seats #- reservation_at(time).sum(:seats)
 	end
 
 	# def reservation_at(time)

@@ -36,11 +36,17 @@ before_action :current_user
 
 	def update
 		@reservation = Reservation.find(params[:id])
-		if @reservation.update_attributes(reservation_params)
-			redirect_to vehicle_reservations_url(@vehicle)
-		else
-			render :edit
-		end
+    @reservation.vehicle = Vehicle.find_by(params[:vehicle_id])
+
+    if @vehicle.available(reservation_params[:seats].to_i, params[:vehicle_id].to_i)
+  		if @reservation.update_attributes(reservation_params)
+  			redirect_to vehicle_reservations_url(@vehicle)
+  		else
+  			render :edit
+  		end
+    else
+      render :edit
+    end
 	end
 
 	def destroy
