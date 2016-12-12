@@ -17,6 +17,7 @@
         <li><h3><%= vehicle.vehicle_year %> <%= vehicle.vehicle_make %> <%= vehicle.vehicle_model %></h3></li>
         <p><%= link_to 'Vehicle Page', vehicle_path(vehicle) %></p>
         <p><%= link_to 'Edit Vehicle', edit_vehicle_path(vehicle) %></p>
+        <p><%= link_to 'Delete Vehicle', vehicle_path(vehicle), method: :delete %></p>
       <% end %>
     <% end %>
   </section>
