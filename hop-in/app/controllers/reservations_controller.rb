@@ -27,7 +27,7 @@ before_action :current_user
 
 		if @vehicle.available(reservation_params[:seats].to_i, params[:vehicle_id])
       if @reservation.save
-				redirect_to vehicles_url
+				redirect_to vehicle_reservation_url(@reservation)
 			else
 				render :new
 			end
