@@ -1,11 +1,14 @@
 <h1><%= @vehicle.owner.first_name %>'s Vehicle's Reservations</h1>
 
-<% @vehicle.reservations.each do |reservation| %>
-  <p>Date: <%= reservation.date.to_date %></p>
-  <p>Start Time: <%= reservation.start_time %></p>
-  <p>Start Location: <%= reservation.start_location %></p>
-	<p>Destination: <%= reservation.destination %></p>
-
+<% if current_user == @vehicle.owner %>
+  <% @vehicle.reservations.each do |reservation| %>
+    <p>Date: <%= reservation.date.to_date %></p>
+    <p>Start Time: <%= reservation.start_time %></p>
+    <p>Start Location: <%= reservation.start_location %></p>
+  	<p>Destination: <%= reservation.destination %></p>
+    <% end %>
+<% else %>
+  <p>Sorry, only owner's have access to their vehicle's reservations</p>
 <% end %>
 
 <%= link_to 'Reserve', new_vehicle_reservation_path %>
