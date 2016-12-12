@@ -14,7 +14,6 @@ before_action :current_user
 	def show
 		@reservation = Reservation.find(params[:id])
 		@vehicle = Vehicle.find(params[:vehicle_id])
-		# @reservation.passenger = current_user
 	end
 
 	def edit
@@ -26,14 +25,13 @@ before_action :current_user
 		@reservation.vehicle = Vehicle.find(params[:vehicle_id])
 		@reservation.passenger = current_user
 
-
-		# if @vehicle.available(reservation_params[:seats].to_i, reservation_params[:start_time].to_time, params[:vehicle_id])
-			if @reservation.save
+		if @vehicle.available(reservation_params[:seats].to_i, params[:vehicle_id])
+      if @reservation.save
 				redirect_to vehicles_url
 			else
 				render :new
 			end
-		# end
+		end
 	end
 
 	def update
