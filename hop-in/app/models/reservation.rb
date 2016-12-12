@@ -3,5 +3,5 @@ class Reservation < ApplicationRecord
 	belongs_to :vehicle
 	belongs_to :passenger, class_name: 'User'
 
-	validates_presence_of :start_time, :start_location, :date, :destination
+	validates_presence_of :start_time, :start_location, :date, :destination, :seats
 end
