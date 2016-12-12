@@ -6,4 +6,6 @@
 <p>Start Time: <%= @reservation.start_time %></p>
 <p>Start Location: <%= @reservation.start_location %></p>
 <p>Destination: <%= @reservation.destination %></p>
+<p>Number of Passengers: <%= @reservation.seats %></p>
+
 <%= link_to "Edit Reservation", edit_vehicle_reservation_path(@vehicle, @reservation) %>
