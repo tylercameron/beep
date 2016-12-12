@@ -31,6 +31,8 @@ before_action :current_user
 			else
 				render :new
 			end
+    else
+      render :new
 		end
 	end
 
