@@ -1,8 +1,12 @@
-<%= link_to "Back to Reservation", vehicle_reservations_url(@vehicle) %>
+<%= link_to "Back to Reservations", vehicle_reservations_url(@vehicle) %>
 
 <h2>Your Reservation</h2>
 
-<p>Date: <%= @reservation.date.to_date %><br>
-Start Time: <%= @reservation.start_time %><br>
-Start Location: <%= @reservation.start_location %><br>
-Destination: <%= @reservation.destination %></p>
+<p>Date: <%= @reservation.date.to_date %></p>
+<p>Start Time: <%= @reservation.start_time %></p>
+<p>Start Location: <%= @reservation.start_location %></p>
+<p>Destination: <%= @reservation.destination %></p>
+<p>Number of Passengers: <%= @reservation.seats %></p>
+
+<%= link_to "Edit Reservation", edit_vehicle_reservation_path(@vehicle, @reservation) %>
+<%= link_to "Delete Reservation", vehicle_reservation_path(@vehicle, @reservation), method: :delete %>

@@ -1,48 +1,48 @@
-<%= link_to 'Add Your Vehicle', new_vehicle_path %> | <%= link_to 'Profile', users_path %>
-
 <h1>Available Vehicles</h1>
 
 <% @vehicles.each do |vehicle| %>
 	<article class="">
 		<h2><%= vehicle.owner.first_name %> - <%= vehicle.vehicle_year %> <%= vehicle.vehicle_make %> <%= vehicle.vehicle_model %></h2>
 		<h3>Seats: <%= vehicle.seats %></h3>
-		<h3>Address: <%= vehicle.street_address %>, <%= vehicle.city %></h3>
+		<h3>Address: <span class="vehicle-address"><%= vehicle.street_address %>, <%= vehicle.city %></span></h3>
+		<p><%= link_to 'Vehicle Page', vehicle_path(vehicle) %></p> | <p><%= link_to 'Reserve Vehicle', new_vehicle_reservation_path(vehicle) %></p>
 	</article>
 <% end %>
 
 
-<h3>My Google Maps Demo</h3>
+<h3>Vehicle Locator</h3>
 <div id="map"></div>
-<% @vehicles.each do |vehicle| %>
-	<%= vehicle.owner.first_name %>
-<% end %>
+
 	<script>
 		function initMap() {
-			console.log("inside initMap function");
 			var toronto = {lat: 43.7184038, lng: -79.5181441};
 			var map = new google.maps.Map(document.getElementById('map'), {
 				zoom: 12,
 				center: toronto
 			});
-			// var marker = new google.maps.Marker({
-			// 	position: uluru,
-			// 	map: map
-			// });
-			var geocoder = new google.maps.Geocoder();
-			console.log(geocoder);
 
-			geocoder.geocode({'address': "220 King St W, Toronto, ON"}, function(results, status) {
-				console.log(results);
-				console.log(status);
-				console.log(map);
-				map.setCenter(results[0].geometry.location);
-				var marker = new google.maps.Marker({
-					map: map,
-					position: results[0].geometry.location
-				});
+			var geocoder = new google.maps.Geocoder();
+			var vehicles = [];
+			$.each($('.vehicle-address'), function (index, vehicle) {
+				vehicles.push(vehicle.innerHTML);
 			});
+
+			for (var i = 0; i < vehicles.length; i++) {
+				geocoder.geocode({'address': vehicles[i]}, function(results, status) {
+					if (status === 'OK') {
+						map.setCenter(results[0].geometry.location);
+						var marker = new google.maps.Marker({
+							map: map,
+							position: results[0].geometry.location
+							});
+					} else {
+						alert('Geocode was not successful for the following reason: ' + status);
+					}
+				});
+			}
 		}
 	</script>
+
 <script async defer
 	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-Sq6ZBy9oC33y1vxqvw6p42Yw-UUfwws&callback=initMap">
 </script>
