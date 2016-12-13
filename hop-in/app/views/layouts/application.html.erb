@@ -11,20 +11,20 @@
 	</head>
 
 	<body>
-		<header>
+		<header class="nav-bar">
 			<h1 class="beep-title">Beep</h1>
-			<ul class="navigation-bar">
+			<ul class="nav-links">
 				<% if current_user %>
-					<li>Hello <%= current_user.first_name %> | <%= link_to 'Log Out', sessions_path, method: :delete %></li>
+					<li class="nav-login">Hello <%= current_user.first_name %> | <%= link_to 'Log Out', sessions_path, method: :delete %></li>
 				<% else %>
-					<li><%= link_to 'Log In/Sign Up', new_users_path %></li>
+					<li class="nav-login"><%= link_to 'Log In/Sign Up', new_users_path %></li>
 				<% end %>
-        <i class="fa fa-bars" aria-hidden="true"></i>
+        <i class="fa fa-bars" id="drop-menu-icon" aria-hidden="true"></i>
       </ul>
+    </header>
 
-				<a href="/vehicles">Vehicles</a> | <a href="/users">Profile</a><br>
-				<a href="/vehicles/new">Add a Vehicle</a>
-		</header>
+			<a href="/vehicles">Vehicles</a> | <a href="/users">Profile</a><br>
+			<a href="/vehicles/new">Add a Vehicle</a>
 		<% if flash[:notice]%>
 			<p><%=flash[:notice]%></p>
 		<% end %>
