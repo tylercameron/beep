@@ -14,12 +14,12 @@
 		<header class="nav-bar">
 			<h1 class="beep-title">Beep</h1>
 			<ul class="nav-links">
+        <i class="fa fa-bars" id="drop-menu-icon" aria-hidden="true"></i>
 				<% if current_user %>
 					<li class="nav-login">Hello <%= current_user.first_name %> | <%= link_to 'Log Out', sessions_path, method: :delete %></li>
 				<% else %>
 					<li class="nav-login"><%= link_to 'Log In/Sign Up', new_users_path %></li>
 				<% end %>
-        <i class="fa fa-bars" id="drop-menu-icon" aria-hidden="true"></i>
       </ul>
     </header>
 

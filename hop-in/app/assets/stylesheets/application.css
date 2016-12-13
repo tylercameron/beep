@@ -47,16 +47,22 @@
   box-sizing: border-box;
 }
 .nav-login {
-  float: left;
+  float: right;
   margin: 0;
-  width: 50%;
+  width: 75%;
   list-style-type: none;
+  padding-top: 18px;
+  text-align: right;
 }
 
 #drop-menu-icon {
   float: right;
-  width: 40%;
+  width: 15%;
   margin: 0;
+  text-align: right;
+  padding-right: 20px;
+  padding-top: 15px;
+  font-size: 30px;
 }
 
 li a {
@@ -71,5 +77,4 @@ body {
   color: green;
   text-align: center;
   font-family: 'Comfortaa', cursive;
-
 }
