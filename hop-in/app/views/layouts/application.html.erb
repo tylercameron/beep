@@ -6,6 +6,7 @@
 
 		<%= stylesheet_link_tag    'application', media: 'all' %>
 		<%= javascript_include_tag 'application' %>
+    <script src="https://use.fontawesome.com/2fd75991c7.js"></script>
 	</head>
 
 	<body>
@@ -13,14 +14,15 @@
 			<h1 class="beep-title">Beep</h1>
 			<ul class="navigation-bar">
 				<% if current_user %>
-					<p>Hello <%= current_user.first_name %> | <%= link_to 'Log Out', sessions_path, method: :delete %></p>
+					<li>Hello <%= current_user.first_name %> | <%= link_to 'Log Out', sessions_path, method: :delete %></li>
 				<% else %>
-					<p><%= link_to 'Log In/Sign Up', new_users_path %></p>
+					<li><%= link_to 'Log In/Sign Up', new_users_path %></li>
 				<% end %>
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </ul>
 
 				<a href="/vehicles">Vehicles</a> | <a href="/users">Profile</a><br>
 				<a href="/vehicles/new">Add a Vehicle</a>
-			</ul>
 		</header>
 		<% if flash[:notice]%>
 			<p><%=flash[:notice]%></p>
