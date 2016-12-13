@@ -56,7 +56,7 @@
     <%= select_year(Date.today, start_year: 1920, end_year: 1998) %>
   </div>
 
-  <div class="">
+  <div class="button">
     <%= f.submit %>
   </div>
 <% end %>
@@ -69,7 +69,7 @@
 <div class="">
   <%= label_tag :password %><%= password_field_tag :password %>
 </div>
-<div class="">
+<div class="button">
   <%= submit_tag "Login" %>
 </div>
 <% end %>

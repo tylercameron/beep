@@ -1,0 +1,10 @@
+<h2>Your Reservations</h2>
+
+<% current_user.trips.each do |reservation|%>
+
+<p>Date: <%= @reservation.date.to_date %><br>
+Start Time: <%= @reservation.start_time %><br>
+Start Location: <%= @reservation.start_location %><br>
+Destination: <%= @reservation.destination %></p>
+
+<%end%>
