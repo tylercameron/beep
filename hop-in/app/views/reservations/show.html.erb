@@ -9,3 +9,4 @@
 <p>Number of Passengers: <%= @reservation.seats %></p>
 
 <%= link_to "Edit Reservation", edit_vehicle_reservation_path(@vehicle, @reservation) %>
+<%= link_to "Delete Reservation", vehicle_reservation_path(@vehicle, @reservation), method: :delete %>

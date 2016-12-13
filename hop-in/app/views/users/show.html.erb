@@ -8,6 +8,8 @@
         <h3>To: <%= trip.destination %></h3>
         <h3>Number of Passengers: <%= trip.seats %></h3>
         <p><%= link_to 'Edit Reservation', edit_vehicle_reservation_path(trip.vehicle_id, trip) %></p>
+        <p><%= link_to 'View Reservation', vehicle_reservation_path(trip.vehicle_id, trip) %></p>
+        <p><%= link_to 'Delete Reservation', vehicle_reservation_path(trip.vehicle_id, trip), method: :delete %></p>     
       <% end %>
   </section>
 

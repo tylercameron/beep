@@ -27,7 +27,7 @@ before_action :current_user
 
 		if @vehicle.available(reservation_params[:seats].to_i, params[:vehicle_id])
       if @reservation.save
-				redirect_to vehicle_reservation_url(@reservation)
+				redirect_to vehicle_reservation_url(@vehicle, @reservation)
 			else
 				render :new
 			end
@@ -54,7 +54,7 @@ before_action :current_user
 	def destroy
 		@reservation = Reservation.find(params[:id])
 		@reservation.destroy
-		redirect_to reservations_url
+		redirect_to vehicle_reservations_url(@vehicle)
 	end
 
 	private

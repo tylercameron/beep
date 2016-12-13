@@ -10,9 +10,6 @@
 </article>
 
 <p><%= link_to 'Make a Reservation', new_vehicle_reservation_path(@vehicle) %></p>
-<% if current_user.id == @vehicle.owner_id %>
-  <p><%= link_to 'Edit Vehicle Details', edit_vehicle_path(@vehicle) %></p>
-<% end %>
 
 <section>
   <% if current_user == @vehicle.owner %>
@@ -24,6 +21,7 @@
         <li><%= reservation.destination %></li>
       </ul>
     <% end %>
+    <p><%= link_to 'Edit Vehicle Details', edit_vehicle_path(@vehicle) %></p>
     <p><%= link_to 'Delete Vehicle', vehicle_path(@vehicle), method: :delete %></p>
   <% end %>
 </section>
