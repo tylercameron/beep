@@ -51,9 +51,9 @@
 
   <div class="">
     <%= f.label :date_of_birth %>
+    <%= select_year(Date.today, start_year: 1920, end_year: 1998) %>
     <%= select_month DateTime.now %>
     <%= select_day DateTime.now  %>
-    <%= select_year(Date.today, start_year: 1920, end_year: 1998) %>
   </div>
 
   <div class="button">
