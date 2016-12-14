@@ -4,15 +4,12 @@ class Reservation < ApplicationRecord
 	belongs_to :passenger, class_name: 'User'
 
 	validates_presence_of :start_time, :start_location, :date, :destination, :seats
-  validate :not_past_date #numericality: { less_than: Time.now }
-
-
+  validate :not_past_date
 
   def not_past_date
     if self.date < Date.today
       errors.add(:date, "Date can't be in the past")
     end
   end
-
 
 end
