@@ -4,7 +4,7 @@
   <section>
       <h2>Reservations</h2>
       <% current_user.trips.each do |trip| %>
-        <h3>Date: <%= trip.start_time %></h3><h3>Time: <%= trip.start_time %></h3>
+        <h3>Date: <%= trip.start_time.strftime("%A %B %d, %Y") %></h3><h3>Time: <%= trip.start_time.strftime("%l:%M %p") %></h3>
         <h3>From: <%= trip.start_location %></h3>
         <h3>To: <%= trip.destination %></h3>
         <h3>Number of Passengers: <%= trip.seats %></h3>
