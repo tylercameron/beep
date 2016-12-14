@@ -13,17 +13,105 @@
  *= require_tree .
  *= require_self
  */
+.nav-bar {
+  background-color: #00D486;
+  color: white;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  height: 60px;
+}
 
 .beep-title {
-  background-color: green;
+  width: 30%;
+  float: left;
   color: white;
   font-size: 36pt;
   padding-left: 20px;
   text-align: left;
+  display: inline-block;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.nav-links {
+  width: 70%;
+  font-size: 20px;
+  float: right;
+  color: white;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.nav-login {
+  float: right;
+  margin: 0;
+  width: 75%;
+  list-style-type: none;
+  padding-top: 18px;
+  text-align: right;
+}
+
+#drop-menu-icon {
+  float: right;
+  width: 50px;
+  margin: 0;
+  text-align: right;
+  padding-right: 20px;
+  padding-top: 15px;
+  font-size: 30px;
+  height: 100%;
+  padding-bottom: 20px;
+}
+
+.dropdown{
+  position: relative;
+}
+.dropdown-contents {
+    display: none;
+    position: absolute;
+    background-color: #00D486;
+    min-width: 160px;
+    right: 0;
+    top: 60px;
+}
+
+.dropdown-contents a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-contents:hover .dropdown-contents{
+  display:block;
+}
+.dropdown-contents a:hover {
+    background: white;
+    color: #00D486;
 
 }
 
+.dropdown:hover .dropdown-contents {
+    display: block;
+
+}
+
+
+.nav-login a {
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: #00D486;
+}
+
 body {
-  color: green;
+  /*background-image: url(http://www.vaterrarc.com/Content/Images/Products/landing/bg_road2.jpg);
+  background-repeat: no-repeat;*/
+  color: #00D486;
   text-align: center;
+  font-family: 'Comfortaa', cursive;
 }
