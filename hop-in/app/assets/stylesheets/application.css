@@ -75,6 +75,7 @@
     min-width: 160px;
     right: 0;
     top: 60px;
+    z-index: 400;
 }
 
 .dropdown-contents a {
@@ -114,4 +115,13 @@ body {
   color: #00D486;
   text-align: center;
   font-family: 'Comfortaa', cursive;
+}
+
+footer {
+    background: #00D486;
+    margin-top: 36px;
+    height: 11px;
+    color: white;
+    font-family: monospace;
+    padding: 23px;
 }
