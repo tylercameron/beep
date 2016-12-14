@@ -26,31 +26,33 @@
   <% end %>
 </section>
 
-<h3>Vehicle Location</h3>
-<div id="map"></div>
+  <h3 class="map-btn">Vehicle's Location</h3>
+  <div class="map-div">
+    <div id="map"></div>
 
-	<script>
-		function initMap() {
-			var map = new google.maps.Map(document.getElementById('map'), {
-				zoom: 16,
-			});
+  	<script>
+  		function initMap() {
+  			var map = new google.maps.Map(document.getElementById('map'), {
+  				zoom: 16,
+  			});
 
-			var geocoder = new google.maps.Geocoder();
-			var vehicle = "<%= @vehicle.street_address %>, <%= @vehicle.city %>, <%= @vehicle.province %>";
+  			var geocoder = new google.maps.Geocoder();
+  			var vehicle = "<%= @vehicle.street_address %>, <%= @vehicle.city %>, <%= @vehicle.province %>";
 
-			geocoder.geocode({'address': vehicle}, function(results, status) {
-				if (status === 'OK') {
-					map.setCenter(results[0].geometry.location);
-					var marker = new google.maps.Marker({
-						map: map,
-						position: results[0].geometry.location
-						});
-				} else {
-					alert('Geocode was not successful for the following reason: ' + status);
-				}
-			});
-		}
-	</script>
+  			geocoder.geocode({'address': vehicle}, function(results, status) {
+  				if (status === 'OK') {
+  					map.setCenter(results[0].geometry.location);
+  					var marker = new google.maps.Marker({
+  						map: map,
+  						position: results[0].geometry.location
+  						});
+  				} else {
+  					alert('Geocode was not successful for the following reason: ' + status);
+  				}
+  			});
+  		}
+  	</script>
+  </div>
 
 <script async defer
 	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-Sq6ZBy9oC33y1vxqvw6p42Yw-UUfwws&callback=initMap">
