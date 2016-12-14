@@ -1,12 +1,15 @@
 // Place all the styles related to the Vehicles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
 #map {
   width: 80%;
   margin: auto;
   height: 400px;
   background-color: grey;
-  border: 1px solid black;
+  border: 1px solid white;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,2);
 }
 
@@ -28,4 +31,15 @@ input[type="submit"] {
 
 .button{
   padding: 15px;
+}
+
+article.vehicle-container {
+    border: 1px solid;
+    margin: 20px auto;
+    color: white;
+    background-color: lightgrey;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,2);
+    opacity: 0.4;
+    width: 80%;
+
 }
