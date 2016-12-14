@@ -61,7 +61,43 @@
   padding-right: 20px;
   padding-top: 15px;
   font-size: 30px;
+  height: 100%;
+  padding-bottom: 20px;
 }
+
+.dropdown{
+  position: relative;
+}
+.dropdown-contents {
+    display: none;
+    position: absolute;
+    background-color: #00D486;
+    min-width: 160px;
+    right: 0;
+    top: 60px;
+}
+
+.dropdown-contents a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-contents:hover .dropdown-contents{
+  display:block;
+}
+.dropdown-contents a:hover {
+    background: white;
+    color: #00D486;
+
+}
+
+.dropdown:hover .dropdown-contents {
+    display: block;
+
+}
+
 
 li a {
   color: white;

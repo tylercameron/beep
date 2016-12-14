@@ -14,7 +14,14 @@
 		<header class="nav-bar">
 			<h1 class="beep-title">Beep</h1>
 			<ul class="nav-links">
-        <i class="fa fa-bars" id="drop-menu-icon" aria-hidden="true"></i>
+				<div class="dropdown">
+					<i class="fa fa-bars" id="drop-menu-icon" aria-hidden="true"></i>
+					<div class="dropdown-contents">
+						<a href="/vehicles">Vehicles</a>
+						<a href="/users">Profile</a>
+						<a href="/vehicles/new">Add a Vehicle</a>
+					</div>
+			  <div>
 				<% if current_user %>
 					<li class="nav-login">Hello <%= current_user.first_name %> | <%= link_to 'Log Out', sessions_path, method: :delete %></li>
 				<% else %>
@@ -23,8 +30,7 @@
       </ul>
     </header>
 
-			<a href="/vehicles">Vehicles</a> | <a href="/users">Profile</a><br>
-			<a href="/vehicles/new">Add a Vehicle</a>
+
 		<% if flash[:notice]%>
 			<p><%=flash[:notice]%></p>
 		<% end %>
