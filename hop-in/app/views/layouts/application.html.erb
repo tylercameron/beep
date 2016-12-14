@@ -11,7 +11,8 @@
 
 	<body>
 		<header>
-			<h1 class="beep-title">Beep</h1>
+
+			<h1 class="beep-title"><%= image_tag("logo.png", :alt => "logo", :size => "100x80") %></h1>
 			<ul class="navigation-bar">
 				<% if current_user %>
 					<li>Hello <%= current_user.first_name %> | <%= link_to 'Log Out', sessions_path, method: :delete %></li>
