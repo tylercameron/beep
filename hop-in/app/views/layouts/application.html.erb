@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Beep</title>
-		<%= csrf_meta_tags %>
-
-		<%= stylesheet_link_tag    'application', media: 'all' %>
-		<%= javascript_include_tag 'application' %>
-    <script src="https://use.fontawesome.com/2fd75991c7.js"></script>
-		<link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
-	</head>
+	<%= render partial: '/layouts/head' %>
 
 	<body>
 		<header class="nav-bar">
@@ -35,6 +27,6 @@
 			<p><%=flash[:notice]%></p>
 		<% end %>
 		<%= yield %>
-		<footer> Beep &copy 2016 </footer>
+		<footer> Beep &copy; 2016 </footer>
 	</body>
 </html>

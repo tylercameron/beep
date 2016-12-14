@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
-
+    render :new, layout: 'homepage'
   end
 
   def create
