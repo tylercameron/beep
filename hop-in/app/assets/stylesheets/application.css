@@ -124,4 +124,7 @@ footer {
     color: white;
     font-family: monospace;
     padding: 23px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
