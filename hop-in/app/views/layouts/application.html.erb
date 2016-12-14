@@ -21,7 +21,7 @@
 						<a href="/users">Profile</a>
 						<a href="/vehicles/new">Add a Vehicle</a>
 					</div>
-			  <div>
+			  </div>
 				<% if current_user %>
 					<li class="nav-login">Hello <%= current_user.first_name %> | <%= link_to 'Log Out', sessions_path, method: :delete %></li>
 				<% else %>
