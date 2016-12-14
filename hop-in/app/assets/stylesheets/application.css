@@ -116,3 +116,12 @@ body {
   text-align: center;
   font-family: 'Comfortaa', cursive;
 }
+
+footer {
+    background: #00D486;
+    margin-top: 36px;
+    height: 11px;
+    color: white;
+    font-family: monospace;
+    padding: 23px;
+}
