@@ -14,7 +14,12 @@ $('.signup-btn').on('click', function() {
   $('.signup-container').fadeIn('slow');
 });
 
-
+$('.map-btn').on('click', function() {
+  $('.map-div').fadeIn('slow');
+  $('#map').fadeIn('slow');
+  $('.map-btn').fadeOut('fast');
+  initMap();
+});
 
 
 
