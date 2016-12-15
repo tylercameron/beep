@@ -98,33 +98,3 @@
     display: block;
 
 }
-
-
-.nav-login a {
-  color: white;
-}
-
-a {
-  text-decoration: none;
-  color: #00D486;
-}
-
-body {
-  /*background-image: url(http://www.vaterrarc.com/Content/Images/Products/landing/bg_road2.jpg);
-  background-repeat: no-repeat;*/
-  color: #00D486;
-  text-align: center;
-  font-family: 'Comfortaa', cursive;
-}
-
-footer {
-    background: #00D486;
-    margin-top: 36px;
-    height: 11px;
-    color: white;
-    font-family: monospace;
-    padding: 23px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}

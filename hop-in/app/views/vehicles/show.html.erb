@@ -16,9 +16,9 @@
     <h2>Vehicle Reservations</h2>
     <% @vehicle.reservations.each do |reservation| %>
       <ul>
-        <li><%= reservation.start_time %> : <%= reservation.date.to_date %></li>
-        <li><%= reservation.start_location %></li>
-        <li><%= reservation.destination %></li>
+        <li>Date: <%= reservation.start_time.strftime("%A %B %d, %Y") %> : <%= reservation.start_time.strftime("%l:%M %p") %></li>
+        <li>From: <%= reservation.start_location %></li>
+        <li>To: <%= reservation.destination %></li>
       </ul>
     <% end %>
     <p><%= link_to 'Edit Vehicle Details', edit_vehicle_path(@vehicle) %></p>

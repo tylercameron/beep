@@ -5,3 +5,80 @@
 .signup-container, .login{
   display: none;
 }
+
+
+.nav-login a {
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: #00D486;
+}
+
+body {
+  /*background-image: url(http://www.vaterrarc.com/Content/Images/Products/landing/bg_road2.jpg);
+  background-repeat: no-repeat;*/
+  color: #00D486;
+  text-align: center;
+  font-family: 'Comfortaa', cursive;
+}
+
+footer {
+    background: #00D486;
+    margin-top: 36px;
+    height: 11px;
+    color: white;
+    font-family: monospace;
+    padding: 23px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.login-signin{
+  float:left;
+  clear: both;
+  position: relative;
+  overflow: hidden;
+  width: 1280px;
+  height: 500px;
+  margin: auto;
+  background-image: url("http://www.vaterrarc.com/Content/Images/Products/landing/bg_road2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  color: black;
+}
+
+h2.login-btn, .signup-btn {
+
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.02);
+    padding: 17px;
+    cursor: pointer;
+    border: 1px solid;
+    width: 125px;
+    box-sizing: border-box;
+    position: relative;
+    top: 240px;
+}
+
+h2.login-btn {
+  float: right;
+  right: 39%;
+  // left: 10px;
+
+}
+
+
+
+h2.signup-btn {
+    float: left;
+    left: 39%;
+    // right: 10px;
+
+}
+
+h1.homepage-heading {
+    text-align: left;
+    font-family: sans-serif;
+    color: lightgrey;
+}
