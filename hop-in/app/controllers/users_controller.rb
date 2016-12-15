@@ -13,6 +13,8 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to vehicles_url
     else
+      # flash[:notice] = "Invalid Email or Password"
+      # redirect_to new_users_url
       render :new
     end
   end
