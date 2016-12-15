@@ -61,7 +61,7 @@ before_action :current_user
 
 	private
 	def reservation_params
-		params.require(:reservation).permit(:start_time, :start_location, :destination, :comment, :vehicle_id, :passenger_id, :seats)
+		params.require(:reservation).permit(:start_time, :end_time, :start_location, :destination, :comment, :vehicle_id, :passenger_id, :seats)
 	end
 
 	def load_vehicle

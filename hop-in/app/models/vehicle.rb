@@ -28,3 +28,35 @@ private
 	end
 
 end
+
+
+
+
+
+
+
+
+
+# def isoverlap
+#    @garden.reservations.each do |f|
+#        if f.startdate <= @reservation.enddate && @reservation.startdate <= f.enddate
+#            return true
+#        end
+#    end
+#        return false
+#  end
+#
+#  def create
+#    @garden = Garden.find(params[:garden_id])
+#    @reservation = @garden.reservations.build(reservation_params)
+#        if isoverlap == false
+#                @reservation.user = current_user
+#                if @reservation.save
+#                    redirect_to garden_reservation_url(@garden, @reservation), notice: 'Reservation made!'
+#                else
+#                    redirect_to garden_path(@garden), alert: @reservation.errors.full_messages
+#                end
+#        else
+#            redirect_to garden_path(@garden), alert: 'Your Reservation overlaps with another reservation change your dates'
+#        end
+#  end
