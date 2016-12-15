@@ -128,3 +128,23 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+h2.login-btn {
+    float: left;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.01);
+    padding: 17px;
+    cursor: pointer;
+    border: px solid;
+    width: 15%;
+    margin: 50px;
+}
+
+h2.signup-btn {
+    float: left;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.01);
+    padding: 17px;
+    cursor: pointer;
+    border: px solid;
+    width: 15%;
+    margin: 50px;
+}
