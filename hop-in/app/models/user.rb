@@ -13,9 +13,5 @@ class User < ApplicationRecord
 	validates :first_name, :last_name, :phone_number, :email, :date_of_birth, presence: true
 
 
-	def self.search(search)
 
-		where("city ILIKE ?", "#{search}")
-
-	end
 end
