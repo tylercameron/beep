@@ -11,4 +11,7 @@ class User < ApplicationRecord
 	validates :password, presence: true
 	validates :password_confirmation, presence: true
 	validates :first_name, :last_name, :phone_number, :email, :date_of_birth, presence: true
+
+
+
 end
