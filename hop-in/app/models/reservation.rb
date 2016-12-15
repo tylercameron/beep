@@ -3,7 +3,7 @@ class Reservation < ApplicationRecord
 	belongs_to :vehicle
 	belongs_to :passenger, class_name: 'User'
 
-	validates_presence_of :start_time, :start_location, :destination, :seats
+	validates_presence_of :start_time, :end_time, :start_location, :destination, :seats
   validate :not_past_date, :capacity, :available
 
   def not_past_date
