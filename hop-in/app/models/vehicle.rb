@@ -7,7 +7,11 @@ class Vehicle < ApplicationRecord
 
 	def self.search(search)
 
-	  where("city ILIKE?", "#{search}")
+	  where("city ILIKE ?", "%#{search}%")
+		.or(where("vehicle_make ILIKE ?", "%#{search}%"))
+		.or(where("vehicle_model ILIKE ?", "%#{search}%"))
+		.or(where("province ILIKE ?", "%#{search}%"))
+		# .or(where("seats >= ?", "#{search.to_i}"))
 
 	end
 
