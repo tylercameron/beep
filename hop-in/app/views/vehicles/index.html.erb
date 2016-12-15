@@ -14,7 +14,10 @@
 <div class="vehicle-index">
 
 <h1>Available Vehicles</h1>
-
+<% if @vehicles.present? %>
+<% else %>
+	<p>No Vehicles :(</p>
+<% end %>
 	<% @vehicles.each do |vehicle| %>
 		<article class="vehicle-container">
 			<h2><%= vehicle.owner.first_name %> - <%= vehicle.vehicle_year %> <%= vehicle.vehicle_make %> <%= vehicle.vehicle_model %></h2>
