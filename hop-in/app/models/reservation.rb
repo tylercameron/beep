@@ -3,8 +3,7 @@ class Reservation < ApplicationRecord
 	belongs_to :vehicle
 	belongs_to :passenger, class_name: 'User'
 
-	validates_presence_of :start_time, :start_location, :destination, :seats #:date
-end
+	validates_presence_of :start_time, :start_location, :destination, :seats
   # validate :not_past_date
 
   # def not_past_date
@@ -12,3 +11,4 @@ end
   #     errors.add(:start_time, "Date can't be in the past")
   #   end
   # end
+end
