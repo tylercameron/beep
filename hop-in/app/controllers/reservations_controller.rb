@@ -22,8 +22,8 @@ before_action :current_user
 
 	def create
 		@reservation = Reservation.new(reservation_params)
-    @reservation.start_time = DateTime.new(params[:date][:year].to_i, params[:date][:month].to_i, params[:date][:day].to_i, params[:date][:hour].to_i, params[:date][:minute].to_i)
-		@reservation.vehicle = Vehicle.find(params[:vehicle_id])
+    @reservation.start_time = Time.new(params[:date][:year].to_i, params[:date][:month].to_i, params[:date][:day].to_i, params[:date][:hour].to_i, params[:date][:minute].to_i)
+    @reservation.vehicle = Vehicle.find(params[:vehicle_id])
 		@reservation.passenger = current_user
 
 		if @vehicle.available(reservation_params[:seats].to_i, params[:vehicle_id])
@@ -39,7 +39,7 @@ before_action :current_user
 
 	def update
 		@reservation = Reservation.find(params[:id])
-    @reservation.start_time = DateTime.new(params[:date][:year].to_i, params[:date][:month].to_i, params[:date][:day].to_i, params[:date][:hour].to_i, params[:date][:minute].to_i)
+    @reservation.start_time = Time.new(params[:date][:year].to_i, params[:date][:month].to_i, params[:date][:day].to_i, params[:date][:hour].to_i, params[:date][:minute].to_i)
     @reservation.vehicle = Vehicle.find_by(params[:vehicle_id])
 
     if @vehicle.available(reservation_params[:seats].to_i, params[:vehicle_id].to_i)
