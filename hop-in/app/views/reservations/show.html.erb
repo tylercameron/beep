@@ -1,7 +1,7 @@
 <h2>Your Reservation</h2>
 
 <p>Date: <%= @reservation.start_time.strftime("%A %B %d, %Y") %></p>
-<p>Start Time: <%= @reservation.start_time.strftime("%l:%M %p") %></p>
+<p>Start Time: <%= @reservation.start_time.in_time_zone('Eastern Time (US & Canada)').strftime("%l:%M %p") %></p>
 <p>Start Location: <%= @reservation.start_location %></p>
 <p>Destination: <%= @reservation.destination %></p>
 <p>Number of Passengers: <%= @reservation.seats %></p>
