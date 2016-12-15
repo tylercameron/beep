@@ -5,21 +5,26 @@ class Vehicle < ApplicationRecord
 
 	validates_presence_of :vehicle_year, :vehicle_make, :vehicle_model, :street_address, :city, :province, :postal_code, :seats
 
-	def available(number_of_passengers, vehicle_id)
-		number_of_passengers > 0 && seat_capacity(vehicle_id) >= number_of_passengers
+	def capacity(number_of_passengers, vehicle_id)
+    number_of_passengers > 0 && seat_capacity(vehicle_id) >= number_of_passengers
+    # errors.add(:seats, "Number of passengers for this vehicle must be between 1 and #{seat_capacity(vehicle_id)}")
 	end
+
+  def available(vehicle_id, time)
+    time != reserved?(vehicle_id, time)
+  end
 
 private
 	def seat_capacity(vehicle_id)
 		Vehicle.find_by(id: vehicle_id).seats #- reservation_at(time).sum(:seats)
 	end
 
-	# def reservation_at(time)
-	# 	reservations.where(start_time: time.beginning_of_hour..time.end_of_hour)
-	# end
+	def reservation_at(time)
+		reservations.where(start_time: time.beginning_of_hour..time.end_of_hour)
+	end
 
-	def reserved?(time, vehicle_id)
-		Vehicle.where(id: vehicle_id).reservation_at(time)
+	def reserved?(vehicle_id, time)
+		Vehicle.find_by(id: vehicle_id).reservation_at(time)
 	end
 
 end

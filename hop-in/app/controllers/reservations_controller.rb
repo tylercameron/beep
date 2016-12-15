@@ -26,7 +26,7 @@ before_action :current_user
     @reservation.vehicle = Vehicle.find(params[:vehicle_id])
 		@reservation.passenger = current_user
 
-		if @vehicle.available(reservation_params[:seats].to_i, params[:vehicle_id])
+		if @vehicle.capacity(reservation_params[:seats].to_i, params[:vehicle_id]) && @vehicle.available(params[:vehicle_id].to_i, reservation_params[:start_time].to_time)
       if @reservation.save
 				redirect_to vehicle_reservation_url(@vehicle, @reservation)
 			else
@@ -42,7 +42,7 @@ before_action :current_user
     @reservation.start_time = DateTime.new(params[:date][:year].to_i, params[:date][:month].to_i, params[:date][:day].to_i, params[:date][:hour].to_i, params[:date][:minute].to_i)
     @reservation.vehicle = Vehicle.find_by(params[:vehicle_id])
 
-    if @vehicle.available(reservation_params[:seats].to_i, params[:vehicle_id].to_i)
+    if @vehicle.capacity(reservation_params[:seats].to_i, params[:vehicle_id].to_i)
   		if @reservation.update_attributes(reservation_params)
   			redirect_to vehicle_reservation_url(@vehicle, @reservation)
   		else
