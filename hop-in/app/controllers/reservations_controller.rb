@@ -23,34 +23,28 @@ before_action :current_user
 	def create
 		@reservation = Reservation.new(reservation_params)
     @reservation.start_time = DateTime.new(params[:date][:year].to_i, params[:date][:month].to_i, params[:date][:day].to_i, params[:date][:hour].to_i, params[:date][:minute].to_i, 0, "-05:00")
+    @reservation.end_time = @reservation.start_time + 1.hour
     @reservation.vehicle = Vehicle.find(params[:vehicle_id])
 		@reservation.passenger = current_user
 
-		if @vehicle.available(reservation_params[:seats].to_i, params[:vehicle_id])
-      if @reservation.save
-				redirect_to vehicle_reservation_url(@vehicle, @reservation)
-			else
-				render :new
-			end
-    else
-      render :new
+    if @reservation.save
+			redirect_to vehicle_reservation_url(@vehicle, @reservation)
+		else
+			render :new
 		end
 	end
 
 	def update
 		@reservation = Reservation.find(params[:id])
     @reservation.start_time = DateTime.new(params[:date][:year].to_i, params[:date][:month].to_i, params[:date][:day].to_i, params[:date][:hour].to_i, params[:date][:minute].to_i)
+    @reservation.end_time = @reservation.start_time + 1.hour
     @reservation.vehicle = Vehicle.find_by(params[:vehicle_id])
 
-    if @vehicle.available(reservation_params[:seats].to_i, params[:vehicle_id].to_i)
-  		if @reservation.update_attributes(reservation_params)
-  			redirect_to vehicle_reservation_url(@vehicle, @reservation)
-  		else
-  			render :edit
-  		end
-    else
-      render :edit
-    end
+		if @reservation.update_attributes(reservation_params)
+			redirect_to vehicle_reservation_url(@vehicle, @reservation)
+		else
+			render :edit
+		end
 	end
 
 	def destroy
@@ -61,7 +55,7 @@ before_action :current_user
 
 	private
 	def reservation_params
-		params.require(:reservation).permit(:start_time, :start_location, :destination, :comment, :vehicle_id, :passenger_id, :seats)
+		params.require(:reservation).permit(:start_time, :end_time, :start_location, :destination, :comment, :vehicle_id, :passenger_id, :seats)
 	end
 
 	def load_vehicle
