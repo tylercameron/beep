@@ -1,5 +1,5 @@
 class VehiclesController < ApplicationController
-	before_action :current_user, only: [:create, :destroy]
+	before_action :current_user, only: [:create, :update, :destroy]
 
 	def index
 		@vehicles = Vehicle.all
