@@ -51,7 +51,7 @@ footer {
 
 .signup-container{
   border: solid 1px lightgrey;
-  opacity: 0.6;
+  opacity: 0.5;
   color: black;
   background: white;
   height: auto;
@@ -59,6 +59,7 @@ footer {
   margin: auto;
   position: relative;
   top: 32px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,2);
 }
 
 h2.login-btn, .signup-btn {
