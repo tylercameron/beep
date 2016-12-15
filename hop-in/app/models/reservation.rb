@@ -7,7 +7,7 @@ class Reservation < ApplicationRecord
   validate :not_past_date
 
   def not_past_date
-    if self.start_time < Time.now
+    if self.start_time < DateTime.now
       errors.add(:start_time, "Time and Date can't be in the past")
     end
   end
