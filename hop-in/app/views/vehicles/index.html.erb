@@ -1,6 +1,8 @@
 <h1>Available Vehicles</h1>
 
 
+<div class="vehicle-index">
+
 
 <% @vehicles.each do |vehicle| %>
 	<article class="vehicle-container">
@@ -10,8 +12,7 @@
 	<ul ><li class='vehicle-link'><%= link_to 'Vehicle Page', vehicle_path(vehicle) %> </li>|<li class='vehicle-link'> <%= link_to 'Reserve Vehicle', new_vehicle_reservation_path(vehicle) %></li></ul>
 	</article>
 <% end %>
-
-
+</div>
 <h3>Vehicle Locator</h3>
 <div id="map"></div>
 

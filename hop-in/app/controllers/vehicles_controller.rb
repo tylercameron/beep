@@ -3,6 +3,10 @@ class VehiclesController < ApplicationController
 
 	def index
 		@vehicles = Vehicle.all
+		#if search render results else render vehicles.all
+
+
+	
 	end
 
 	def new
