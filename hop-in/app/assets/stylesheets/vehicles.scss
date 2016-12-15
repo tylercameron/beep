@@ -22,14 +22,15 @@
 }
 
 input[type="submit"] {
-    background-color: #00D486;
+    background-color: lighgrey;
     padding: 10px;
-    color: white;
+    color: black;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,2);
     font-family: comfortaa;
     font-size: 16px;
     cursor: pointer;
-    border-color:  #00D486;
-    border-radius: 30px;
+    border-color:  lightgrey;
+    border-radius: 10px;
 }
 
 .button{
