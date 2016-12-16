@@ -119,3 +119,32 @@ h1.homepage-heading {
     font-family: sans-serif;
     color: lightgrey;
 }
+input#search.homepage-form-control {
+    height: 50px;
+    width: 70%;
+    border: 1px solid lightgray;
+    font-family: Comfortaa;
+    font-size: 16px;
+    opacity: 0.4;
+    background: black;
+}
+
+
+input[type="text"] {
+}
+
+.btn-btn-primary {
+  display: none;
+
+}
+ //
+ // {
+ //    border: 1px solid white;
+ //    padding: 5px;
+ //    box-shadow: 0px 8px 16px 0px rgba(0,0,0,2);
+ //    border-radius: 10px; }
+
+form.navbar-form.navbar-left.search-form {
+    position: relative;
+    top: 50px;
+}
