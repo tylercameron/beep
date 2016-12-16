@@ -79,6 +79,8 @@
 <div class="login">
 
   <h1>Login</h1>
+
+  <button type="button" class="close">x</button>
   <%= form_tag sessions_path do%>
   <div class="">
     <%= label_tag :email %><%= text_field_tag :email, params[:email] %>
