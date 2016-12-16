@@ -35,14 +35,14 @@ li {
 }
 
 .vehicle-container {
-    border: 1px solid;
+    // border: 1px solid;
     margin: 20px auto;
     color: #000000;
-    background-color: #bdbdbd;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,2);
+    background-color: #ececec;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     opacity: 0.8;
-    width: 80%;
-    height: 300px;
+    width: 700px;
+    height: 170px;
     position: relative;
     // background-image: url("http://gas2.org/wp-content/uploads/2015/01/mercedes-benz-f015-luxuryinmotion-ab-1.jpg");
     // background-size: 100%;
@@ -76,20 +76,25 @@ ul.vehicle-container {
   border: 1px solid;
   width: 175px;
   box-sizing: border-box;
-  // opacity: 0.6;
+  opacity: 0.6;
   background-color: #00D486;
   border-radius: 3px;
+}
+.vehicle-container li {
+  padding: 2px;
 }
 .vehicle-container a {
   color: black;
   font-weight: bold;
+}
+.vehicle-search {
+  border-top: solid 2px grey;
 }
 .vehicle-index {
   overflow: scroll;
   height: 500px;
   width: 100%;
   // background-color: #37393a;
-  border-top: solid 2px grey;
 }
 .vehicle-index h1 {
   color: grey;
@@ -142,11 +147,29 @@ ul.vehicle-container {
 
 }
 .vehicle-details {
+  position: relative;
   color: black;
-  border: 2px solid black;
+  // border: 2px solid black;
   background-color: #ececec;
-  opacity: 0.6;
-  margin: 30px;
+  opacity: 0.8;
+  margin: auto;
+  width: 700px;
+
+  // border: 1px solid;
+  margin: 20px auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+}
+.vehicle-descrip {
+  margin-top: 15px;
+}
+.vehicle-details img {
+  width: 350px;
+  height: 250px;
+  float: left;
+  // border: 2px solid;
+  margin: 5px;
+  margin-top: 15px;
 }
 
 .owner-title {
