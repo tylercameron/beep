@@ -3,16 +3,18 @@
   <%= render partial: '/layouts/head' %>
 
 	<body>
-    
+
     <header class="main-nav-bar">
       <h1 class="beep-title" id="logo-icon"><%= link_to 'Beep', new_users_path %></h1>
       <ul class="nav-links">
         <div class="dropdown">
           <i class="fa fa-bars" id="main-drop-menu-icon" aria-hidden="true"></i>
           <div class="dropdown-contents" id="main-drop-menu">
+            <a href="/vehicles/new">About Us</a>
             <a href="/vehicles">Vehicles</a>
             <a href="/users">Profile</a>
             <a href="/vehicles/new">Add a Vehicle</a>
+            <a href="/vehicles/new">Contact Us</a>
           </div>
         </div>
     </header>
