@@ -1,4 +1,4 @@
-<div class="vehicle-index">
+
 
 <div class="vehicle-search">
 	<%= form_tag vehicles_path, method: :get, class: "search-bar" do %>
@@ -12,7 +12,7 @@
 	<% end %>
 </div>
 
-
+<div class="vehicle-index">
 <h1>Available Vehicles</h1>
 <% if @vehicles.present? %>
 <% else %>
