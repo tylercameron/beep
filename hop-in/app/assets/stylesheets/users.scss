@@ -13,7 +13,7 @@
 
 a {
   text-decoration: none;
-  color: #00D486;
+  color: darkgrey;
 }
 
 body {
@@ -161,4 +161,54 @@ button.close {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
     background-color: lightgrey;
     opacity: 0.6;
+}
+// ============== USER SHOW PAGE ==================
+
+.profile-details {
+    clear: both;
+    position: relative;
+    padding: 25px;
+    width: 45%;
+    float: left;
+    opacity: 0.7;
+}
+
+.reservations-vehicle-details {
+    padding: 25px;
+    width: 45%;
+    float: right;
+}
+
+.profile.page {
+    // border: 2px solid lightgrey;
+    padding: 20px;
+    height: 500px;
+    margin: 10px;
+    background: url(https://linziboyd.files.wordpress.com/2013/08/open-road.jpg);
+    background-position: center;
+    opacity: 1;
+}
+.user-info, .reservation-vehicle-show, .reservations-vehicle-details{
+    border: 1px white solid;
+    background: white;
+    color: black;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+}
+.reservation-vehicle-show {
+  margin-top:15px;
+  padding-bottom: 5px;
+}
+.reservations-vehicle-details {
+  margin-top: 25px;
+  opacity: 0.6;
+}
+#show-links {
+    display: inline-block;
+    border: solid 1px lightgrey;
+    background: black;
+    color: white;
+    padding: 5px;
+    margin: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 5px;
 }
