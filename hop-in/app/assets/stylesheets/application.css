@@ -71,7 +71,7 @@
 .dropdown-contents {
     display: none;
     position: absolute;
-    background-color: #00D486;
+    background-color: grey;
     min-width: 160px;
     right: 0;
     top: 60px;
@@ -90,7 +90,7 @@
 }
 .dropdown-contents a:hover {
     background: white;
-    color: #00D486;
+    color: grey;
 
 }
 
