@@ -1,7 +1,15 @@
 
 <% if current_user %>
 
-  <section>
+  <section class="user-details">
+    <h2>Personal Info</h2>
+    <h3>Name: <%= current_user.first_name %> <%= current_user.last_name %></h3>
+    <h3>Phone Number: <%= current_user.phone_number %></h3>
+    <h3>Email: <%= current_user.email %></h3>
+    <h3>Birthdate: <%= current_user.date_of_birth.strftime("%A %B %d, %Y") %></h3>
+  </section>
+
+  <section class="reservations-details">
       <h2>Reservations</h2>
       <% current_user.trips.each do |trip| %>
         <h3>Date: <%= trip.start_time.strftime("%A %B %d, %Y") %></h3><h3>Time: <%= trip.start_time.in_time_zone('Eastern Time (US & Canada)').strftime("%l:%M %p") %></h3>
@@ -14,9 +22,9 @@
       <% end %>
   </section>
 
-  <section>
+  <section class="vehicle-reservations">
     <% if current_user.owned_vehicles.any? do |vehicle| %>
-      <h2><%= current_user.first_name %>'s Vehicle</h2>
+      <h2>Your Vehicle</h2>
         <li><h3><%= vehicle.vehicle_year %> <%= vehicle.vehicle_make %> <%= vehicle.vehicle_model %></h3></li>
         <p><%= link_to 'Vehicle Page', vehicle_path(vehicle) %></p>
         <p><%= link_to 'Edit Vehicle', edit_vehicle_path(vehicle) %></p>
