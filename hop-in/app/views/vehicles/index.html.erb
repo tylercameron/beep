@@ -1,17 +1,17 @@
+<div class="vehicle-index">
 
 <div class="vehicle-search">
-	<%= form_tag vehicles_path, method: :get, class: "navbar-form navbar-left search-form" do %>
+	<%= form_tag vehicles_path, method: :get, class: "search-bar" do %>
 	  <%= text_field_tag(
 	      :search,
 	      params[:search],
-	      placeholder: "Search Vehicles",
+	      placeholder: "Where would you like to travel?",
 	      class: "form-control"
 	  ) %>
 		 <%= submit_tag "Search", class: "btn btn-primary" %>
 	<% end %>
 </div>
 
-<div class="vehicle-index">
 
 <h1>Available Vehicles</h1>
 <% if @vehicles.present? %>
@@ -27,7 +27,7 @@
 		</article>
 	<% end %>
 </div>
-<h3>Vehicle Locator</h3>
+<h3 class="map-title">Vehicle Locator</h3>
 <div id="map"></div>
 
 	<script>

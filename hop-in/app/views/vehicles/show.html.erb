@@ -1,4 +1,4 @@
-<h1><%= @vehicle.owner.first_name %>'s Ride</h1>
+<h1 class="owner-title"><%= @vehicle.owner.first_name %>'s Ride</h1>
 
 <article class="vehicle-details">
 	<h2><%= @vehicle.vehicle_year %> <%= @vehicle.vehicle_make %> <%= @vehicle.vehicle_model %></h2>
@@ -9,7 +9,7 @@
 	<h3>Postal Code: <%= @vehicle.postal_code %></h3>
 </article>
 
-<p><%= link_to 'Make a Reservation', new_vehicle_reservation_path(@vehicle) %></p>
+<p class="res-btn"><%= link_to 'Make a Reservation', new_vehicle_reservation_path(@vehicle) %></p>
 
 <section>
   <% if current_user == @vehicle.owner %>
