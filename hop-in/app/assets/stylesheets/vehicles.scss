@@ -1,6 +1,9 @@
 // Place all the styles related to the Vehicles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+li {
+  list-style: none;
+}
 
 #map {
   width: 80%;
@@ -31,7 +34,7 @@
   padding: 15px;
 }
 
-article.vehicle-container {
+.vehicle-container {
     border: 1px solid;
     margin: 20px auto;
     color: #000000;
@@ -39,6 +42,28 @@ article.vehicle-container {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,2);
     opacity: 0.6;
     width: 80%;
+}
+ul.vehicle-container {
+  box-sizing: border-box;
+  padding: 12px;
+  width: 500px;
+}
+.vehicle-container p {
+  display: inline-block;
+  margin: 10px;
+  box-shadow: 0px 4px 10px 0px black;
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid;
+  width: 170px;
+  box-sizing: border-box;
+  opacity: 0.6;
+  background-color: #00D486;
+  border-radius: 5px;
+}
+.vehicle-container a {
+  color: black;
+  font-weight: bold;
 }
 .vehicle-index {
   overflow: scroll;
@@ -59,16 +84,16 @@ article.vehicle-container {
   margin: auto;
   margin-top: 30px;
   margin-bottom: 70px;
-  // padding-bottom: 50px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.02);
-  padding: 17px;
+  padding: 10px;
   cursor: pointer;
   border: 1px solid;
-  width: 125px;
+  width: 200px;
   box-sizing: border-box;
-  // position: relative;
-  // top: 240px;
   color: black;
+  border-radius: 15px;
+  background-color: #00D486;
+  opacity: 0.6;
 }
 .search-bar {
   opacity: 0.7;
@@ -102,4 +127,13 @@ article.vehicle-container {
 
 .owner-title {
   color: black;
+}
+
+.vehicle-reservations {
+  margin-top: 50px;
+  border-top: 2px solid black;
+}
+
+.vehicle-reservations h2 {
+  color: #909090;
 }
