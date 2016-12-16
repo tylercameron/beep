@@ -10,23 +10,29 @@
   background-position: center;
 }
 
+.reserve div {
+  margin-top: 1em;
+}
+
 .reserve-container {
   border: solid 1px lightgrey;
   opacity: 0.8;
   color: white;
   background: black;
   height: auto;
-  width: 50%;
+  width: 40%;
+  padding: 15px;
   margin: auto;
   position: relative;
-  top: 110px;
+  top: 38px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,2);
+}
+
+.reserve-form-input select,
+.reserve-form-input input {
+  font-size: 1em;
 }
 
 #reserve-show-page {
   background-image: url("http://eskipaper.com/images/mountain-road-background-1.jpg");
-}
-
-#reserve-show-container {
-
 }
