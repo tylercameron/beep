@@ -1,5 +1,5 @@
 <h1 class="owner-title"><%= @vehicle.owner.first_name %>'s Ride</h1>
-
+  <%= image_tag "#{@vehicle.image}" %>
 <article class="vehicle-details">
 	<h2><%= @vehicle.vehicle_year %> <%= @vehicle.vehicle_make %> <%= @vehicle.vehicle_model %></h2>
 	<h3>Seats: <%= @vehicle.seats %></h3>
