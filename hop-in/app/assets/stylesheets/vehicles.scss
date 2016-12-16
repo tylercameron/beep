@@ -21,17 +21,6 @@
   display: inline;
 }
 
-.signup-button, .login-button {
-    background-color: lighgrey;
-    padding: 10px;
-    color: black;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,2);
-    font-family: comfortaa;
-    font-size: 16px;
-    cursor: pointer;
-    border-color:  lightgrey;
-    border-radius: 10px;
-}
 
 .button{
   padding: 15px;
@@ -45,4 +34,9 @@ article.vehicle-container {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,2);
     opacity: 0.4;
     width: 80%;
+}
+.vehicle-index{
+  overflow: scroll;
+  height: 500px;
+  width: 100%;
 }
