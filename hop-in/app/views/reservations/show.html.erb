@@ -7,8 +7,9 @@
     <p>Start Location: <%= @reservation.start_location %></p>
     <p>Destination: <%= @reservation.destination %></p>
     <p>Number of Passengers: <%= @reservation.seats %></p>
-
-    <%= link_to "Edit Reservation", edit_vehicle_reservation_path(@vehicle, @reservation) %>
-    <%= link_to "Delete Reservation", vehicle_reservation_path(@vehicle, @reservation), method: :delete %>
+    <div class="">
+      <%= link_to "Edit Reservation", edit_vehicle_reservation_path(@vehicle, @reservation) %>
+      <%= link_to "Delete Reservation", vehicle_reservation_path(@vehicle, @reservation), method: :delete %>
+    </div>
   </div>
 </div>
