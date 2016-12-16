@@ -40,9 +40,28 @@ li {
     color: #000000;
     background-color: #bdbdbd;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,2);
-    opacity: 0.6;
+    opacity: 0.8;
     width: 80%;
+    height: 300px;
+    position: relative;
+    // background-image: url("http://gas2.org/wp-content/uploads/2015/01/mercedes-benz-f015-luxuryinmotion-ab-1.jpg");
+    // background-size: 100%;
+    // background-position: center;
+    // background-repeat: no-repeat;
 }
+
+.vehicle-container img {
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  left: 0;
+  z-index: 0;
+}
+.vehicle-text {
+  position: relative;
+  z-index: 1;
+}
+
 ul.vehicle-container {
   box-sizing: border-box;
   padding: 12px;
@@ -57,7 +76,7 @@ ul.vehicle-container {
   border: 1px solid;
   width: 175px;
   box-sizing: border-box;
-  opacity: 0.6;
+  // opacity: 0.6;
   background-color: #00D486;
   border-radius: 3px;
 }
