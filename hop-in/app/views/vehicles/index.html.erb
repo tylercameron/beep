@@ -20,7 +20,6 @@
 <% end %>
 	<% @vehicles.each do |vehicle| %>
 		<article class="vehicle-container">
-      <%= image_tag "#{vehicle.image}" %>
       <div class="vehicle-text">
   			<h2><%= vehicle.owner.first_name %>'s - <%= vehicle.vehicle_year %> <%= vehicle.vehicle_make %> <%= vehicle.vehicle_model %></h2>
   			<h3>Seats: <%= vehicle.seats %></h3>
