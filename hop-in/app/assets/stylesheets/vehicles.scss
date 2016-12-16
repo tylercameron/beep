@@ -16,11 +16,15 @@
   display: none;
 }
 
-.vehicle-link{
+.vehicle-link {
   list-style-type: none;
   display: inline;
 }
 
+.vehicle-link a{
+  color: #ffffff;
+
+}
 
 .button{
   padding: 15px;
@@ -29,14 +33,35 @@
 article.vehicle-container {
     border: 1px solid;
     margin: 20px auto;
-    color: white;
-    background-color: lightgrey;
+    color: #656161;
+    background-color: rgb(75, 230, 173);
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,2);
-    opacity: 0.4;
+    opacity: 0.6;
     width: 80%;
 }
-.vehicle-index{
+.vehicle-index {
   overflow: scroll;
   height: 500px;
   width: 100%;
+  background-color: #37393a;
+}
+.vehicle-index h1 {
+  color: #43a17f;
+}
+
+.map-title {
+  color: #43a17f;
+}
+
+.map-btn {
+  padding-bottom: 50px;
+}
+.search-bar {
+  opacity: 0.7;
+  padding-top: 10px;
+}
+.search-bar input#search {
+  width: 215px;
+  height: 15px;
+  text-align: right;
 }
