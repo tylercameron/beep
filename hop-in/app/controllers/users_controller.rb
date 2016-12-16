@@ -32,14 +32,14 @@ class UsersController < ApplicationController
     if @user.update_attributes(user_params)
       redirect_to users_url(@user)
     else
-      render :edit
+      render 'user#new'
     end
   end
 
   def destroy
     @user = User.find(params[:id])
     @user.destroy
-    redirect_to users_url
+    redirect_to :root
   end
 
   private

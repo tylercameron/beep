@@ -1,8 +1,12 @@
+<div class="profile page">
+
+
+  <h2 id="profile-heading">Reservations</h2>
 
 <% if current_user %>
 
-  <section>
-      <h2>Reservations</h2>
+  <section class="reservation-profile">
+
       <% current_user.trips.each do |trip| %>
         <h3>Date: <%= trip.start_time.strftime("%A %B %d, %Y") %></h3><h3>Time: <%= trip.start_time.in_time_zone('Eastern Time (US & Canada)').strftime("%l:%M %p") %></h3>
         <h3>From: <%= trip.start_location %></h3>
@@ -14,7 +18,7 @@
       <% end %>
   </section>
 
-  <section>
+  <section class="reservation-vehicle-show">
     <% if current_user.owned_vehicles.any? do |vehicle| %>
       <h2><%= current_user.first_name %>'s Vehicle</h2>
         <li><h3><%= vehicle.vehicle_year %> <%= vehicle.vehicle_make %> <%= vehicle.vehicle_model %></h3></li>
@@ -26,3 +30,4 @@
   </section>
 
 <% end %>
+</div>
