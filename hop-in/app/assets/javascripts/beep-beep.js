@@ -4,6 +4,7 @@ $(document).ready(function() {
 
     $('.login-btn').fadeOut('fast');
     $('.signup-btn').fadeOut('fast');
+    $('.homepage-search').fadeOut('fast');
     $('.login').fadeIn('slow');
   });
 
@@ -11,6 +12,7 @@ $(document).ready(function() {
 
     $('.login-btn').fadeOut('fast');
     $('.signup-btn').fadeOut('fast');
+    $('.homepage-search').fadeOut('fast');
     $('.signup-container').fadeIn('slow');
   });
 
