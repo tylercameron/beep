@@ -32,10 +32,12 @@
  </div>
 
 
-<div class="reservations-vehicle-details">
-  <section class="reservation-profile">
-      <h2 id="profile-heading">Reservations</h2>
+
+
       <% current_user.trips.each do |trip| %>
+        <div class="reservations-vehicle-details">
+        <section class="reservation-profile">
+        <h2 id="profile-heading">Reservations</h2>
         <h3>Date: <%= trip.start_time.strftime("%A %B %d, %Y") %></h3><h3>Time: <%= trip.start_time.in_time_zone('Eastern Time (US & Canada)').strftime("%l:%M %p") %></h3>
         <h3>From: <%= trip.start_location %></h3>
         <h3>To: <%= trip.destination %></h3>
