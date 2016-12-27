@@ -26,6 +26,12 @@ $(document).ready(function() {
 
   });
 
+  $('#header-login').on('click', function(eventObject) {
+    eventObject.preventDefault();
+      $('.login').fadeIn('slow');
+
+  });
+
   $('.map-btn').on('click', function() {
     $('.map-div').fadeIn('slow');
     $('#map').fadeIn('slow');

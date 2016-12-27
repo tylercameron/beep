@@ -1,5 +1,6 @@
 <!-- <%= link_to "Back to Reservation", new_vehicle_reservation_url%>
  -->
+<% if current_user %>
 <div class="reserve">
   <div class="reserve-container">
     <h1>When do you need a ride?</h1>
@@ -10,3 +11,22 @@
   </div>
 
 </div>
+
+<% else %>
+
+<div class="reserve">
+  <div class="login-first">
+    <p> Please login to make a reservation</p>
+  </div>
+  <div class="reserve-con">
+
+    <h1>When do you need a ride?</h1>
+
+      <div class="">
+        <%= render 'form' %>
+      </div>
+  </div>
+
+</div>
+
+<% end %>
