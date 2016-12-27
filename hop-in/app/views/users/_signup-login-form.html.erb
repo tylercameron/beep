@@ -1,3 +1,8 @@
+<div class="login-signin">
+
+<div class="login-signup-btns">
+  <h2 class='login-btn'>Login</h2> <h2 class='signup-btn'>Signup</h2>
+</div>
 
 <div class="signup-container">
 
@@ -88,3 +93,23 @@
   </div>
 </div>
 <% end %>
+
+<div class="homepage-search">
+	<%= form_tag vehicles_path, method: :get, class: "navbar-form navbar-left search-form" do %>
+	  <%= text_field_tag(
+	      :search,
+	      params[:search],
+	      placeholder: "Where would you like to go?",
+	      class: "homepage-form-control"
+	  ) %>
+		 <%= submit_tag "Search", class: "btn-btn-primary" %>
+	<% end %>
+
+  <% if @vehicles.present? %>
+    <% render :vehicles %>
+  <% end %>
+</div>
+
+</div>
+
+<footer class="homepage-footer"> Beep &copy; 2016 </footer>
