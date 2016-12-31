@@ -19,7 +19,7 @@ a {
 body {
   /*background-image: url(http://www.vaterrarc.com/Content/Images/Products/landing/bg_road2.jpg);
   background-repeat: no-repeat;*/
-  color: #00D486;
+  color: grey;
   text-align: center;
   font-family: 'Comfortaa', cursive;
 }
@@ -129,6 +129,7 @@ input#search.homepage-form-control {
     background: black;
     padding: 5px;
     text-align: center;
+    color: white;
 }
 
 
@@ -179,7 +180,7 @@ button.close {
     float: right;
 }
 
-.profile.page {
+.profile-page, .edit-profile {
     // border: 2px solid lightgrey;
     padding: 20px;
     height: 500px;
@@ -211,4 +212,14 @@ button.close {
     margin: 5px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     border-radius: 5px;
+}
+
+.edit-profile {
+    // border: 2px solid lightgrey;
+    padding: 20px;
+    height: 500px;
+    margin: 10px;
+    background: grey;
+    background-position: center;
+    opacity: 1;
 }

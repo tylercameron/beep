@@ -1,5 +1,6 @@
 <!-- <%= link_to "Back to Reservation", new_vehicle_reservation_url%>
  -->
+<% if current_user %>
 <div class="reserve">
   <div class="reserve-container">
     <h1>When do you need a ride?</h1>
@@ -10,3 +11,33 @@
   </div>
 
 </div>
+
+<% else %>
+
+<div class="reserve">
+
+
+  <div class="reserve-con">
+
+    <h1>When do you need a ride?</h1>
+
+    <p> Please login to make a reservation</p>
+
+    <%= form_tag sessions_path do%>
+    <div class="">
+      <%= label_tag :email %><%= text_field_tag :email, params[:email] %>
+    </div>
+    <div class="">
+      <%= label_tag :password %><%= password_field_tag :password %>
+    </div>
+    <div class="login-button">
+      <%= submit_tag "Login", class: "login-button" %>
+    </div>
+
+  <% end %>
+  </div>
+
+
+</div>
+
+<% end %>
