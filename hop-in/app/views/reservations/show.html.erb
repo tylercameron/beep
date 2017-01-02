@@ -15,38 +15,36 @@
   </div>
 </div>
 
-<div id="res-map">
-
-</div>
+<div id="res-map"></div>
 
 <script>
-      function initMap() {
-        var directionsDisplay = new google.maps.DirectionsRenderer;
-        var directionsService = new google.maps.DirectionsService;
-        var map = new google.maps.Map(document.getElementById('res-map'), {
-          zoom: 7,
-          scrollwheel: false,
-        });
-        directionsDisplay.setMap(map);
-        calculateAndDisplayRoute(directionsService, directionsDisplay);
-      }
+  function initMap() {
+    var directionsDisplay = new google.maps.DirectionsRenderer;
+    var directionsService = new google.maps.DirectionsService;
+    var map = new google.maps.Map(document.getElementById('res-map'), {
+      zoom: 7,
+      scrollwheel: false,
+    });
+    directionsDisplay.setMap(map);
+    calculateAndDisplayRoute(directionsService, directionsDisplay);
+  }
 
-      function calculateAndDisplayRoute(directionsService, directionsDisplay) {
-        var start = document.getElementById('start-address').innerHTML;
-        var end = document.getElementById('end-address').innerHTML;
-        directionsService.route({
-          origin: start,
-          destination: end,
-          travelMode: 'DRIVING'
-        }, function(response, status) {
-          if (status === 'OK') {
-            directionsDisplay.setDirections(response);
-          } else {
-            window.alert('Directions request failed due to ' + status);
-          }
-        });
+  function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+    var start = document.getElementById('start-address').innerHTML;
+    var end = document.getElementById('end-address').innerHTML;
+    directionsService.route({
+      origin: start,
+      destination: end,
+      travelMode: 'DRIVING'
+    }, function(response, status) {
+      if (status === 'OK') {
+        directionsDisplay.setDirections(response);
+      } else {
+        window.alert('Directions request failed due to ' + status);
       }
-    </script>
+    });
+  }
+</script>
 
 <script async defer
 	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-Sq6ZBy9oC33y1vxqvw6p42Yw-UUfwws&callback=initMap">
