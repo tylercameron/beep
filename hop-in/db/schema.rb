@@ -16,8 +16,9 @@ ActiveRecord::Schema.define(version: 20170103191907) do
   enable_extension "plpgsql"
 
   create_table "availabilities", force: :cascade do |t|
-    t.datetime "start_time"
-    t.datetime "end_time"
+    t.integer  "start_time"
+    t.integer  "end_time"
+    t.string   "weekday"
     t.integer  "vehicle_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
