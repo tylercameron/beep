@@ -56,7 +56,7 @@ class AvailabilitiesController < ApplicationController
 
 	private
 	def availability_params
-		params.require(:reservation).permit(:start_time, :end_time, :start_location, :destination, :comment, :vehicle_id, :passenger_id, :seats)
+		params.require(:availability).permit(:start_time, :end_time, :weekday, :vehicle_id)
 	end
 
 	def load_vehicle
