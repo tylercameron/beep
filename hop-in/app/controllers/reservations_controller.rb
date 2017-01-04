@@ -50,7 +50,7 @@ before_action :current_user
 	def destroy
 		@reservation = Reservation.find(params[:id])
 		@reservation.destroy
-		redirect_to vehicle_reservations_url(@vehicle)
+		redirect_to '/user'
 	end
 
 	private
