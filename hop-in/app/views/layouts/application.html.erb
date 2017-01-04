@@ -4,7 +4,7 @@
 
 	<body>
 		<header class="nav-bar">
-			<h1 class="beep-title"><%= link_to 'Beep', new_users_path %></h1>
+			<h1 class="beep-title"><%= link_to 'Beep', new_user_path %></h1>
 			<ul class="nav-links">
 				<div class="dropdown">
 					<i class="fa fa-bars" id="drop-menu-icon" aria-hidden="true"></i>
@@ -17,7 +17,7 @@
 				<% if current_user %>
 					<li class="nav-login">Hello <%= current_user.first_name %> | <%= link_to 'Log Out', sessions_path, method: :delete %></li>
 				<% else %>
-					<li class="nav-login"><%= link_to 'Log In', new_users_path %> | <%= link_to 'Sign Up', new_users_path %></li>
+					<li class="nav-login"><%= link_to 'Log In', new_user_path %> | <%= link_to 'Sign Up', new_user_path %></li>
 				<% end %>
     	</ul>
 

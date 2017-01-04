@@ -38,7 +38,7 @@ before_action :current_user
 		@reservation = Reservation.find(params[:id])
     @reservation.start_time = DateTime.new(params[:date][:year].to_i, params[:date][:month].to_i, params[:date][:day].to_i, params[:date][:hour].to_i, params[:date][:minute].to_i)
     @reservation.end_time = @reservation.start_time + 1.hour
-    @reservation.vehicle = Vehicle.find_by(params[:vehicle_id])
+    @reservation.vehicle = Vehicle.find(params[:vehicle_id])
 
 		if @reservation.update_attributes(reservation_params)
 			redirect_to vehicle_reservation_url(@vehicle, @reservation)

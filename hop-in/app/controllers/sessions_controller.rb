@@ -10,13 +10,13 @@ class SessionsController < ApplicationController
 			redirect_to vehicles_url, notice: "You are now logged In :)"
 		else
 			flash[:notice] = "Invalid Email or Password"
-			redirect_to new_users_url
+			redirect_to new_user_url
 		end
 	end
 
 	def destroy
 		session[:user_id] = nil
-		redirect_to users_url, alert: "You are logged out!"
+		redirect_to user_url, alert: "You are logged out!"
 	end
 
 	private
