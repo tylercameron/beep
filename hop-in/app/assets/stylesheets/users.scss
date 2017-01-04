@@ -175,9 +175,9 @@ button.close {
 }
 
 .reservations-vehicle-details {
-    padding: 25px;
-    width: 45%;
-    float: right;
+    // padding: 25px;
+    // width: 45%;
+    // float: right;
 }
 
 .profile-page, .edit-profile {
@@ -223,3 +223,14 @@ button.close {
     background-position: center;
     opacity: 1;
 }
+.reserv-container {
+  padding: 20px;
+  width: 45%;
+  float: right;
+  overflow: scroll;
+  height: 400px;
+  background: grey;
+}
+// .reservations-vehicle-details {
+//   position: relative;
+// }
