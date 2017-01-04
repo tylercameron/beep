@@ -18,17 +18,15 @@ class AvailabilitiesController < ApplicationController
 
 	def edit
 		@availability = Availability.find(params[:id])
+    @vehicle = Vehicle.find(params[:vehicle_id])
 	end
 
 	def create
 		@availability = Availability.new(availability_params)
-    # @availability.start_time = DateTime.new(params[:date][:year].to_i, params[:date][:month].to_i, params[:date][:day].to_i, params[:date][:hour].to_i, params[:date][:minute].to_i, 0, "-05:00")
-    # @availability.end_time = @reservation.start_time + 1.hour
     @availability.vehicle = Vehicle.find(params[:vehicle_id])
 
     if @availability.save
-			# redirect_to vehicle_reservation_url(@vehicle, @reservation)
-      redirect_to root
+      redirect_to vehicle_availabilities_path(@vehicle, @availability)
 		else
 			render :new
 		end
@@ -36,13 +34,10 @@ class AvailabilitiesController < ApplicationController
 
 	def update
 		@availability = Availability.find(params[:id])
-    # @availability.start_time = DateTime.new(params[:date][:year].to_i, params[:date][:month].to_i, params[:date][:day].to_i, params[:date][:hour].to_i, params[:date][:minute].to_i)
-    # @availability.end_time = @reservation.start_time + 1.hour
-    @availability.vehicle = Vehicle.find_by(params[:vehicle_id])
+    @availability.vehicle = Vehicle.find(params[:vehicle_id])
 
 		if @availability.update_attributes(availability_params)
-			# redirect_to vehicle_reservation_url(@vehicle, @reservation)
-      redirect_to root
+      redirect_to vehicle_availabilities_path(@vehicle, @availability)
 		else
 			render :edit
 		end
