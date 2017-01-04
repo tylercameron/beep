@@ -10,7 +10,7 @@
       <h3>Phone Number: <%= current_user.phone_number %></h3>
       <h3>Email: <%= current_user.email %></h3>
       <h3>Birthdate: <%= current_user.date_of_birth.strftime("%A %B %d, %Y") %></h3>
-      <p id="show-links"><%= link_to 'Edit Profile', edit_users_path %></p>
+      <p id="show-links"><%= link_to 'Edit Profile', edit_user_path %></p>
     </section>
 
     <% if current_user.owned_vehicles.any? do |vehicle| %>
