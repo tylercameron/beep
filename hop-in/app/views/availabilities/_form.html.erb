@@ -1,0 +1,32 @@
+<%= form_for [@vehicle, @availability] do |f| %>
+
+  <% if @availability.errors.any? %>
+    <div class="error_messages">
+      <ul>
+        <% @availability.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <!-- <div class="vehicle_form"> -->
+  	<div class="availability-form-input">
+  		<% f.hidden_field :vehicle_id, value: @vehicle.id %>
+  	</div>
+  	<div class="availability-form-input">
+  		<%= f.label :weekday %><br>
+  		<%= f.text_field :weekday %>
+  	</div>
+  	<div class="availability-form-input">
+  		<%= f.label :start_time %><br>
+  		<%= f.number_field :start_time %>
+  	</div>
+  	<div class="availability-form-input">
+  		<%= f.label :end_time %><br>
+  		<%= f.number_field :end_time %>
+  	</div>
+
+  	<div class="button"><%= f.submit %></div>
+  <!-- </div> -->
+<% end %>
