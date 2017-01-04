@@ -22,3 +22,5 @@ Vehicle.create(vehicle_year: 2020, vehicle_make: 'Tesla', vehicle_model: 'Model 
 Vehicle.create(vehicle_year: 2020, vehicle_make: 'Mercedes', vehicle_model: 'F 015', seats: 4, street_address: '3 Oxford St', city: 'Toronto', province: 'ON', postal_code: 'M5T 1N9', owner_id: 4, image: "http://gas2.org/wp-content/uploads/2015/01/mercedes-benz-f015-luxuryinmotion-ab-1.jpg")
 
 Reservation.create(passenger_id: 2, vehicle_id: 1, start_time: 1.day.from_now, start_location: '220 King St', date: '20161212', destination: 'New York', seats: 2)
+
+Availability.create(start_time: '1100', end_time: '1800', weekday: 'Thursday', vehicle_id: 1)
