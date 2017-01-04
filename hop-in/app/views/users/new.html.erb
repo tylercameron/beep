@@ -8,7 +8,7 @@
 
 <h1>Sign Up</h1>
 
-<%= form_for @user do |f| %>
+<%= form_for(@user, url: user_path) do |f| %>
   <%if @user.errors.any? %>
     <div class="error_messages">
       <h2>Entry is invalid</h2>

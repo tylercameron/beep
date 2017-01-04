@@ -49,7 +49,7 @@ class VehiclesController < ApplicationController
 	def destroy
 		@vehicle = Vehicle.find(params[:id])
 		@vehicle.destroy
-		redirect_to vehicles_url
+		redirect_to '/user'
 	end
 
 	private
