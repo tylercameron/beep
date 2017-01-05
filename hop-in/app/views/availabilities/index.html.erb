@@ -1,22 +1,16 @@
-<p><%= @vehicle.vehicle_year %> <%= @vehicle.vehicle_make %> <%= @vehicle.vehicle_model %></p>
+<main>
+  <p><%= @vehicle.vehicle_year %> <%= @vehicle.vehicle_make %> <%= @vehicle.vehicle_model %></p>
 
-<div class="availabilities-container">
-  <% @availabilities.each do |avail| %>
-    <div class="weekday-time">
-      <%= avail.weekday %>
-      <%= avail.start_time %>
-      <%= avail.end_time %>
+  <div class="availabilities-container">
+    <% for availability in 1..7 %>
+      <div class="weekday-time">
+        <%= @availabilities.find_by(id: availability).weekday %>
+        <%= @availabilities.find_by(id: availability).start_time %>
+        <%= @availabilities.find_by(id: availability).end_time %>
 
-      <%= link_to "Edit Availability", edit_vehicle_availability_path(@vehicle, avail) %>
-      <%= link_to "Delete Availability", vehicle_availability_path(@vehicle, avail), method: :delete %>
-    </div><br>
-  <% end %>
-</div>
-
-<p><%= @availabilities[4].weekday %> <%= @availabilities[0].start_time %> <%= @availabilities[0].end_time %></p>
-<p><%= @availabilities[1].weekday %> <%= @availabilities[1].start_time %> <%= @availabilities[1].end_time %></p>
-<p><%= @availabilities[2].weekday %> <%= @availabilities[2].start_time %> <%= @availabilities[2].end_time %></p>
-<p><%= @availabilities[0].weekday %> <%= @availabilities[3].start_time %> <%= @availabilities[3].end_time %></p>
-<p><%= @availabilities[5].weekday %> <%= @availabilities[4].start_time %> <%= @availabilities[4].end_time %></p>
-<p><%= @availabilities[3].weekday %> <%= @availabilities[5].start_time %> <%= @availabilities[5].end_time %></p>
-<p><%= @availabilities[6].weekday %> <%= @availabilities[6].start_time %> <%= @availabilities[6].end_time %></p>
+        <%= link_to "Edit Availability", edit_vehicle_availability_path(@vehicle, @availabilities.find_by(id: availability)) %>
+        <%= link_to "Delete Availability", vehicle_availability_path(@vehicle, @availabilities.find_by(id: availability)), method: :delete %>
+      </div><br>
+    <% end %>
+  </div>
+</main>
