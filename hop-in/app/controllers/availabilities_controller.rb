@@ -46,7 +46,7 @@ class AvailabilitiesController < ApplicationController
 	def destroy
 		@availability = Availability.find(params[:id])
 		@availability.destroy
-		redirect_to vehicle_reservations_url(@vehicle)
+		redirect_to vehicle_availabilities_path(@vehicle)
 	end
 
 	private
