@@ -1,7 +1,11 @@
 <div class="login-signin">
 
 <div class="login-signup-btns">
-  <h2 class='login-btn'>Login</h2> <h2 class='signup-btn'>Signup</h2>
+  <% if current_user %>
+    <h2><%= link_to 'Log Out', sessions_path, method: :delete %></h2>
+  <% else %>
+    <h2 class='login-btn'>Login</h2> <h2 class='signup-btn'>Signup</h2>
+  <% end %>
 </div>
 
 <div class="signup-container">
