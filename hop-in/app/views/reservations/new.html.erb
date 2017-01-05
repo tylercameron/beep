@@ -19,10 +19,13 @@
 
   <div class="reserve-con">
 
-    <h1>When do you need a ride?</h1>
-
     <p> Please Signup or Login to make a reservation</p>
 
+  <div class="usersignup-container">
+
+  <div class="login-reserv">
+
+    <h1>Login</h1>
     <%= form_tag sessions_path do%>
     <div class="">
       <%= label_tag :email %><%= text_field_tag :email, params[:email] %>
@@ -33,7 +36,10 @@
     <div class="login-button">
       <%= submit_tag "Login", class: "login-button" %>
     </div>
+  <%end%>
+  </div>
 
+  <div class="signup-reserv">
 
     <h1>Sign Up</h1>
 
@@ -50,9 +56,6 @@
       <% end %>
 
       <div class="">
-        <h2>Account Info</h2>
-
-        <button type="button" class="close">x</button>
 
         <div class="">
           <%= f.label :email %>
@@ -72,8 +75,6 @@
 
 
       <div class="">
-
-        <h2>Personal Information</h2>
 
           <div class="">
             <%= f.label :first_name %>
@@ -104,8 +105,8 @@
       </div>
     <% end %>
     </div>
-
-  <% end %>
+  </div>
+ </div>
   </div>
 
 
