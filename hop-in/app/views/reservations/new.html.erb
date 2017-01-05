@@ -34,6 +34,77 @@
       <%= submit_tag "Login", class: "login-button" %>
     </div>
 
+
+    <h1>Sign Up</h1>
+
+    <%= form_for(@user, url: user_path) do |f| %>
+      <%if @user.errors.any? %>
+        <div class="error_messages">
+          <h2>Entry is invalid</h2>
+          <ul>
+            <% @user.errors.full_messages.each do |message| %>
+              <li> <%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="">
+        <h2>Account Info</h2>
+
+        <button type="button" class="close">x</button>
+
+        <div class="">
+          <%= f.label :email %>
+          <%= f.email_field :email %>
+        </div>
+
+        <div class="">
+          <%= f.label :password %>
+          <%= f.password_field :password %>
+        </div>
+
+        <div class="">
+          <%= f.label :password_confirmation %>
+          <%= f.password_field :password_confirmation %>
+        </div>
+      </div>
+
+
+      <div class="">
+
+        <h2>Personal Information</h2>
+
+          <div class="">
+            <%= f.label :first_name %>
+            <%= f.text_field :first_name %>
+          </div>
+
+          <div class="">
+            <%= f.label :last_name %>
+            <%= f.text_field :last_name %>
+          </div>
+
+          <div class="">
+            <%= f.label :phone_number %>
+            <%= f.telephone_field :phone_number %>
+          </div>
+
+          <div class="">
+            <%= f.label :date_of_birth %>
+            <%= select_year(Date.today, start_year: 1920, end_year: 1998) %>
+            <%= select_month DateTime.now %>
+            <%= select_day DateTime.now  %>
+          </div>
+
+          <div class="signup-button">
+            <%= f.submit 'Submit', class: "signup-button" %>
+          </div>
+
+      </div>
+    <% end %>
+    </div>
+
   <% end %>
   </div>
 

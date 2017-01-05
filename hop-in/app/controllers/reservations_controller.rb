@@ -9,6 +9,7 @@ before_action :current_user
 	def new
 		@reservation = Reservation.new
 		@vehicle = Vehicle.find(params[:vehicle_id])
+		@user = User.new
 	end
 
 	def show
