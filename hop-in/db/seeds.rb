@@ -23,10 +23,10 @@ Vehicle.create(vehicle_year: 2020, vehicle_make: 'Mercedes', vehicle_model: 'F 0
 
 Reservation.create(passenger_id: 2, vehicle_id: 1, start_time: 1.day.from_now, start_location: '220 King St', date: '20161212', destination: 'New York', seats: 2)
 
-Availability.create(start_time: '1100', end_time: '1800', weekday: 'Monday', vehicle_id: 1)
-Availability.create(start_time: '1100', end_time: '1800', weekday: 'Tuesday', vehicle_id: 1)
-Availability.create(start_time: '1100', end_time: '1800', weekday: 'Wednesday', vehicle_id: 1)
-Availability.create(start_time: '1100', end_time: '1800', weekday: 'Thursday', vehicle_id: 1)
-Availability.create(start_time: '1100', end_time: '1800', weekday: 'Friday', vehicle_id: 1)
-Availability.create(start_time: '1100', end_time: '1800', weekday: 'Saturday', vehicle_id: 1)
-Availability.create(start_time: '1100', end_time: '1800', weekday: 'Sunday', vehicle_id: 1)
+Availability.create(start_time: 1100, end_time: 1800, weekday: 'Monday', vehicle_id: 1)
+Availability.create(start_time: 1100, end_time: 1800, weekday: 'Tuesday', vehicle_id: 1)
+Availability.create(start_time: 1100, end_time: 1800, weekday: 'Wednesday', vehicle_id: 1)
+Availability.create(start_time: 1100, end_time: 1800, weekday: 'Thursday', vehicle_id: 1)
+Availability.create(start_time: 1100, end_time: 1800, weekday: 'Friday', vehicle_id: 1)
+Availability.create(start_time: 1100, end_time: 1800, weekday: 'Saturday', vehicle_id: 1)
+Availability.create(start_time: 1100, end_time: 1800, weekday: 'Sunday', vehicle_id: 1)
