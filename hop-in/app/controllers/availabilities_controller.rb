@@ -37,7 +37,7 @@ class AvailabilitiesController < ApplicationController
     @availability.vehicle = Vehicle.find(params[:vehicle_id])
 
 		if @availability.update_attributes(availability_params)
-      redirect_to vehicle_availabilities_path(@vehicle, @availability)
+      redirect_to vehicle_availabilities_path(@vehicle, @availabilities)
 		else
 			render :edit
 		end
