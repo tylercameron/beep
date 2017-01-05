@@ -5,13 +5,25 @@
 	<body>
 		<header class="nav-bar">
 			<h1 class="beep-title"><%= link_to 'Beep', new_user_path %></h1>
+			<% if current_user %>
 			<ul class="nav-links">
 				<div class="dropdown">
 					<i class="fa fa-bars" id="drop-menu-icon" aria-hidden="true"></i>
 					<div class="dropdown-contents">
-						<a href="/vehicles">Vehicles</a>
+
 						<a href="/user">Profile</a>
-						<a href="/vehicles/new">Add a Vehicle</a>
+            <a href="/vehicles">Make a Reservation</a>
+            <a href="/vehicles/new">Share Your Vehicle</a>
+            <%else%>
+						<ul class="nav-links">
+							<div class="dropdown">
+								<i class="fa fa-bars" id="drop-menu-icon" aria-hidden="true"></i>
+								<div class="dropdown-contents">
+						<a href="">About Us</a>
+						<a href="/vehicles">Search</a>
+						<a href="/vehicles/new">Perks</a>
+						<a href="">Contact Us</a>
+					<%end%>
 					</div>
 			  </div>
 				<% if current_user %>
