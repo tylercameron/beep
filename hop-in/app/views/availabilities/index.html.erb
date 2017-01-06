@@ -1,15 +1,14 @@
 <main>
   <p><%= @vehicle.vehicle_year %> <%= @vehicle.vehicle_make %> <%= @vehicle.vehicle_model %></p>
-
   <div class="availabilities-container">
-    <% for availability in 1..7 %>
+    <% for availability in 0..6 %>
       <div class="weekday-time">
-        <%= @availabilities.find_by(id: availability).weekday %>
-        <%= @availabilities.find_by(id: availability).start_time %>
-        <%= @availabilities.find_by(id: availability).end_time %>
+        <%= @availabilities.find_by(id: @vehicle.availabilities.ids[availability]).weekday %>
+        <%= @availabilities.find_by(id: @vehicle.availabilities.ids[availability]).start_time %>
+        <%= @availabilities.find_by(id: @vehicle.availabilities.ids[availability]).end_time %>
 
-        <%= link_to "Edit Availability", edit_vehicle_availability_path(@vehicle, @availabilities.find_by(id: availability)) %>
-        <%= link_to "Delete Availability", vehicle_availability_path(@vehicle, @availabilities.find_by(id: availability)), method: :delete %>
+        <%= link_to "Edit Availability", edit_vehicle_availability_path(@vehicle, @availabilities.find_by(id: @vehicle.availabilities.ids[availability])) %>
+        <%= link_to "Delete Availability", vehicle_availability_path(@vehicle, @availabilities.find_by(id: @vehicle.availabilities.ids[availability])), method: :delete %>
       </div><br>
     <% end %>
   </div>
