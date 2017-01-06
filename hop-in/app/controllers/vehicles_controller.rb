@@ -22,6 +22,13 @@ class VehiclesController < ApplicationController
 		@vehicle.owner_id = current_user.id
 
 		if @vehicle.save
+      Availability.create(start_time: 0, end_time: 0, weekday: 'Monday', vehicle_id: @vehicle.id)
+      Availability.create(start_time: 0, end_time: 0, weekday: 'Tuesday', vehicle_id: @vehicle.id)
+      Availability.create(start_time: 0, end_time: 0, weekday: 'Wednesday', vehicle_id: @vehicle.id)
+      Availability.create(start_time: 0, end_time: 0, weekday: 'Thursday', vehicle_id: @vehicle.id)
+      Availability.create(start_time: 0, end_time: 0, weekday: 'Friday', vehicle_id: @vehicle.id)
+      Availability.create(start_time: 0, end_time: 0, weekday: 'Saturday', vehicle_id: @vehicle.id)
+      Availability.create(start_time: 0, end_time: 0, weekday: 'Sunday', vehicle_id: @vehicle.id)
 			redirect_to vehicle_url(@vehicle)
 		else
 			render :new
