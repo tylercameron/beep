@@ -4,7 +4,7 @@ class Reservation < ApplicationRecord
 	belongs_to :passenger, class_name: 'User'
 
 	validates_presence_of :start_time, :end_time, :start_location, :destination, :seats
-  validate :not_past_date, :capacity, :not_booked, :available
+  validate :not_past_date, :capacity, :not_booked, :available_check
 
   def not_past_date
     if self.start_time < DateTime.now
@@ -32,15 +32,29 @@ class Reservation < ApplicationRecord
     end
   end
 
-  def available
+  def available_check
+    if available? == false
+      errors.add(:start_time, "Vehicle not available at this time")
+    end
+  end
+
+  def available?
     self.vehicle.availabilities.each do |availability|
-      if self.start_time.strftime("%A") == availability.weekday && self.end_time.strftime("%A") == availability.weekday
-        if self.start_time.strftime("%k%M").to_i >= availability.start_time || self.end_time.strftime("%k%M").to_i <= availability.end_time
-          return true
+      # binding pry
+      if self.start_time.strftime("%A") == availability.weekday && self.start_time.strftime("%A") == self.end_time.strftime("%A")
+        # checking reservation weekday is same as availability weekday && reservation is on same day
+        # return true
+
+        if self.start_time.strftime("%k%M").to_i < availability.start_time || self.end_time.strftime("%k%M").to_i > availability.end_time
+          #checking reservation start is earlier than availability start && reservation end is later than availability end
+# binding pry
+          return false
         end
-      else
-        return false
+      # else
+        # binding pry
+# return false
       end
+
     end
   end
 end
