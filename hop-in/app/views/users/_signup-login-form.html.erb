@@ -1,34 +1,29 @@
-<div class="login-signin">
+<div class="">
 
-<div class="login-signup-btns">
-  <h2 class='login-btn'>Login</h2> <h2 class='signup-btn'>Signup</h2>
-</div>
+<!-- <div class="">
+  <h2 class=''></h2> <h2 class=''></h2>
+</div> -->
 
-<div class="signup-container">
+<div class="">
 
 <h1>Sign Up</h1>
 
-<%= form_for @user do |f| %>
-  <%if @user.errors.any? %>
+<%= form_for current_user do |f| %>
+  <%if current_user.errors.any? %>
     <div class="error_messages">
       <h2>Entry is invalid</h2>
       <ul>
-        <% @user.errors.full_messages.each do |message| %>
+        <% current_user.errors.full_messages.each do |message| %>
           <li> <%= message %></li>
         <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div class="account-info">
+  <div class="">
     <h2>Account Info</h2>
 
-    <button type="button" class="close">x</button>
-
-    <div class="">
-      <%= f.label :email %>
-      <%= f.email_field :email %>
-    </div>
+    <!-- <button type="button" class="close">x</button> -->
 
     <div class="">
       <%= f.label :password %>
@@ -41,8 +36,7 @@
     </div>
   </div>
 
-
-  <div class="personal-info">
+  <div class="">
 
     <h2>Personal Information</h2>
 
@@ -76,7 +70,7 @@
 <% end %>
 </div>
 
-<div class="login">
+<!-- <div class="">
 
   <h1>Login</h1>
 
@@ -92,9 +86,9 @@
     <%= submit_tag "Login", class: "login-button" %>
   </div>
 </div>
-<% end %>
+<% end %> -->
 
-<div class="homepage-search">
+<!-- <div class="homepage-search">
 	<%= form_tag vehicles_path, method: :get, class: "navbar-form navbar-left search-form" do %>
 	  <%= text_field_tag(
 	      :search,
@@ -108,7 +102,7 @@
   <% if @vehicles.present? %>
     <% render :vehicles %>
   <% end %>
-</div>
+</div> -->
 
 </div>
 

@@ -24,12 +24,14 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = User.find_by(params[:id])
+    @user = current_user
   end
 
   def update
-    @user = User.find(params[:id])
+
+    @user = current_user
     if @user.update_attributes(user_params)
+       @user.date_of_birth = Date.new(params[:date][:year].to_i, params[:date][:month].to_i,params[:date][:day].to_i)
       redirect_to user_url(@user)
     else
       render :edit
