@@ -1,0 +1,115 @@
+<!-- <%= link_to "Back to Reservation", new_vehicle_reservation_url%>
+ -->
+<% if current_user %>
+<div class="reserve">
+  <div class="reserve-container">
+    <h1>When do you need a ride?</h1>
+
+      <div class="">
+        <%= render 'form' %>
+      </div>
+  </div>
+
+</div>
+
+<% else %>
+
+<div class="reserve">
+
+
+  <div class="reserve-con">
+
+    <p> Please Signup or Login to make a reservation</p>
+
+  <div class="usersignup-container">
+
+  <div class="login-reserv">
+
+    <h1>Login</h1>
+    <%= form_tag sessions_path do%>
+    <div class="">
+      <%= label_tag :email %><%= text_field_tag :email, params[:email] %>
+    </div>
+    <div class="">
+      <%= label_tag :password %><%= password_field_tag :password %>
+    </div>
+    <div class="login-button">
+      <%= submit_tag "Login", class: "login-button" %>
+    </div>
+  <%end%>
+  </div>
+
+  <div class="signup-reserv">
+
+    <h1>Sign Up</h1>
+
+    <%= form_for(@user, url: user_path) do |f| %>
+      <%if @user.errors.any? %>
+        <div class="error_messages">
+          <h2>Entry is invalid</h2>
+          <ul>
+            <% @user.errors.full_messages.each do |message| %>
+              <li> <%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="">
+
+        <div class="">
+          <%= f.label :email %>
+          <%= f.email_field :email %>
+        </div>
+
+        <div class="">
+          <%= f.label :password %>
+          <%= f.password_field :password %>
+        </div>
+
+        <div class="">
+          <%= f.label :password_confirmation %>
+          <%= f.password_field :password_confirmation %>
+        </div>
+      </div>
+
+
+      <div class="">
+
+          <div class="">
+            <%= f.label :first_name %>
+            <%= f.text_field :first_name %>
+          </div>
+
+          <div class="">
+            <%= f.label :last_name %>
+            <%= f.text_field :last_name %>
+          </div>
+
+          <div class="">
+            <%= f.label :phone_number %>
+            <%= f.telephone_field :phone_number %>
+          </div>
+
+          <div class="">
+            <%= f.label :date_of_birth %>
+            <%= select_year(Date.today, start_year: 1920, end_year: 1998) %>
+            <%= select_month DateTime.now %>
+            <%= select_day DateTime.now  %>
+          </div>
+
+          <div class="signup-button">
+            <%= f.submit 'Submit', class: "signup-button" %>
+          </div>
+
+      </div>
+    <% end %>
+    </div>
+  </div>
+ </div>
+  </div>
+
+
+</div>
+
+<% end %>

@@ -1,0 +1,48 @@
+<div class="profile-page">
+
+<% if current_user %>
+
+  <div class="profile-details">
+
+    <section class="user-info">
+      <h2>Personal Info</h2>
+      <h3>Name: <%= current_user.first_name %> <%= current_user.last_name %></h3>
+      <h3>Phone Number: <%= current_user.phone_number %></h3>
+      <h3>Email: <%= current_user.email %></h3>
+      <h3>Birthdate: <%= current_user.date_of_birth.strftime("%A %B %d, %Y") %></h3>
+      <% binding pry %>
+      <p id="show-links"><%= link_to 'Edit Profile', edit_user_path %></p>
+    </section>
+
+    <% if current_user.owned_vehicles.any? do |vehicle| %>
+      <section class="reservation-vehicle-show">
+        <h2>Your Vehicle</h2>
+        <li><h3><%= vehicle.vehicle_year %> <%= vehicle.vehicle_make %> <%= vehicle.vehicle_model %></h3></li>
+        <p id="show-links"><%= link_to 'Vehicle Page', vehicle_path(vehicle) %></p>
+        <p id="show-links"><%= link_to 'Edit Vehicle', edit_vehicle_path(vehicle) %></p>
+        <% end %>
+      </section>
+    <% end %>
+  </div>
+
+
+
+  <% current_user.trips.each do |trip| %>
+<div class="reserv-container">
+    <div class="reservations-vehicle-details">
+      <section class="reservation-profile">
+        <h2 id="profile-heading">Reservations</h2>
+        <h3>Date: <%= trip.start_time.strftime("%A %B %d, %Y") %></h3><h3>Time: <%= trip.start_time.in_time_zone('Eastern Time (US & Canada)').strftime("%l:%M %p") %></h3>
+        <h3>From: <%= trip.start_location %></h3>
+        <h3>To: <%= trip.destination %></h3>
+        <h3>Number of Passengers: <%= trip.seats %></h3>
+        <p id="show-links"><%= link_to 'Edit Reservation', edit_vehicle_reservation_path(trip.vehicle_id, trip) %></p>
+        <p id="show-links"><%= link_to 'View Reservation', vehicle_reservation_path(trip.vehicle_id, trip) %></p>
+      </section>
+    </div>
+
+  <% end %>
+</div>
+<% end %>
+
+</div>

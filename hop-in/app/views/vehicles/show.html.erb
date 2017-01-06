@@ -1,0 +1,70 @@
+<h1 class="owner-title"><%= @vehicle.owner.first_name %>'s Ride</h1>
+<article class="vehicle-details">
+  <%= image_tag "#{@vehicle.image}" %>
+  <div class="vehicle-descrip">
+
+    <h2><%= @vehicle.vehicle_year %> <%= @vehicle.vehicle_make %> <%= @vehicle.vehicle_model %></h2>
+  	<h3>Seats: <%= @vehicle.seats %></h3>
+  	<h3>Address: <%= @vehicle.street_address %></h3>
+  	<h3>City: <%= @vehicle.city %></h3>
+  	<h3>Province: <%= @vehicle.province %></h3>
+  	<h3>Postal Code: <%= @vehicle.postal_code %></h3>
+    <% if current_user != @vehicle.owner %>
+      <p class="res-btn"><%= link_to 'Make a Reservation', new_vehicle_reservation_path(@vehicle) %></p>
+    <% end %>
+    <p class="map-btn">See Car on Map</p>
+  </div>
+</article>
+
+<section class="vehicle-reservations">
+  <% if current_user == @vehicle.owner %>
+    <h2>Your Vehicle's Reservations</h2>
+    <% @vehicle.reservations.each do |reservation| %>
+    <div class="vehicle-container">
+      <ul>
+        <li>Date: <%= reservation.start_time.strftime("%A %B %d, %Y") %> : <%= reservation.start_time.in_time_zone('Eastern Time (US & Canada)').strftime("%l:%M %p") %></li>
+        <li>From: <%= reservation.start_location %></li>
+        <li>To: <%= reservation.destination %></li>
+      </ul>
+    <% end %>
+    <p><%= link_to 'Edit Vehicle Details', edit_vehicle_path(@vehicle) %></p>
+    <p><%= link_to 'Delete Vehicle', vehicle_path(@vehicle), method: :delete %></p>
+    </div>
+  <% end %>
+</section>
+
+  <div class="map-div">
+    <div id="map"></div>
+
+  	<script>
+  		function initMap() {
+  			var map = new google.maps.Map(document.getElementById('map'), {
+  				zoom: 16,
+          scrollwheel: false,
+          mapTypeControl: true,
+          mapTypeControlOptions: {
+            style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
+          }
+  			});
+
+  			var geocoder = new google.maps.Geocoder();
+  			var vehicle = "<%= @vehicle.street_address %>, <%= @vehicle.city %>, <%= @vehicle.province %>";
+
+  			geocoder.geocode({'address': vehicle}, function(results, status) {
+  				if (status === 'OK') {
+  					map.setCenter(results[0].geometry.location);
+  					var marker = new google.maps.Marker({
+  						map: map,
+  						position: results[0].geometry.location
+  						});
+  				} else {
+  					alert('Geocode was not successful for the following reason: ' + status);
+  				}
+  			});
+  		}
+  	</script>
+  </div>
+
+<script async defer
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-Sq6ZBy9oC33y1vxqvw6p42Yw-UUfwws&callback=initMap">
+</script>

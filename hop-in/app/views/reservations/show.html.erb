@@ -1,0 +1,51 @@
+<div class="reserve" id="reserve-show-page">
+  <div class="reserve-container" id="reserve-show-container">
+    <h2>Your Reservation</h2>
+
+    <p>Date: <%= @reservation.start_time.strftime("%A %B %d, %Y") %></p>
+    <p>Start Time: <%= @reservation.start_time.in_time_zone('Eastern Time (US & Canada)').strftime("%l:%M %p") %></p>
+    <p>Start Location: <span id="start-address"><%= @reservation.start_location %></span></p>
+    <p>Destination: <span id="end-address"><%= @reservation.destination %></span></p>
+    <p>Number of Passengers: <%= @reservation.seats %></p>
+
+    <div class="res-btn">
+      <%= link_to "Edit Reservation", edit_vehicle_reservation_path(@vehicle, @reservation) %>
+      <%= link_to "Delete Reservation", vehicle_reservation_path(@vehicle, @reservation), method: :delete %>
+    </div>
+  </div>
+</div>
+
+<div id="res-map"></div>
+
+<script>
+  function initMap() {
+    var directionsDisplay = new google.maps.DirectionsRenderer;
+    var directionsService = new google.maps.DirectionsService;
+    var map = new google.maps.Map(document.getElementById('res-map'), {
+      zoom: 7,
+      scrollwheel: false,
+    });
+    directionsDisplay.setMap(map);
+    calculateAndDisplayRoute(directionsService, directionsDisplay);
+  }
+
+  function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+    var start = document.getElementById('start-address').innerHTML;
+    var end = document.getElementById('end-address').innerHTML;
+    directionsService.route({
+      origin: start,
+      destination: end,
+      travelMode: 'DRIVING'
+    }, function(response, status) {
+      if (status === 'OK') {
+        directionsDisplay.setDirections(response);
+      } else {
+        window.alert('Directions request failed due to ' + status);
+      }
+    });
+  }
+</script>
+
+<script async defer
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-Sq6ZBy9oC33y1vxqvw6p42Yw-UUfwws&callback=initMap">
+</script>

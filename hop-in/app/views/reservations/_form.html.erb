@@ -1,0 +1,50 @@
+<% if @reservation.errors.any? %>
+  <div>
+    <h2><%= pluralize(@reservation.errors.count, "error") %></h2>
+
+    <ul>
+      <% @reservation.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<div class="reserve-form">
+<%= form_for [@vehicle, @reservation] do |f| %>
+<% f.hidden_field :vehicle_id, value: @vehicle.id %>
+
+  <div class="reserve-form-input">
+    <%= f.label "Date" %>
+    <%= select_month DateTime.now %>
+    <%= select_day DateTime.now  %>
+    <%= select_year DateTime.now %>
+  </div>
+
+  <div class="reserve-form-input">
+    <%= f.label "Start Time" %>
+    <%= select_hour DateTime.now %>
+    <%= select_minute DateTime.now  %>
+  </div>
+
+  <div class="reserve-form-input">
+    <%= f.label "Start Location:" %><br>
+    <%= f.text_field :start_location %>
+  </div>
+
+  <div class="reserve-form-input">
+    <%= f.label "Destination:" %><br>
+    <%= f.text_field :destination %>
+  </div>
+
+  <div class="reserve-form-input">
+    <%= f.label "Number of Passengers:" %><br>
+    <%= f.number_field :seats %>
+  </div>
+
+  <div class="button">
+    <%= f.submit %>
+  </div>
+
+<% end %>
+</div>
