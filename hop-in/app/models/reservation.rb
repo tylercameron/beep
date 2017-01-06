@@ -40,21 +40,14 @@ class Reservation < ApplicationRecord
 
   def available?
     self.vehicle.availabilities.each do |availability|
-      # binding pry
       if self.start_time.strftime("%A") == availability.weekday && self.start_time.strftime("%A") == self.end_time.strftime("%A")
         # checking reservation weekday is same as availability weekday && reservation is on same day
-        # return true
-
         if self.start_time.strftime("%k%M").to_i < availability.start_time || self.end_time.strftime("%k%M").to_i > availability.end_time
           #checking reservation start is earlier than availability start && reservation end is later than availability end
-# binding pry
           return false
         end
-      # else
-        # binding pry
-# return false
       end
-
     end
   end
+  
 end
