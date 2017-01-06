@@ -8,12 +8,12 @@
 
 <h1>Sign Up</h1>
 
-<%= form_for @user do |f| %>
-  <%if @user.errors.any? %>
+<%= form_for current_user do |f| %>
+  <%if current_user.errors.any? %>
     <div class="error_messages">
       <h2>Entry is invalid</h2>
       <ul>
-        <% @user.errors.full_messages.each do |message| %>
+        <% current_user.errors.full_messages.each do |message| %>
           <li> <%= message %></li>
         <% end %>
       </ul>
