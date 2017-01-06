@@ -52,3 +52,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Google maps
 gem 'geocoder'
+
+#Ruby
+ruby '2.3.1'

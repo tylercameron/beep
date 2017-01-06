@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    @user.date_of_birth = Date.new(params[:date][:year].to_i, params[:date][:month].to_i,params[:date][:day].to_i)
+    @user.date_of_birth = Date.new(params[:date][:year].to_i, params[:date][:month].to_i,params[:date][:day].to_i).in_time_zone('Eastern Time (US & Canada)')
     if @user.save
       session[:user_id] = @user.id
       redirect_to vehicles_url
