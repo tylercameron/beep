@@ -2,9 +2,16 @@
 // // They will automatically be included in application.css.
 // // You can use Sass (SCSS) here: http://sass-lang.com/
 //
-// .signup-container, .login{
-//   display: none;
-// }
+.homepage-login-container {
+  background-image: url(http://www.c4dcafe.com/ipb/uploads/monthly_2015_07/Car-Light-Trails-Traffic-in-Urban-City.jpg.29ad68d1d226d391fe611f894f33b0cc.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 600px;
+}
+
+.signup-container, .login-container {
+  display: none;
+}
 //
 //
 // .nav-login a {
@@ -16,14 +23,12 @@
 //   color: darkgrey;
 // }
 //
-body {
+// body {
 //   /*background-image: url(http://www.vaterrarc.com/Content/Images/Products/landing/bg_road2.jpg);
-    background-image: url(http://www.c4dcafe.com/ipb/uploads/monthly_2015_07/Car-Light-Trails-Traffic-in-Urban-City.jpg.29ad68d1d226d391fe611f894f33b0cc.jpg);
-  background-repeat: no-repeat;
-  background-size: 100%;
+
 //   color: grey;
 //   text-align: center;
-}
+// }
 //
 // footer {
 //     background: white;
@@ -62,7 +67,7 @@ body {
 //   top: 32px;
 //   box-shadow: 0px 8px 16px 0px rgba(0,0,0,2);
 // }
-// .login {
+// .login-container {
 //   border: solid 1px lightgrey;
 //   opacity: 0.5;
 //   color: black;
