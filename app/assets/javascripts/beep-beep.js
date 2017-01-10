@@ -5,7 +5,7 @@ $(document).ready(function() {
     $('.login-btn').fadeOut('fast');
     $('.signup-btn').fadeOut('fast');
     $('.homepage-search').fadeOut('fast');
-    $('.login').fadeIn('slow');
+    $('.login-container').fadeIn('slow');
   });
 
   $('.signup-btn').on('click', function() {
@@ -18,7 +18,7 @@ $(document).ready(function() {
 
   $('.close').on('click', function() {
 
-    $('.login').fadeOut('fast');
+    $('.login-container').fadeOut('fast');
     $('.signup-container').fadeOut('fast');
     $('.login-btn').fadeIn('slow');
     $('.signup-btn').fadeIn('slow');
@@ -28,7 +28,7 @@ $(document).ready(function() {
 
   $('#header-login').on('click', function(eventObject) {
     eventObject.preventDefault();
-      $('.login').fadeIn('slow');
+      $('.login-container').fadeIn('slow');
 
   });
 
