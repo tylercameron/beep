@@ -1,221 +1,221 @@
-// Place all the styles related to the Vehicles controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-li {
-  list-style: none;
-}
-
-#map {
-  width: 80%;
-  margin: auto;
-  margin-top: 30px;
-  height: 400px;
-  background-color: grey;
-  border: 1px solid white;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,2);
-  margin-bottom: 100px;
-}
-
-.map-div {
-  display: none;
-}
-
-.vehicle-link {
-  list-style-type: none;
-  display: inline;
-}
-
-.vehicle-link a{
-  color: #2196F3;
-
-}
-
-.button{
-  padding: 15px;
-}
-
-.vehicle-container {
-    // border: 1px solid;
-    margin: 20px auto;
-    color: #000000;
-    background-color: #ececec;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    opacity: 0.8;
-    width: 700px;
-    height: 170px;
-    position: relative;
-    // background-image: url("http://gas2.org/wp-content/uploads/2015/01/mercedes-benz-f015-luxuryinmotion-ab-1.jpg");
-    // background-size: 100%;
-    // background-position: center;
-    // background-repeat: no-repeat;
-}
-
-.vehicle-container img {
-  width: 100%;
-  height: 300px;
-  position: absolute;
-  left: 0;
-  z-index: 0;
-}
-.vehicle-text {
-  position: relative;
-  z-index: 1;
-}
-
-ul.vehicle-container {
-  box-sizing: border-box;
-  padding: 12px;
-  width: 500px;
-}
-.vehicle-container p {
-  display: inline-block;
-  margin: 10px;
-  box-shadow: 0px 4px 10px 0px black;
-  padding: 10px;
-  cursor: pointer;
-  border: 1px solid;
-  width: 175px;
-  box-sizing: border-box;
-  opacity: 0.6;
-  background-color: #00D486;
-  border-radius: 3px;
-}
-.vehicle-container li {
-  padding: 2px;
-}
-.vehicle-container a {
-  color: black;
-  font-weight: bold;
-}
-.vehicle-search {
-  border-top: solid 2px grey;
-}
-.vehicle-index {
-  overflow: scroll;
-  height: 500px;
-  width: 100%;
-  // background-color: #37393a;
-}
-.vehicle-index h1 {
-  color: grey;
-}
-
-.map-title {
-  color: #2196F3;
-}
-
-.map-btn {
-  display: inline-block;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.02);
-  padding: 10px;
-  cursor: pointer;
-  border: 1px solid;
-  width: 170px;
-  box-sizing: border-box;
-  color: black;
-  margin-top: 0;
-  margin-left: 10px;
-  opacity: 0.6;
-  background-color: #00D486;
-  border-radius: 3px;
-}
-.search-bar {
-  opacity: 0.7;
-  padding-top: 10px;
-}
-.search-bar input#search {
-  width: 240px;
-  height: 20px;
-  text-align: right;
-  font-size: 14px;
-}
-.res-btn a {
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.02);
-  padding: 10px;
-  cursor: pointer;
-  border: 1px solid;
-  width: 125px;
-  box-sizing: border-box;
-  color: black;
-
-  opacity: 0.6;
-  background-color: #00D486;
-  border-radius: 3px;
-}
-.res-btn {
-  display: inline-block;
-
-}
-.vehicle-details {
-  position: relative;
-  color: black;
-  // border: 2px solid black;
-  background-color: #ececec;
-  opacity: 0.8;
-  margin: auto;
-  width: 700px;
-
-  // border: 1px solid;
-  margin: 20px auto;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-
-}
-.vehicle-descrip {
-  margin-top: 15px;
-}
-.vehicle-details img {
-  width: 350px;
-  height: 250px;
-  float: left;
-  // border: 2px solid;
-  margin: 5px;
-  margin-top: 15px;
-}
-
-.owner-title {
-  color: black;
-}
-
-.vehicle-reservations {
-  margin-top: 50px;
-  margin-bottom: 70px;
-  border-top: 2px solid black;
-}
-
-.vehicle-reservations h2 {
-  color: #909090;
-}
-
-.vehicle_form {
-  border: 1px solid;
-  padding: 15px;
-  width: 400px;
-  margin: auto;
-  margin-bottom: 70px;
-  background-color: #e6e6e6;
-  color: #636363;
-}
-.vehicle_form .button input {
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.02);
-  padding: 17px;
-  cursor: pointer;
-  border: 1px solid;
-  width: 125px;
-  box-sizing: border-box;
-  color: white;
-  font-family: comfortaa;
-}
-
-.vehicle-form-input input {
-  width: 100%;
-  height: 20px;
-  opacity: 0.8;
-}
-.vehicle-form-input {
-  text-align: left;
-  padding-left: 30px;
-  padding-right: 36px;
-  padding-top: 10px;
-}
-.vehicle-form-input label {
-}
+// // Place all the styles related to the Vehicles controller here.
+// // They will automatically be included in application.css.
+// // You can use Sass (SCSS) here: http://sass-lang.com/
+// li {
+//   list-style: none;
+// }
+//
+// #map {
+//   width: 80%;
+//   margin: auto;
+//   margin-top: 30px;
+//   height: 400px;
+//   background-color: grey;
+//   border: 1px solid white;
+//   box-shadow: 0px 8px 16px 0px rgba(0,0,0,2);
+//   margin-bottom: 100px;
+// }
+//
+// .map-div {
+//   display: none;
+// }
+//
+// .vehicle-link {
+//   list-style-type: none;
+//   display: inline;
+// }
+//
+// .vehicle-link a{
+//   color: #2196F3;
+//
+// }
+//
+// .button{
+//   padding: 15px;
+// }
+//
+// .vehicle-container {
+//     // border: 1px solid;
+//     margin: 20px auto;
+//     color: #000000;
+//     background-color: #ececec;
+//     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+//     opacity: 0.8;
+//     width: 700px;
+//     height: 170px;
+//     position: relative;
+//     // background-image: url("http://gas2.org/wp-content/uploads/2015/01/mercedes-benz-f015-luxuryinmotion-ab-1.jpg");
+//     // background-size: 100%;
+//     // background-position: center;
+//     // background-repeat: no-repeat;
+// }
+//
+// .vehicle-container img {
+//   width: 100%;
+//   height: 300px;
+//   position: absolute;
+//   left: 0;
+//   z-index: 0;
+// }
+// .vehicle-text {
+//   position: relative;
+//   z-index: 1;
+// }
+//
+// ul.vehicle-container {
+//   box-sizing: border-box;
+//   padding: 12px;
+//   width: 500px;
+// }
+// .vehicle-container p {
+//   display: inline-block;
+//   margin: 10px;
+//   box-shadow: 0px 4px 10px 0px black;
+//   padding: 10px;
+//   cursor: pointer;
+//   border: 1px solid;
+//   width: 175px;
+//   box-sizing: border-box;
+//   opacity: 0.6;
+//   background-color: #00D486;
+//   border-radius: 3px;
+// }
+// .vehicle-container li {
+//   padding: 2px;
+// }
+// .vehicle-container a {
+//   color: black;
+//   font-weight: bold;
+// }
+// .vehicle-search {
+//   border-top: solid 2px grey;
+// }
+// .vehicle-index {
+//   overflow: scroll;
+//   height: 500px;
+//   width: 100%;
+//   // background-color: #37393a;
+// }
+// .vehicle-index h1 {
+//   color: grey;
+// }
+//
+// .map-title {
+//   color: #2196F3;
+// }
+//
+// .map-btn {
+//   display: inline-block;
+//   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.02);
+//   padding: 10px;
+//   cursor: pointer;
+//   border: 1px solid;
+//   width: 170px;
+//   box-sizing: border-box;
+//   color: black;
+//   margin-top: 0;
+//   margin-left: 10px;
+//   opacity: 0.6;
+//   background-color: #00D486;
+//   border-radius: 3px;
+// }
+// .search-bar {
+//   opacity: 0.7;
+//   padding-top: 10px;
+// }
+// .search-bar input#search {
+//   width: 240px;
+//   height: 20px;
+//   text-align: right;
+//   font-size: 14px;
+// }
+// .res-btn a {
+//   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.02);
+//   padding: 10px;
+//   cursor: pointer;
+//   border: 1px solid;
+//   width: 125px;
+//   box-sizing: border-box;
+//   color: black;
+//
+//   opacity: 0.6;
+//   background-color: #00D486;
+//   border-radius: 3px;
+// }
+// .res-btn {
+//   display: inline-block;
+//
+// }
+// .vehicle-details {
+//   position: relative;
+//   color: black;
+//   // border: 2px solid black;
+//   background-color: #ececec;
+//   opacity: 0.8;
+//   margin: auto;
+//   width: 700px;
+//
+//   // border: 1px solid;
+//   margin: 20px auto;
+//   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+//
+// }
+// .vehicle-descrip {
+//   margin-top: 15px;
+// }
+// .vehicle-details img {
+//   width: 350px;
+//   height: 250px;
+//   float: left;
+//   // border: 2px solid;
+//   margin: 5px;
+//   margin-top: 15px;
+// }
+//
+// .owner-title {
+//   color: black;
+// }
+//
+// .vehicle-reservations {
+//   margin-top: 50px;
+//   margin-bottom: 70px;
+//   border-top: 2px solid black;
+// }
+//
+// .vehicle-reservations h2 {
+//   color: #909090;
+// }
+//
+// .vehicle_form {
+//   border: 1px solid;
+//   padding: 15px;
+//   width: 400px;
+//   margin: auto;
+//   margin-bottom: 70px;
+//   background-color: #e6e6e6;
+//   color: #636363;
+// }
+// .vehicle_form .button input {
+//   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.02);
+//   padding: 17px;
+//   cursor: pointer;
+//   border: 1px solid;
+//   width: 125px;
+//   box-sizing: border-box;
+//   color: white;
+//   font-family: comfortaa;
+// }
+//
+// .vehicle-form-input input {
+//   width: 100%;
+//   height: 20px;
+//   opacity: 0.8;
+// }
+// .vehicle-form-input {
+//   text-align: left;
+//   padding-left: 30px;
+//   padding-right: 36px;
+//   padding-top: 10px;
+// }
+// .vehicle-form-input label {
+// }
