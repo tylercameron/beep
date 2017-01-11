@@ -2,40 +2,40 @@ $(document).ready(function() {
 
   $('.login-btn').on('click', function() {
 
-    $('.login-btn').fadeOut('fast');
-    $('.signup-btn').fadeOut('fast');
-    $('.homepage-search').fadeOut('fast');
-    $('.login-container').fadeIn('slow');
+    $('.login-btn').hide();
+    $('.signup-btn').hide();
+    $('.homepage-search').hide();
+    $('.login-container').show();
   });
 
   $('.signup-btn').on('click', function() {
 
-    $('.login-btn').fadeOut('fast');
-    $('.signup-btn').fadeOut('fast');
-    $('.homepage-search').fadeOut('fast');
-    $('.signup-container').fadeIn('slow');
+    $('.login-btn').hide();
+    $('.signup-btn').hide();
+    $('.homepage-search').hide();
+    $('.signup-container').show();
   });
 
   $('.close-button').on('click', function() {
 
-    $('.login-container').fadeOut('fast');
-    $('.signup-container').fadeOut('fast');
-    $('.login-btn').fadeIn('slow');
-    $('.signup-btn').fadeIn('slow');
-    $('.homepage-search').fadeIn('slow');
+    $('.login-container').hide();
+    $('.signup-container').hide();
+    $('.login-btn').show();
+    $('.signup-btn').show();
+    $('.homepage-search').show();
 
   });
 
   $('#header-login').on('click', function(eventObject) {
     eventObject.preventDefault();
-      $('.login-container').fadeIn('slow');
+      $('.login-container').show();
 
   });
 
   $('.map-btn').on('click', function() {
-    $('.map-div').fadeIn('slow');
-    $('#map').fadeIn('slow');
-    $('.map-btn').fadeOut('fast');
+    $('.map-div').show();
+    $('#map').show();
+    $('.map-btn').hide();
     initMap();
   });
 
