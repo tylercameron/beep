@@ -198,16 +198,18 @@ p {
 }
 
 i#main-drop-menu-icon {
-    background-color: white;
-    color: purple;
-    border-radius: 5px;
-    padding: 12px 17px;
+    background-color: black;
+    color: white;
+    border-radius: 9px;
+    padding: 12px 4px;
     margin: 10px;
+    border: 1px solid;
+    text-align: center;
 }
 
 .main-nav-bar {
-  background-color: white;
-  height: 50px;
+  background-color: black;
+  height: 100px;
   width: 100%;
 }
 
