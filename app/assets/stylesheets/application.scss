@@ -71,6 +71,10 @@ p {
   padding: 10px;
 }
 
+header {
+  height: 75px;
+}
+
 .nav-bar {
   color: purple;
   width: 100%;
@@ -82,7 +86,7 @@ p {
 .beep-title a {
   width: 30%;
   float: left;
-  color: purple;
+  color: white;
   font-size: 36pt;
   padding-left: 20px;
   text-align: left;
@@ -162,9 +166,9 @@ p {
   background-color: none;
 }*/
 
-#logo-icon a{
-  color: purple;
-}
+// #logo-icon a{
+//   color: purple;
+// }
 
 #main-drop-menu-icon {
   // color: grey;
@@ -209,7 +213,7 @@ i#main-drop-menu-icon {
 
 .main-nav-bar {
   background-color: black;
-  height: 100px;
+  height: 75px;
   width: 100%;
 }
 

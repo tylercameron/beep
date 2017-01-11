@@ -74,33 +74,38 @@
 //       border-radius: 10px;
 //   }
 //
+.login-signup-btns {
+  position: relative;
+  top: 140px;
+  width: 100%;
+  text-align: center
+}
+
 h2.login-btn, .signup-btn {
   color: white;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.02);
     padding: 17px;
     cursor: pointer;
-    border: 1px solid;``
-    width: 125px;
+    // border: 1px solid;
+    width: 175px;
+    height: 60px;
     box-sizing: border-box;
     position: relative;
-    top: 240px;
+    left: 15%;
+    // top: 240px;
+    background-color: $beep_colour;
 }
 
 h2.login-btn {
-  float: right;
-  right: 39%;
-
-
-  // left: 10px;
-
+  // float: right;
+  // right: 39%;
+  border-bottom: 1px solid;
+  border-top: 4px solid $beep_accent;
 }
 
-
-
 h2.signup-btn {
-    float: left;
-    left: 39%;
-    // right: 10px;
+  // float: left;
+  // left: 39%;
 
 }
 //
@@ -110,20 +115,16 @@ h2.signup-btn {
 //     color: lightgrey;
 // }
 input#search.homepage-form-control {
-    height: 45px;
-    width: 70%;
-    border: 1px solid black;
-    font-family: Comfortaa;
-    font-size: 16px;
-    opacity: 0.8;
-    background: black;
-    padding: 5px;
-    text-align: center;
-    color: white;
-}
-
-
-input[type="text"] {
+  height: 45px;
+  width: 70%;
+  border: 1px solid black;
+  font-family: Comfortaa;
+  font-size: 20px;
+  opacity: 0.9;
+  background: black;
+  padding: 5px;
+  text-align: center;
+  color: white;
 }
 
 .btn-btn-primary {
