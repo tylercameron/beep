@@ -79,7 +79,7 @@ h2.login-btn, .signup-btn {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.02);
     padding: 17px;
     cursor: pointer;
-    border: 1px solid;``
+    border: 1px solid;
     width: 125px;
     box-sizing: border-box;
     position: relative;
@@ -158,6 +158,13 @@ button.close-button {
     text-align: center;
     position: relative;
 
+}
+
+#slogan, #about, #contact{
+  font-weight: bold;
+  font-size: 32pt;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 // // ============== USER SHOW PAGE ==================
 //
