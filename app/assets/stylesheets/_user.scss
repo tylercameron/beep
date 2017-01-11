@@ -114,18 +114,24 @@ h2.signup-btn {
 //     font-family: sans-serif;
 //     color: lightgrey;
 // }
-input#search.homepage-form-control {
+input#search.homepage-form-control{
+  border: 1px solid black;
+  background: black;
+  color: white;
+}
+
+input#search.homepage-form-control, input#search.form-control {
   height: 45px;
   width: 70%;
-  border: 1px solid black;
   font-family: Comfortaa;
   font-size: 20px;
   opacity: 0.9;
-  background: black;
   padding: 5px;
   text-align: center;
-  color: white;
+
 }
+
+
 
 .btn-btn-primary {
   display: none;
