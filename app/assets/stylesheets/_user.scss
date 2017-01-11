@@ -169,7 +169,23 @@ button.close-button {
 }
 
 #about-container {
-  background-color: yellow;
+  // background-color: yellow;
+  height: 500px;
+}
+
+.about-image {
+  width: 40%;
+  float: left;
+
+}
+
+.about-image img {
+  width: 100%;
+}
+
+.about-content {
+  float: right;
+  width: 50%;
 }
 
 #contact-container {
