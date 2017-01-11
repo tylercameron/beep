@@ -1,3 +1,5 @@
+@import "variables", "user";
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -37,6 +39,7 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
+  font-family: 'Comfortaa', cursive;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -64,9 +67,12 @@ table {
 }
 
 /*/// STYLING BELOW ///*/
+p {
+  padding: 10px;
+}
 
 .nav-bar {
-  color: grey;
+  color: purple;
   width: 100%;
   box-sizing: border-box;
   margin: 0;
@@ -76,7 +82,7 @@ table {
 .beep-title a {
   width: 30%;
   float: left;
-  color: grey;
+  color: purple;
   font-size: 36pt;
   padding-left: 20px;
   text-align: left;
@@ -89,7 +95,7 @@ table {
   width: 70%;
   font-size: 20px;
   float: right;
-  color: grey;
+  color: purple;
   position: relative;
   margin: 0;
   padding: 0;
@@ -114,7 +120,7 @@ table {
   font-size: 30px;
   height: 100%;
   padding-bottom: 20px;
-  color: grey;
+  color: purple;
 }
 
 .dropdown{
@@ -157,20 +163,20 @@ table {
 }*/
 
 #logo-icon a{
-  color: grey;
+  color: purple;
 }
 
 #main-drop-menu-icon {
-  color: grey;
+  // color: grey;
   float: right;
   width: 50px;
   margin: 0;
   text-align: right;
-  padding-right: 20px;
-  padding-top: 15px;
+  // padding-right: 20px;
+  // padding-top: 15px;
   font-size: 30px;
   height: 100%;
-  padding-bottom: 20px;
+  // padding-bottom: 20px;
 }
 
 #main-drop-menu {
@@ -189,4 +195,30 @@ table {
 #main-drop-menu a:hover {
     background: lightgrey;
     color: black;
+}
+
+i#main-drop-menu-icon {
+    background-color: white;
+    color: purple;
+    border-radius: 5px;
+    padding: 12px 17px;
+    margin: 10px;
+}
+
+.main-nav-bar {
+  background-color: white;
+  height: 50px;
+  width: 100%;
+}
+
+footer {
+  background: white;
+  height: 11px;
+  text-align: center;
+  color: purple;
+  font-family: monospace;
+  padding: 5px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }

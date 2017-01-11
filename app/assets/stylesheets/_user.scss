@@ -1,0 +1,243 @@
+@import "variables";
+// // Place all the styles related to the Users controller here.
+// // They will automatically be included in application.css.
+// // You can use Sass (SCSS) here: http://sass-lang.com/
+//
+.homepage-login-container {
+  background-image: url(http://www.c4dcafe.com/ipb/uploads/monthly_2015_07/Car-Light-Trails-Traffic-in-Urban-City.jpg.29ad68d1d226d391fe611f894f33b0cc.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 600px;
+}
+
+.signup-container, .login-container {
+  display: none;
+  border: solid 1px lightgrey;
+  opacity: 0.9;
+  color: black;
+  background: white;
+  height: auto;
+  margin: auto;
+  position: relative;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,2);
+}
+
+.signup-container {
+  width: 50%;
+  top: 32px;
+}
+
+.login-container {
+  width: 33%;
+  top: 20%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,2);
+  }
+//
+//
+// .nav-login a {
+//   color: grey;
+// }
+//
+// a {
+//   text-decoration: none;
+//   color: darkgrey;
+// }
+//
+//
+
+// .login-signin{
+//   float:left;
+//   clear: both;
+//   position: relative;
+//   overflow: scroll;
+//   width: 100%;
+//   height: 500px;
+//   margin: auto;
+//   background-image: url("http://www.vaterrarc.com/Content/Images/Products/landing/bg_road2.jpg");
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   color: black;
+// }
+//
+
+//
+//   .signup-button, .login-button {
+//       background-color: lighgrey;
+//       padding: 10px;
+//       color: black;
+//       box-shadow: 0px 8px 16px 0px rgba(0,0,0,2);
+//       font-family: comfortaa;
+//       font-size: 16px;
+//       cursor: pointer;
+//       border-color:  lightgrey;
+//       border-radius: 10px;
+//   }
+//
+h2.login-btn, .signup-btn {
+  color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.02);
+    padding: 17px;
+    cursor: pointer;
+    border: 1px solid;
+    width: 125px;
+    box-sizing: border-box;
+    position: relative;
+    top: 240px;
+}
+//
+// h2.login-btn {
+//   float: right;
+//   right: 39%;
+//   // left: 10px;
+//
+// }
+//
+//
+//
+// h2.signup-btn {
+//     float: left;
+//     left: 39%;
+//     // right: 10px;
+//
+// }
+//
+// h1.homepage-heading {
+//     text-align: left;
+//     font-family: sans-serif;
+//     color: lightgrey;
+// }
+// input#search.homepage-form-control {
+//     height: 45px;
+//     width: 70%;
+//     border: 1px solid lightgray;
+//     font-family: Comfortaa;
+//     font-size: 16px;
+//     opacity: 0.4;
+//     background: black;
+//     padding: 5px;
+//     text-align: center;
+//     color: white;
+// }
+//
+//
+// input[type="text"] {
+// }
+//
+// .btn-btn-primary {
+//   display: none;
+//
+// }
+//  //
+//  // {
+//  //    border: 1px solid white;
+//  //    padding: 5px;
+//  //    box-shadow: 0px 8px 16px 0px rgba(0,0,0,2);
+//  //    border-radius: 10px; }
+//
+// form.navbar-form.navbar-left.search-form {
+//     position: relative;
+//     top: 50px;
+// }
+// button.close {
+//     position: absolute;
+//     top: 0.75em;
+//     right: 0.75em;
+//     background: white;
+//     color: black;
+//     border-radius: 4px;
+//     font-size: 10px;
+//     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+//     background-color: lightgrey;
+//     opacity: 0.6;
+// }
+// // ============== USER SHOW PAGE ==================
+//
+// .profile-details {
+//     clear: both;
+//     position: relative;
+//     padding: 25px;
+//     width: 45%;
+//     float: left;
+//     opacity: 0.7;
+// }
+//
+// .reservations-vehicle-details {
+//     // padding: 25px;
+//     // width: 45%;
+//     // float: right;
+// }
+//
+// .profile-page, .edit-profile {
+//     // border: 2px solid lightgrey;
+//     padding: 20px;
+//     height: 500px;
+//     margin: 10px;
+//     background: url(https://linziboyd.files.wordpress.com/2013/08/open-road.jpg);
+//     background-position: center;
+//     opacity: 1;
+// }
+// .user-info, .reservation-vehicle-show, .reservations-vehicle-details{
+//     border: 1px white solid;
+//     background: white;
+//     color: black;
+//     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+// }
+// .reservation-vehicle-show {
+//   margin-top:15px;
+//   padding-bottom: 5px;
+// }
+// .reservations-vehicle-details {
+//   margin-top: 25px;
+//   opacity: 0.6;
+// }
+// #show-links {
+//     display: inline-block;
+//     border: solid 1px lightgrey;
+//     background: black;
+//     color: white;
+//     padding: 5px;
+//     margin: 5px;
+//     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+//     border-radius: 5px;
+// }
+//
+// .edit-profile {
+//     // border: 2px solid lightgrey;
+//     padding: 20px;
+//     height: 500px;
+//     margin: 10px;
+//     background: lightgrey;
+//     background-position: center;
+//     opacity: 1;
+// }
+// .reserv-container {
+//   padding: 20px;
+//   width: 45%;
+//   float: right;
+//   overflow: scroll;
+//   height: 400px;
+//   // background: grey;
+// }
+// // .reservations-vehicle-details {
+// //   position: relative;
+// // }
+//
+// // USER SIGNUP/LOGIN ON RESERVATION PAGE
+//
+// .usersignup-container {
+//   height: 475px;
+//   width: 80%;
+//   clear: both;
+//   margin-left: auto;
+//   margin-right: auto;
+// }
+//
+// .login-reserv {
+//   float: left;
+//   width: 30%
+// }
+//
+// .signup-reserv{
+//   float: right;
+//   width: 40%;
+// }
