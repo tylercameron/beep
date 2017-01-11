@@ -16,7 +16,7 @@ $(document).ready(function() {
     $('.signup-container').fadeIn('slow');
   });
 
-  $('.close').on('click', function() {
+  $('.close-button').on('click', function() {
 
     $('.login-container').fadeOut('fast');
     $('.signup-container').fadeOut('fast');

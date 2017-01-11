@@ -23,7 +23,7 @@
   <div class="">
     <h2>Account Info</h2>
 
-    <!-- <button type="button" class="close">x</button> -->
+    <!-- <button type="button" class="close-button">x</button> -->
 
     <div class="">
       <%= f.label :password %>
@@ -74,7 +74,7 @@
 
   <h1>Login</h1>
 
-  <button type="button" class="close">x</button>
+  <button type="button" class="close-button">x</button>
   <%= form_tag sessions_path do%>
   <div class="">
     <%= label_tag :email %><%= text_field_tag :email, params[:email] %>
