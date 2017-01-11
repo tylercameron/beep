@@ -11,7 +11,26 @@
 
 .signup-container, .login-container {
   display: none;
+  border: solid 1px lightgrey;
+  opacity: 0.9;
+  color: black;
+  background: white;
+  height: auto;
+  margin: auto;
+  position: relative;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,2);
 }
+
+.signup-container {
+  width: 50%;
+  top: 32px;
+}
+
+.login-container {
+  width: 33%;
+  top: 20%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,2);
+  }
 //
 //
 // .nav-login a {
@@ -23,24 +42,8 @@
 //   color: darkgrey;
 // }
 //
-// body {
-//   /*background-image: url(http://www.vaterrarc.com/Content/Images/Products/landing/bg_road2.jpg);
-
-//   color: grey;
-//   text-align: center;
-// }
 //
-// footer {
-//     background: white;
-//     margin-top: 36px;
-//     height: 11px;
-//     color: grey;
-//     font-family: monospace;
-//     padding: 23px;
-//     position: fixed;
-//     bottom: 0;
-//     width: 100%;
-// }
+
 // .login-signin{
 //   float:left;
 //   clear: both;
@@ -55,30 +58,7 @@
 //   color: black;
 // }
 //
-// .signup-container {
-//   border: solid 1px lightgrey;
-//   opacity: 0.5;
-//   color: black;
-//   background: white;
-//   height: auto;
-//   width: 50%;
-//   margin: auto;
-//   position: relative;
-//   top: 32px;
-//   box-shadow: 0px 8px 16px 0px rgba(0,0,0,2);
-// }
-// .login-container {
-//   border: solid 1px lightgrey;
-//   opacity: 0.5;
-//   color: black;
-//   background: white;
-//   height: auto;
-//   width: 33%;
-//   margin: auto;
-//   position: relative;
-//   top: 20%;
-//   box-shadow: 0px 8px 16px 0px rgba(0,0,0,2);
-//   }
+
 //
 //   .signup-button, .login-button {
 //       background-color: lighgrey;
@@ -92,17 +72,17 @@
 //       border-radius: 10px;
 //   }
 //
-// h2.login-btn, .signup-btn {
-//
-//     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.02);
-//     padding: 17px;
-//     cursor: pointer;
-//     border: 1px solid;
-//     width: 125px;
-//     box-sizing: border-box;
-//     position: relative;
-//     top: 240px;
-// }
+h2.login-btn, .signup-btn {
+  color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.02);
+    padding: 17px;
+    cursor: pointer;
+    border: 1px solid;
+    width: 125px;
+    box-sizing: border-box;
+    position: relative;
+    top: 240px;
+}
 //
 // h2.login-btn {
 //   float: right;
