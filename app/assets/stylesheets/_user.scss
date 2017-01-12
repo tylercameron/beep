@@ -17,6 +17,7 @@
 }
 
 #main-drop-menu {
+  top: 62px;
   background-color: $beep_homepage-dropdown;
 }
 
@@ -415,12 +416,7 @@ button.close-button {
 //   width: 40%;
 // }
 
-.footer {
-  height: 30px;
-  padding: 7px;
-  position: relative;
-  bottom: -100px;
-}
+
 
 
 @media (min-width: 480px) {

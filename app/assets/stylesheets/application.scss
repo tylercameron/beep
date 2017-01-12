@@ -191,6 +191,18 @@ header {
   color: white;
 }
 
+.footer {
+  height: 30px;
+  padding: 7px;
+  position: relative;
+  bottom: 0;
+}
+.homepage-footer {
+  height: 30px;
+  padding: 7px;
+  position: relative;
+  bottom: -100px;
+}
 footer {
   background: white;
   height: 11px;
