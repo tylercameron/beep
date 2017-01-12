@@ -135,10 +135,10 @@ header {
 .dropdown-contents {
     display: none;
     position: absolute;
-    background-color: grey;
-    min-width: 160px;
+    background-color: $beep_accent;
+    min-width: 130px;
     right: 0;
-    top: 60px;
+    top: 62px;
     z-index: 400;
 }
 
@@ -154,7 +154,7 @@ header {
 }
 .dropdown-contents a:hover {
     background: white;
-    color: grey;
+    color: white;
 
 }
 
