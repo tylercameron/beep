@@ -121,10 +121,10 @@ input#search.homepage-form-control{
 }
 
 input#search.homepage-form-control, input#search.form-control {
-  height: 45px;
-  width: 70%;
+  height: 50px;
+  width: 80%;
   font-family: Comfortaa;
-  font-size: 20px;
+  font-size: 18px;
   opacity: 0.9;
   padding: 5px;
   text-align: center;
@@ -288,3 +288,38 @@ button.close-button {
 //   float: right;
 //   width: 40%;
 // }
+
+@media (min-width: 480px) {
+  .homepage-login-container {
+    // background-image: none;
+    // background-color: black;
+  }
+  input#search.homepage-form-control, input#search.form-control {
+    height: 45px;
+    width: 70%;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 740px) {
+  .homepage-login-container {
+    height: 360px;
+    // background-image: none;
+    // background-color: black;
+  }
+}
+
+@media (min-width: 870px) {
+  .homepage-login-container {
+    height: 450px;
+    // background-image: none;
+    // background-color: black;
+  }
+}
+
+@media (min-width: 1200px) {
+  .homepage-login-container {
+    // background-image: none;
+    // background-color: black;
+  }
+}
