@@ -43,7 +43,7 @@
   height: 500px;
 }
 
-.login-reserv, .signup-reserv {
+.login-reserv, .signup-reserv, .reserve-container {
     background: beige;
     border: 1px solid $mobile_bg_color_1;
     padding: 10px;
@@ -56,7 +56,7 @@
   padding-bottom: 18px;
 }
 
-.login-button, .signup-button {
+.login-button-reserv, .signup-button-reserv {
     border: 1px solid $mobile_bg_color_1;
     border-radius: 5px;
     padding: 7px;
@@ -74,5 +74,7 @@
 
 #signin-alert-reserv {
   background: $mobile_bg_color_1;
-  font: $mobile_font_2;
+  color: $mobile_font_2;
+  font-size: 16pt;
+  text-align: center;
 }
