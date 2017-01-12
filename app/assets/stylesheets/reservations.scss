@@ -42,3 +42,37 @@
   width: 500px;
   height: 500px;
 }
+
+.login-reserv, .signup-reserv {
+    background: beige;
+    border: 1px solid $mobile_bg_color_1;
+    padding: 10px;
+    line-height: 1.5em;
+    margin: 16px 0px;
+}
+
+#login-signup-header {
+  font-size: 20pt;
+  padding-bottom: 18px;
+}
+
+.login-button, .signup-button {
+    border: 1px solid $mobile_bg_color_1;
+    border-radius: 5px;
+    padding: 7px;
+    margin-top: 10px;
+    background: goldenrod;
+    color: $mobile_font_2;
+    opacity: 0.9;
+    text-align: center;
+}
+
+.signup-btn-text, .login-btn-text{
+  font-size: 15pt;
+  color: $mobile_font_2;
+}
+
+#signin-alert-reserv {
+  background: $mobile_bg_color_1;
+  font: $mobile_font_2;
+}
