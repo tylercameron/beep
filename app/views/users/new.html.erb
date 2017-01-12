@@ -51,17 +51,17 @@
 
           <button type="button" class="close-button">x</button>
 
-          <div class="">
+          <div class="form-line">
             <%= f.label :email %>
             <%= f.email_field :email %>
           </div>
 
-          <div class="">
+          <div class="form-line">
             <%= f.label :password %>
             <%= f.password_field :password %>
           </div>
 
-          <div class="">
+          <div class="form-line">
             <%= f.label :password_confirmation %>
             <%= f.password_field :password_confirmation %>
           </div>
@@ -72,22 +72,22 @@
 
           <h2>Personal Information</h2>
 
-          <div class="">
+          <div class="form-line">
             <%= f.label :first_name %>
             <%= f.text_field :first_name %>
           </div>
 
-          <div class="">
+          <div class="form-line">
             <%= f.label :last_name %>
             <%= f.text_field :last_name %>
           </div>
 
-          <div class="">
+          <div class="form-line">
             <%= f.label :phone_number %>
             <%= f.telephone_field :phone_number %>
           </div>
 
-          <div class="">
+          <div class="form-line">
             <%= f.label :date_of_birth %>
             <%= select_year(Date.today, start_year: 1920, end_year: 1998) %>
             <%= select_month DateTime.now %>
@@ -107,10 +107,10 @@
 
       <button type="button" class="close-button">x</button>
       <%= form_tag sessions_path do%>
-        <div class="">
+        <div class="form-line">
           <%= label_tag :email %><%= text_field_tag :email, params[:email] %>
         </div>
-        <div class="">
+        <div class="form-line">
           <%= label_tag :password %><%= password_field_tag :password %>
         </div>
         <div class="login-button">
