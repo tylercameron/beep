@@ -78,7 +78,15 @@ i#main-drop-menu-icon {
   width: 33%;
   top: 20%;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,2);
-  }
+}
+
+.search-top {
+  display: none;
+}
+
+.slogan-bottom {
+  display: none;
+}
 //
 //
 // .nav-login a {
@@ -210,7 +218,7 @@ button.close-button {
 .homepage-search {
     text-align: center;
     position: relative;
-
+    // display: none;
 }
 
 #slogan, #about, #contact{
@@ -390,7 +398,8 @@ button.close-button {
       color: white;
   }
   .homepage-login-container {
-    background-image: url(http://www.c4dcafe.com/ipb/uploads/monthly_2015_07/Car-Light-Trails-Traffic-in-Urban-City.jpg.29ad68d1d226d391fe611f894f33b0cc.jpg);
+    background-image: url(mainpage-lights-large.jpg);
+    // background-image: url(http://www.c4dcafe.com/ipb/uploads/monthly_2015_07/Car-Light-Trails-Traffic-in-Urban-City.jpg.29ad68d1d226d391fe611f894f33b0cc.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
     height: 600px;
