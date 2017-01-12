@@ -12,14 +12,12 @@
   // padding-right: 20px;
   // padding-top: 15px;
   font-size: 30px;
-  
+
   // padding-bottom: 20px;
 }
 
 #main-drop-menu {
-    opacity: 0.5;
-    background-color: white;
-
+  background-color: $beep_homepage-dropdown;
 }
 
 #main-drop-menu a {
@@ -30,8 +28,8 @@
 }
 
 #main-drop-menu a:hover {
-    background: lightgrey;
-    color: black;
+    background: $beep_colour;
+    color: white;
 }
 
 i#main-drop-menu-icon {
@@ -379,11 +377,17 @@ button.close-button {
   }
   #main-drop-menu a {
     float: left;
-    // width: 100px;
     color: white;
+    padding: 16px 0px 5px 0px;
+    margin: 0px 10px;
   }
   #main-drop-menu-icon {
     display: none;
+  }
+  #main-drop-menu a:hover {
+      background: none;
+      border-bottom: 3px solid $beep_colour;
+      color: white;
   }
   .homepage-login-container {
     background-image: url(http://www.c4dcafe.com/ipb/uploads/monthly_2015_07/Car-Light-Trails-Traffic-in-Urban-City.jpg.29ad68d1d226d391fe611f894f33b0cc.jpg);
