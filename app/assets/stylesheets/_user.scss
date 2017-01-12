@@ -275,7 +275,7 @@ button.close-button {
 
 #contact-container {
   // background-color: green;
-  height: 400px;
+  height: 300px;
   position: relative;
   top: 100px;
 }
@@ -370,6 +370,14 @@ button.close-button {
 //   float: right;
 //   width: 40%;
 // }
+
+.footer {
+  height: 30px;
+  padding: 7px;
+  position: relative;
+  bottom: -100px;
+}
+
 
 @media (min-width: 480px) {
   .homepage-login-container {
