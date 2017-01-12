@@ -72,7 +72,7 @@ p {
 }
 
 header {
-  height: 75px;
+  // height: 75px;
 }
 
 .nav-bar {
@@ -81,11 +81,10 @@ header {
   box-sizing: border-box;
   margin: 0;
   height: 60px;
-	border-bottom: 1px solid grey;
+	border-bottom: 2px solid grey;
 	padding-top: 14px;
   padding-bottom: 65px;
 }
-
 
 .beep-title a {
   width: 30%;
@@ -111,12 +110,21 @@ header {
   box-sizing: border-box;
 }
 .nav-login {
-  float: right;
   margin: 0;
-  width: 75%;
+  width: 100%;
   list-style-type: none;
-  padding-top: 18px;
-  text-align: right;
+  padding: 18px;
+  text-align: center;;
+}
+
+.nav-login a {
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+}
+
+.login-line {
+    font-size: 27px;
 }
 
 #drop-menu-icon {

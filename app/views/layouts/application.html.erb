@@ -3,35 +3,40 @@
 	<%= render partial: '/layouts/head' %>
 
 	<body>
-		<header class="nav-bar">
-			<h1 class="beep-title"><%= link_to 'Beep', new_user_path %></h1>
-			<% if current_user %>
-			<ul class="nav-links">
-				<div class="dropdown">
-					<i class="fa fa-bars" id="drop-menu-icon" aria-hidden="true"></i>
-					<div class="dropdown-contents">
+		<header class="header">
+      <div class="nav-bar">
+  			<h1 class="beep-title"><%= link_to 'Beep', new_user_path %></h1>
+  			<% if current_user %>
+  			<ul class="nav-links">
+  				<div class="dropdown">
+  					<i class="fa fa-bars" id="drop-menu-icon" aria-hidden="true"></i>
+  					<div class="dropdown-contents">
 
-						<a href="/user">Profile</a>
-            <a href="/vehicles">Make a Reservation</a>
-            <a href="/vehicles/new">Share Your Vehicle</a>
-            <%else%>
-						<ul class="nav-links">
-							<div class="dropdown">
-								<i class="fa fa-bars" id="drop-menu-icon" aria-hidden="true"></i>
-								<div class="dropdown-contents">
-						<a href="#about-container">About Us</a>
-						<a href="/vehicles">Search</a>
-						<a href="/vehicles/new">Perks</a>
-						<a href="#contact-container">Contact Us</a>
-					<%end%>
-					</div>
-			  </div>
+  						<a href="/user">Profile</a>
+              <a href="/vehicles">Make a Reservation</a>
+              <a href="/vehicles/new">Share Your Vehicle</a>
+        <%else%>
+  						<ul class="nav-links">
+  							<div class="dropdown">
+  								<i class="fa fa-bars" id="drop-menu-icon" aria-hidden="true"></i>
+  								<div class="dropdown-contents">
+        						<a href="#about-container">About Us</a>
+        						<a href="/vehicles">Search</a>
+        						<a href="/vehicles/new">Perks</a>
+        						<a href="#contact-container">Contact Us</a>
+              </ul>
+				<%end%>
+  					</div>
+  			  </div>
+      </div>
+
+      <div class="login-buttons-header">
 				<% if current_user %>
 					<li class="nav-login">Hello <%= current_user.first_name %> | <%= link_to 'Log Out', sessions_path, method: :delete %></li>
 				<% else %>
-					<li class="nav-login"><%= link_to 'Log In', new_user_path %> | <%= link_to 'Sign Up', new_user_path %></li>
+					<li class="nav-login"><%= link_to 'Log In', new_user_path %> &nbsp; <span class="login-line">|</span> &nbsp; <%= link_to 'Sign Up', new_user_path %></li>
 				<% end %>
-    	</ul>
+      </div>
 
     </header>
 
