@@ -78,7 +78,36 @@ i#main-drop-menu-icon {
   width: 33%;
   top: 20%;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,2);
-  }
+}
+
+.container-film {
+    // background-color: black;
+    height: 200px;
+    width: 220px;
+    position: relative;
+    top: 100px;
+    left: 80px;
+    opacity: 0.9;
+}
+
+.main-page-slogan.slogan-top {
+    height: 100px;
+    text-align: center;
+}
+
+#slogan {
+  font-weight: bold;
+  padding: 15px 0px;
+  font-size: 26pt;
+}
+
+.search-top {
+  display: none;
+}
+
+.slogan-bottom {
+  display: none;
+}
 //
 //
 // .nav-login a {
@@ -122,7 +151,8 @@ i#main-drop-menu-icon {
 //
 .login-signup-btns {
   position: relative;
-  top: 140px;
+  top: 38px;
+  left: -23%;
   width: 100%;
   text-align: center
 }
@@ -131,29 +161,29 @@ h2.login-btn, .signup-btn {
   color: white;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.02);
     padding: 17px;
+    font-size: 30px;
     cursor: pointer;
-    // border: 1px solid;
     width: 175px;
     height: 60px;
     box-sizing: border-box;
     position: relative;
-    left: 15%;
-    // top: 240px;
-    background-color: $beep_colour;
+    left: 25%;
+    background-color: black;
+    border: 1px solid;
 }
 
 h2.login-btn {
   // float: right;
   // right: 39%;
-  border-bottom: 1px solid;
-  border-top: 4px solid $beep_accent;
+  border-bottom: 2px solid;
+  // border-top: 4px solid $beep_accent;
 }
 
-h2.signup-btn {
-  // float: left;
-  // left: 39%;
-
+.search-bottom {
+  position: relative;
+  top: -30px;
 }
+
 //
 // h1.homepage-heading {
 //     text-align: left;
@@ -207,24 +237,27 @@ button.close-button {
 .homepage-search {
     text-align: center;
     position: relative;
-
+    // display: none;
 }
 
-#slogan, #about, #contact{
+#about, #contact{
   font-weight: bold;
   font-size: 32pt;
-  padding-bottom: 10px;
-  padding-top: 10px;
+  padding: 0px 10px;
+  background-color: goldenrod;
+  color: white;
 }
 
 #about-container {
   // background-color: yellow;
   height: 500px;
+  position: relative;
+  top: 70px;
 }
 
 .about-image {
-  width: 40%;
-  float: left;
+  // width: 40%;
+  // float: left;
 
 }
 
@@ -233,12 +266,15 @@ button.close-button {
 }
 
 .about-content {
-  float: right;
-  width: 50%;
+  // float: right;
+  // width: 50%;
 }
 
 #contact-container {
-  background-color: green;
+  // background-color: green;
+  height: 300px;
+  position: relative;
+  top: 100px;
 }
 // // ============== USER SHOW PAGE ==================
 //
@@ -332,6 +368,14 @@ button.close-button {
 //   width: 40%;
 // }
 
+.footer {
+  height: 30px;
+  padding: 7px;
+  position: relative;
+  bottom: -100px;
+}
+
+
 @media (min-width: 480px) {
   .homepage-login-container {
     // background-image: none;
@@ -351,13 +395,15 @@ button.close-button {
     background-size: 100%;
     height: 400px;
   }
+
+  #slogan {
+    padding: 30px 0px;
+  }
 }
 
 @media (min-width: 740px) {
   .homepage-login-container {
     height: 360px;
-    // background-image: none;
-    // background-color: black;
   }
   .dropdown {
     float: right;
@@ -387,10 +433,33 @@ button.close-button {
       color: white;
   }
   .homepage-login-container {
-    background-image: url(http://www.c4dcafe.com/ipb/uploads/monthly_2015_07/Car-Light-Trails-Traffic-in-Urban-City.jpg.29ad68d1d226d391fe611f894f33b0cc.jpg);
+    background-image: url(mainpage-lights-large.jpg);
+    // background-image: url(http://www.c4dcafe.com/ipb/uploads/monthly_2015_07/Car-Light-Trails-Traffic-in-Urban-City.jpg.29ad68d1d226d391fe611f894f33b0cc.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
     height: 600px;
+  }
+  .slogan-top, .search-bottom {
+    display: none;
+  }
+
+  .search-top {
+    display: block;
+  }
+
+  form.navbar-form.navbar-left.search-form {
+      top: -15px;
+  }
+
+  h2.login-btn, .signup-btn {
+    top: 80px;
+  }
+
+  .container-film {
+    background: none;
+    opacity: 1;
+    width: 80%;
+    top: 70px;
   }
 }
 
