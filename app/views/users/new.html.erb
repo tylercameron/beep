@@ -1,6 +1,10 @@
+<div class="main-page-slogan slogan-top">
+  <h1 id='slogan'>The car is yours for the ride.</h1>
+</div>
+
 <div class="homepage-login-container">
 
-  <div class="homepage-search">
+  <div class="homepage-search search-top">
     <%= form_tag vehicles_path, method: :get, class: "navbar-form navbar-left search-form" do %>
       <%= text_field_tag(
           :search,
@@ -15,6 +19,7 @@
       <% render :vehicles %>
     <% end %>
   </div>
+
 
   <div class="login-signup-btns">
     <% if current_user %>
@@ -115,7 +120,23 @@
 
 </div>
 
-<div class="main-page-slogan">
+<div class="homepage-search search-bottom">
+  <%= form_tag vehicles_path, method: :get, class: "navbar-form navbar-left search-form" do %>
+    <%= text_field_tag(
+        :search,
+        params[:search],
+        placeholder: "Where would you like to go?",
+        class: "homepage-form-control"
+    ) %>
+     <%= submit_tag "Search", class: "btn-btn-primary" %>
+  <% end %>
+
+  <% if @vehicles.present? %>
+    <% render :vehicles %>
+  <% end %>
+</div>
+
+<div class="main-page-slogan slogan-bottom">
   <h1 id='slogan'>The car is yours for the ride.</h1>
 </div>
 
