@@ -30,6 +30,17 @@ input.btn.btn-primary {
     display: none;
 }
 
+#avail-header, .map-title {
+    font-size: 30pt;
+    text-align: center;
+    /* border: 3px solid; */
+    background: lightgrey;
+    margin: 10px 0px;
+}
+.vehicle-search {
+    background: darkgrey;
+}
+
 // .map-div {
 //   display: none;
 // }
