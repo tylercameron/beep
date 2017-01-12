@@ -3,6 +3,53 @@
 // // They will automatically be included in application.css.
 // // You can use Sass (SCSS) here: http://sass-lang.com/
 //
+#main-drop-menu-icon {
+  // color: grey;
+  float: right;
+  width: 50px;
+  margin: 0;
+  text-align: right;
+  // padding-right: 20px;
+  // padding-top: 15px;
+  font-size: 30px;
+  height: 100%;
+  // padding-bottom: 20px;
+}
+
+#main-drop-menu {
+    opacity: 0.5;
+    background-color: white;
+
+}
+
+#main-drop-menu a {
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+#main-drop-menu a:hover {
+    background: lightgrey;
+    color: black;
+}
+
+i#main-drop-menu-icon {
+    background-color: black;
+    color: white;
+    border-radius: 9px;
+    padding: 12px 4px;
+    margin: 10px;
+    border: 1px solid;
+    text-align: center;
+}
+
+.main-nav-bar {
+  background-color: black;
+  height: 75px;
+  width: 100%;
+}
+
 .homepage-login-container {
   background-image: url(http://www.c4dcafe.com/ipb/uploads/monthly_2015_07/Car-Light-Trails-Traffic-in-Urban-City.jpg.29ad68d1d226d391fe611f894f33b0cc.jpg);
   background-repeat: no-repeat;
@@ -306,6 +353,27 @@ button.close-button {
     height: 360px;
     // background-image: none;
     // background-color: black;
+  }
+  .dropdown {
+    float: right;
+  }
+  #main-drop-menu {
+      // float: left;
+      position: relative;
+      display: block;
+      background-color: grey;
+      width: 500px;
+      right: -90px;
+      top: 0px;
+      z-index: 400;
+  }
+  #main-drop-menu a {
+    float: left;
+    // width: 100px;
+    color: white;
+  }
+  #main-drop-menu-icon {
+    display: none;
   }
 }
 
