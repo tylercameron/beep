@@ -73,6 +73,33 @@ h1#slogan2 {
     padding: 10px 0px;
 }
 
+.vehicle_forms {
+      background: lightgrey;
+      border: 1px solid $mobile_bg_color_1;
+      padding: 10px;
+      line-height: 1.5em;
+      margin: 16px auto;
+      color: $mobile_bg_color_1;
+      text-align: center;
+}
+
+.new-vehicle-button{
+  border: 1px solid $mobile_bg_color_1;
+  border-radius: 5px;
+  padding: 7px;
+  margin-top: 10px;
+  background: goldenrod;
+  color: $mobile_font_2;
+  opacity: 0.9;
+  text-align: center;
+}
+
+#new-veh-header {
+  font-size: 20pt;
+  padding-bottom: 18px;
+  color: black;
+}
+
 // .map-div {
 //   display: none;
 // }
