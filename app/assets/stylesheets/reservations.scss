@@ -45,18 +45,23 @@
 
 .login-reserv, .signup-reserv, .reserve-container {
     background: beige;
-    border: 1px solid $mobile_bg_color_1;
+    border: 0px;
+    border-bottom: 1px solid $mobile_bg_color_1;
     padding: 10px;
     line-height: 1.5em;
-    margin: 16px 0px;
+    margin: 16px auto;
 }
 
-#login-signup-header {
+.reserve-container {
+  text-align: center;
+}
+
+#login-signup-header, #reserv-header {
   font-size: 20pt;
   padding-bottom: 18px;
 }
 
-.login-button-reserv, .signup-button-reserv {
+.login-button-reserv, .signup-button-reserv, .reserv-btn {
     border: 1px solid $mobile_bg_color_1;
     border-radius: 5px;
     padding: 7px;
@@ -67,7 +72,7 @@
     text-align: center;
 }
 
-.signup-btn-text, .login-btn-text{
+.signup-btn-text, .login-btn-text, .reserve-btn-text{
   font-size: 15pt;
   color: $mobile_font_2;
 }
@@ -77,4 +82,18 @@
   color: $mobile_font_2;
   font-size: 16pt;
   text-align: center;
+}
+
+select {
+    border: 1px solid;
+    padding: 2px;
+    font-size: 13px;
+    line-height: 2em;
+}
+
+input#reservation_start_location, input#reservation_destination, input#reservation_seats {
+    border: 1px solid darkgoldenrod;
+    width: 80%;
+    height: 20px;
+    margin-bottom: 10px;
 }
