@@ -81,7 +81,11 @@ header {
   box-sizing: border-box;
   margin: 0;
   height: 60px;
+	border-bottom: 1px solid grey;
+	padding-top: 14px;
+  padding-bottom: 65px;
 }
+
 
 .beep-title a {
   width: 30%;
@@ -130,7 +134,6 @@ header {
   color: black;
 	padding: 9px 1px;
 	margin-right: 10px;
-
 }
 
 
