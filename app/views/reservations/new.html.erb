@@ -92,7 +92,7 @@
           </div>
 
           <div class="">
-            <%= f.label :date_of_birth %>
+            <%= f.label :date_of_birth %><br>
             <%= select_year(Date.today, start_year: 1920, end_year: 1998) %>
             <%= select_month DateTime.now %>
             <%= select_day DateTime.now  %>
