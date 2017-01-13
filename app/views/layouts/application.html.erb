@@ -6,32 +6,14 @@
 		<header class="header">
       <div class="nav-bar">
   			<h1 class="beep-title"><%= link_to 'Beep', new_user_path %></h1>
-  			<% if current_user %>
   			<ul class="nav-links">
   				<div class="dropdown">
   					<i class="fa fa-bars" id="drop-menu-icon" aria-hidden="true"></i>
   					<div class="dropdown-contents">
-
-  						<a href="/user">Profile</a>
-              <a href="/vehicles">Make a Reservation</a>
-              <a href="/vehicles/new">Register a Vehicle</a>
-              <% if current_user.owned_vehicles.count > 0 %>
-                <% id = current_user.owned_vehicles.first.id %>
-                <a href="/vehicles/<%= id %>/availabilities">Availability</a>
-              <% end %>
-        <%else%>
-  						<ul class="nav-links">
-  							<div class="dropdown">
-  								<i class="fa fa-bars" id="drop-menu-icon" aria-hidden="true"></i>
-  								<div class="dropdown-contents">
-        						<a href="#about-container">About Us</a>
-        						<a href="/vehicles">Search</a>
-        						<a href="/vehicles/new">Perks</a>
-        						<a href="#contact-container">Contact Us</a>
-              </ul>
-				<%end%>
-  					</div>
-  			  </div>
+              <%= render partial: '/layouts/dropdown_menu' %>
+            </div>
+          </div>
+        </ul>
       </div>
 
       <div class="login-buttons-header">
