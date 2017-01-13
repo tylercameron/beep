@@ -1,6 +1,6 @@
 <main>
   <section class="availabilities-container">
-    <p><%= @vehicle.vehicle_year %> <%= @vehicle.vehicle_make %> <%= @vehicle.vehicle_model %></p>
+    <h3><%= @vehicle.vehicle_year %> <%= @vehicle.vehicle_make %> <%= @vehicle.vehicle_model %> <br>Availability</h3>
     <div class="availability-container">
       <% for availability in 0..6 %>
         <div class="weekday-time">
