@@ -6,19 +6,28 @@
 // }
 
 .availabilities-container {
-    padding: 10px;
+    // padding: 10px;
     line-height: 1.5;
     text-align: center;
 }
-
+.availabilities-container h3 {
+    font-size: 24px;
+    padding: 15px;
+    background-color: darkgoldenrod;
+    color: white;
+}
 .availabilities-container p {
     font-size: 22px;
     padding: 0px 0px 15px 0px;
 }
-
+.availability-weekday {
+    font-size: 20px;
+}
 .weekday-time {
   text-align: center;
   position: relative;
+  padding: 10px;
+  border-top: 2px solid goldenrod;
 }
 
 #availability-start, #availability-end {
@@ -38,12 +47,18 @@
     font-size: 16px;
     padding: 0px 0px 0px 0px;
     width: 80%;
-    background-color: red;
+    // background-color: red;
     border-top: 2px solid;
     text-align: center;
 }
 #availability-start p, #availability-end p {
   width: 80%;
-  font-size: 20px;
+  font-size: 27px;
   padding: 0px 0px 0px 0px;
+}
+.weekday-time a {
+    border: 1px solid;
+    text-decoration: none;
+    color: black;
+    padding: 6px 10px;
 }
