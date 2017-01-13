@@ -317,6 +317,9 @@ button.close-button {
   // float: right;
   // width: 50%;
 }
+.about-content, .contact-content {
+  padding: 10px;
+}
 
 #contact-container {
   // background-color: green;
@@ -485,7 +488,7 @@ button.close-button {
       display: block;
       background-color: grey;
       width: 500px;
-      right: -90px;
+      left: 45%;
       top: 0px;
       z-index: 400;
   }

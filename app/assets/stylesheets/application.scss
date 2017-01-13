@@ -1,4 +1,4 @@
-@import "variables", "user", "vehicles", "reservations";
+@import "variables", "user", "vehicles", "reservations", "availabilities";
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
@@ -50,7 +50,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
-ol, ul {
+ol, ul, li {
 	list-style: none;
 }
 blockquote, q {
@@ -78,9 +78,9 @@ table {
 // }
 
 /*/// STYLING BELOW ///*/
-p {
-  padding: 10px;
-}
+// p {
+//   padding: 10px;
+// }
 
 header {
   // height: 75px;

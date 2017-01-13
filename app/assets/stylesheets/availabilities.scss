@@ -1,6 +1,49 @@
 // Place all the styles related to the Availabilities controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-main {
-    margin-bottom: 70px;
+// main {
+//     margin-bottom: 70px;
+// }
+
+.availabilities-container {
+    padding: 10px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.availabilities-container p {
+    font-size: 22px;
+    padding: 0px 0px 15px 0px;
+}
+
+.weekday-time {
+  text-align: center;
+  position: relative;
+}
+
+#availability-start, #availability-end {
+    position: relative;
+    left: 5%;
+    padding: 10px 0px;
+}
+#availability-start {
+    float: left;
+    width: 50%;
+}
+#availability-end {
+    float: right;
+    width: 50%;
+}
+#availability-start .availability-p, #availability-end .availability-p {
+    font-size: 16px;
+    padding: 0px 0px 0px 0px;
+    width: 80%;
+    background-color: red;
+    border-top: 2px solid;
+    text-align: center;
+}
+#availability-start p, #availability-end p {
+  width: 80%;
+  font-size: 20px;
+  padding: 0px 0px 0px 0px;
 }

@@ -6,27 +6,14 @@
 
     <header class="main-nav-bar">
       <h1 class="beep-title" id="logo-icon"><%= link_to 'Beep', new_user_path %></h1>
-       <% if current_user %>
       <ul class="nav-links">
         <div class="dropdown">
           <i class="fa fa-bars" id="main-drop-menu-icon" aria-hidden="true"></i>
           <div class="dropdown-contents" id="main-drop-menu">
-
-            <a href="/user">Profile</a>
-            <a href="/vehicles">Make a Reservation</a>
-            <a href="/vehicles/new">Share Your Vehicle</a>
-            <%else%>
-            <ul class="nav-links">
-            <div class="dropdown">
-            <i class="fa fa-bars" id="main-drop-menu-icon" aria-hidden="true"></i>
-            <div class="dropdown-contents" id="main-drop-menu">
-            <a href="#about-container">About Us</a>
-            <a href="/vehicles">Search</a>
-            <a href="/vehicles/new">Perks</a>
-            <a href="#contact-container">Contact Us</a>
-            <%end%>
+            <%= render partial: '/layouts/dropdown_menu' %>
           </div>
         </div>
+      </ul>
     </header>
 
 

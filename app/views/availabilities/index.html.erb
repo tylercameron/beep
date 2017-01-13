@@ -1,15 +1,29 @@
 <main>
-  <p><%= @vehicle.vehicle_year %> <%= @vehicle.vehicle_make %> <%= @vehicle.vehicle_model %></p>
-  <div class="availabilities-container">
-    <% for availability in 0..6 %>
-      <div class="weekday-time">
-        <%= @availabilities.find_by(id: @vehicle.availabilities.ids[availability]).weekday %>
-        <%= @availabilities.find_by(id: @vehicle.availabilities.ids[availability]).start_time %>
-        <%= @availabilities.find_by(id: @vehicle.availabilities.ids[availability]).end_time %>
+  <section class="availabilities-container">
+    <p><%= @vehicle.vehicle_year %> <%= @vehicle.vehicle_make %> <%= @vehicle.vehicle_model %></p>
+    <div class="availability-container">
+      <% for availability in 0..6 %>
+        <div class="weekday-time">
+          <li class="availability-weekday">
+            <%= @availabilities.find_by(id: @vehicle.availabilities.ids[availability]).weekday %>
+          </li>
+          <li id="availability-start">
+            <p>
+              <%= @availabilities.find_by(id: @vehicle.availabilities.ids[availability]).start_time %>
+            </p>
+            <p class="availability-p">Availability Start</p>
+          </li>
+          <li id="availability-end">
+            <p>
+              <%= @availabilities.find_by(id: @vehicle.availabilities.ids[availability]).end_time %>
+            </p>
+            <p class="availability-p">Availability End</p>
+          </li>
 
-        <%= link_to "Edit Availability", edit_vehicle_availability_path(@vehicle, @availabilities.find_by(id: @vehicle.availabilities.ids[availability])) %>
-        <%= link_to "Delete Availability", vehicle_availability_path(@vehicle, @availabilities.find_by(id: @vehicle.availabilities.ids[availability])), method: :delete %>
-      </div><br>
-    <% end %>
-  </div>
+          <%= link_to "Edit Availability", edit_vehicle_availability_path(@vehicle, @availabilities.find_by(id: @vehicle.availabilities.ids[availability])) %>
+          <%#= link_to "Delete Availability", vehicle_availability_path(@vehicle, @availabilities.find_by(id: @vehicle.availabilities.ids[availability])), method: :delete %>
+        </div><br>
+      <% end %>
+    </div>
+  </section>
 </main>
