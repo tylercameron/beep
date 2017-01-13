@@ -82,8 +82,8 @@ table {
 //   padding: 10px;
 // }
 
-header {
-  // height: 75px;
+html {
+  position: relative;
 }
 
 .nav-bar {
@@ -205,15 +205,16 @@ header {
 .footer {
   height: 30px;
   padding: 7px;
-  position: relative;
-  bottom: 0;
+  position: absolute;;
+  bottom: -60px;
+  overflow: hidden;
   border-top: 2px solid;
 }
 .homepage-footer {
   height: 30px;
   padding: 7px;
-  position: relative;
-  bottom: -100px;
+  position: absolute;;
+  bottom: -150px;
 }
 footer {
   background: white;

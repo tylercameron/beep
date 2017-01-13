@@ -14,19 +14,29 @@
   	<div class="availability-form-input">
   		<% f.hidden_field :vehicle_id, value: @vehicle.id %>
   	</div>
-  	<div class="availability-form-input">
-  		<%= f.label :weekday %><br>
+  	<div class="availability-form-input availability-weekday-title">
       <%= @availability.weekday %>
   	</div>
-  	<div class="availability-form-input">
-  		<%= f.label :start_time %><br>
-  		<%= f.number_field :start_time %>
-  	</div>
-  	<div class="availability-form-input">
-  		<%= f.label :end_time %><br>
-  		<%= f.number_field :end_time %>
-  	</div>
-
+    <li id="availability-start">
+    	<div class="availability-form-input">
+    		<p>
+          <%= f.number_field :start_time %>
+        </p>
+        <p class="availability-p">
+          <%= f.label :start_time %>
+        </p>
+    	</div>
+    </li>
+    <li id="availability-end">
+    	<div class="availability-form-input">
+        <p>
+          <%= f.number_field :end_time %>
+        </p>
+        <p class="availability-p">
+      		<%= f.label :end_time %>
+        </p>
+    	</div>
+    </li>
   	<div class="button"><%= f.submit %></div>
   </div>
 <% end %>
