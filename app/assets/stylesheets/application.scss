@@ -168,7 +168,7 @@ header {
     background-color: $beep_accent;
     min-width: 130px;
     right: 0;
-    top: 62px;
+    top: 65px;
     z-index: 400;
 }
 
@@ -202,11 +202,24 @@ header {
   color: white;
 }
 
+.footer {
+  height: 30px;
+  padding: 7px;
+  position: relative;
+  bottom: 0;
+  border-top: 2px solid;
+}
+.homepage-footer {
+  height: 30px;
+  padding: 7px;
+  position: relative;
+  bottom: -100px;
+}
 footer {
   background: white;
   height: 11px;
   text-align: center;
-  color: purple;
+  color: black;
   font-family: monospace;
   padding: 5px;
   position: relative;
