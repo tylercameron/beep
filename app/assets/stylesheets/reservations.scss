@@ -61,15 +61,11 @@
   padding-bottom: 18px;
 }
 
-.login-button-reserv, .signup-button-reserv, .reserv-btn {
-    border: 1px solid $mobile_bg_color_1;
-    border-radius: 5px;
-    padding: 7px;
-    margin-top: 36px;
-    background: goldenrod;
-    color: $mobile_font_2;
-    opacity: 0.9;
-    text-align: center;
+.login-button-reserv, .signup-button-reserv {
+  padding: 11px;
+  margin-top: 10px;
+  opacity: 0.9;
+  text-align: center;
 }
 
 .signup-btn-text, .login-btn-text, .reserve-btn-text{
@@ -104,4 +100,8 @@ input#reservation_start_location, input#reservation_destination, input#reservati
   background: none;
   border-bottom: 3px solid;
   padding: 0px 5% 0px 0px;
+}
+
+input.reserve-btn-text,input.login-btn-text,input.signup-btn-text  {
+    color: black;
 }
