@@ -326,6 +326,34 @@ button.close-button {
 }
 // // ============== USER SHOW PAGE ==================
 //
+.profile-details {
+    // padding: 10px;
+}
+
+.user-info-h2 {
+    padding: 0px 0px 10px 0px;
+}
+
+.user-info {
+    background-color: red;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.reservation-vehicle-show {
+    background-color: yellow;
+    padding: 10px;
+}
+
+.user-info-h3 {
+    font-size: 25px;
+}
+
+.user-info-h3 span {
+    display: block;
+    padding: 15px 0px 5px 0px;
+    font-size: 20px;
+}
 // .profile-details {
 //     clear: both;
 //     position: relative;
