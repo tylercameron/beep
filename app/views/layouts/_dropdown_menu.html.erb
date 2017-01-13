@@ -1,14 +1,15 @@
 <% if current_user %>
-  <a href="/user">Profile</a>
-  <a href="/vehicles">Make a Reservation</a>
-  <a href="/vehicles/new">Register a Vehicle</a>
   <% if current_user.owned_vehicles.count > 0 %>
     <% id = current_user.owned_vehicles.first.id %>
     <a href="/vehicles/<%= id %>/availabilities">Availability</a>
+  <% else %>
+    <a href="/vehicles/new">Register a Vehicle</a>
   <% end %>
+  <a href="/vehicles">Ride</a>
+  <a href="/user">Profile</a>
 <%else%>
+  <a href="/vehicles">Ride</a>
   <a href="#about-container">About Us</a>
-  <a href="/vehicles">Search</a>
-  <a href="/vehicles/new">Perks</a>
   <a href="#contact-container">Contact Us</a>
+  <!-- <a href="/vehicles/new">Perks</a> -->
 <%end%>
