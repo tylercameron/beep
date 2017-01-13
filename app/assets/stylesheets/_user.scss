@@ -338,13 +338,13 @@ button.close-button {
 }
 
 .user-info {
-    background-color: $mobile_bg_color_1;
+    // background-color: $mobile_bg_color_1;
     padding: 10px;
     // margin-bottom: 20px;
 }
 
 .reservation-vehicle-show {
-    background-color: yellow;
+    // background-color: yellow;
     padding: 10px;
     overflow: hidden;
 }
@@ -369,32 +369,46 @@ button.close-button {
     padding: 25px 0px 15px 0px;
 }
 
-#edit-user-link a, #show-vehicle-link a, #edit-vehicle-link a {
+#edit-user-link a, #show-vehicle-link a, #edit-vehicle-link a,
+#view-reservation-link a, #edit-reservation-link a {
     text-decoration: none;
-    border: 2px solid;
+    border: 2px solid black;
     padding: 8px;
     border-radius: 3px;
-    color: black;
+    color: white;
+    background: black;
 }
 
-#show-vehicle-link, #edit-vehicle-link {
+#show-vehicle-link, #edit-vehicle-link,
+#view-reservation-link, #edit-reservation-link {
     padding: 30px 0px 12px 0px;
     box-sizing: border-box;
     text-align: center;
+
 }
 
-#show-vehicle-link {
+#show-vehicle-link, #view-reservation-link {
     width: 50%;
     float: left;
     /* background: orange; */
 }
 
-#edit-vehicle-link {
+#edit-vehicle-link, #edit-reservation-link {
     float: right;
     width: 50%;
     /* background: red; */
 }
-
+#profile-heading {
+    text-align: center;
+    font-size: 22px;
+    padding: 15px;
+}
+.reservation-profile .user-info-h3 {
+    padding: 2px 10px;
+}
+.user-reservations-container {
+    line-height: 1.0;
+}
 // .profile-details {
 //     clear: both;
 //     position: relative;
