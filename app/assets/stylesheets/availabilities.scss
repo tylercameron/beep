@@ -62,3 +62,49 @@
     color: black;
     padding: 6px 10px;
 }
+
+
+// ======== EDIT AVAILABILITY PAGE BELOW ============
+
+.edit_availability {
+    padding: 20px 0px;
+}
+
+.availability-form-input {
+    text-align: center;
+    font-size: 22px;
+}
+
+.vehicle_availability_form {
+    text-align: center;
+}
+.availability-weekday-title {
+    background: goldenrod;
+    padding: 8px 0px;
+}
+input#availability_start_time, input#availability_end_time {
+    text-align: center;
+    font-size: 25px;
+    width: 100%;
+    border: 0px;
+    background: none;
+    padding: 7px 0px;
+}
+
+input[type="submit"] {
+    padding: 5px;
+    border: 2px solid;
+    background: none;
+    font-size: 17px;
+    border-radius: 3px;
+}
+.user-info-h2 {
+    font-size: 22px;
+    text-align: center;
+}
+.user-info, .reservation-vehicle-show {
+    border-bottom: 2px solid;
+}
+.user-info {
+    border-top: 2px solid;
+}
