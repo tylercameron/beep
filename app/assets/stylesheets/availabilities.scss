@@ -15,7 +15,9 @@
     font-size: 22px;
     padding: 0px 0px 15px 0px;
 }
-
+.availability-weekday {
+    font-size: 20px;
+}
 .weekday-time {
   text-align: center;
   position: relative;
@@ -46,4 +48,10 @@
   width: 80%;
   font-size: 20px;
   padding: 0px 0px 0px 0px;
+}
+.weekday-time a {
+    border: 1px solid;
+    text-decoration: none;
+    color: black;
+    padding: 6px 10px;
 }
