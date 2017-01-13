@@ -3,12 +3,18 @@
   <div class="availabilities-container">
     <% for availability in 0..6 %>
       <div class="weekday-time">
-        <%= @availabilities.find_by(id: @vehicle.availabilities.ids[availability]).weekday %>
-        <%= @availabilities.find_by(id: @vehicle.availabilities.ids[availability]).start_time %>
-        <%= @availabilities.find_by(id: @vehicle.availabilities.ids[availability]).end_time %>
+        <li class="availability-weekday">
+          <%= @availabilities.find_by(id: @vehicle.availabilities.ids[availability]).weekday %>
+        </li>
+        <li class="availability-start">
+          <%= @availabilities.find_by(id: @vehicle.availabilities.ids[availability]).start_time %>
+        </li>
+        <li class="availability-end">
+          <%= @availabilities.find_by(id: @vehicle.availabilities.ids[availability]).end_time %>
+        </li>
 
         <%= link_to "Edit Availability", edit_vehicle_availability_path(@vehicle, @availabilities.find_by(id: @vehicle.availabilities.ids[availability])) %>
-        <%= link_to "Delete Availability", vehicle_availability_path(@vehicle, @availabilities.find_by(id: @vehicle.availabilities.ids[availability])), method: :delete %>
+        <%#= link_to "Delete Availability", vehicle_availability_path(@vehicle, @availabilities.find_by(id: @vehicle.availabilities.ids[availability])), method: :delete %>
       </div><br>
     <% end %>
   </div>
