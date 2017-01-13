@@ -14,7 +14,11 @@
 
   						<a href="/user">Profile</a>
               <a href="/vehicles">Make a Reservation</a>
-              <a href="/vehicles/new">Share Your Vehicle</a>
+              <a href="/vehicles/new">Register a Vehicle</a>
+              <% if current_user.owned_vehicles.count > 0 %>
+                <% id = current_user.owned_vehicles.first.id %>
+                <a href="/vehicles/<%= id %>/availabilities">Availability</a>
+              <% end %>
         <%else%>
   						<ul class="nav-links">
   							<div class="dropdown">
@@ -32,7 +36,7 @@
 
       <div class="login-buttons-header">
 				<% if current_user %>
-					<li class="nav-login">Hello <%= current_user.first_name %> | <%= link_to 'Log Out', sessions_path, method: :delete %></li>
+					<li class="nav-login">Hello <%= current_user.first_name %> &nbsp; <span class="login-line">|</span> &nbsp; <%= link_to 'Log Out', sessions_path, method: :delete %></li>
 				<% else %>
 					<li class="nav-login"><%= link_to 'Log In', new_user_path %> &nbsp; <span class="login-line">|</span> &nbsp; <%= link_to 'Sign Up', new_user_path %></li>
 				<% end %>
