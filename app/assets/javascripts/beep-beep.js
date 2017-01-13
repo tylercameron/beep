@@ -32,6 +32,20 @@ $(document).ready(function() {
 
   });
 
+  $(".ttl").on('reload', function(){
+     window.location="#avail-header";
+ });
+
+
+if ($("#search").val() != "") {
+ $('html,body').animate({
+    scrollTop: $("#avail-header").offset().top
+ });
+}
+
+
+
+
   $('.map-btn').on('click', function() {
     $('.map-div').show();
     $('#map').show();
