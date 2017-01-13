@@ -17,6 +17,7 @@
 }
 
 #main-drop-menu {
+  top: 62px;
   background-color: $beep_homepage-dropdown;
 }
 
@@ -56,29 +57,105 @@ i#main-drop-menu-icon {
   height: 400px;
 }
 
-.signup-container, .login-container {
+.login-container, .signup-container {
   display: none;
-  border: solid 1px black;
-  opacity: 0.9;
-  color: white;
-  background: black;
-  height: auto;
-  margin: auto;
   position: relative;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,2);
+  width: 100%;
+  height: 270px;
   text-align: center;
+  background-color: white;
+  color: black;
+  // opacity: 0.9;
+  top: 10%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,2);
+  z-index: 1;
 }
 
 .signup-container {
-  width: 50%;
-  top: 32px;
+  height: 700px;
+  // top: 32px;
 }
 
-.login-container {
-  width: 33%;
-  top: 20%;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,2);
-  }
+.login-container h1, .signup-container h1 {
+  font-size: 35px;
+  padding: 15px 0px 0px 0px;
+}
+
+.form-line {
+    line-height: 2;
+    text-align: center;
+}
+
+.form-line label {
+  display: block;
+  text-align: left;
+  padding: 2px 5% 0px 5%;
+}
+
+.account-info h2, .personal-info h2 {
+    font-size: 20px;
+    padding: 20px 0px 10px 0px;
+}
+
+input#email, input#password, input#user_email, input#user_password, input#user_password_confirmation,
+input#user_first_name, input#user_last_name, input#user_phone_number {
+    height: 30px;
+    width: 90%;
+    border: 0px;
+    border-bottom: 3px solid black;
+    color: black;
+    background: none;
+    font-size: 25px;
+}
+
+select#date_year, select#date_month, select#date_day {
+    font-size: 20px;
+    border: 0px;
+    border-radius: 1px;
+    background: none;
+    border-bottom: 3px solid;
+    padding: 0px 5% 0px 0px;
+}
+
+.login-button, .signup-button {
+    font-size: 25px;
+    padding: 9px;
+}
+
+input.login-button, input.signup-button {
+    border: 1px solid;
+    background-color: white;
+    border-radius: 2px;
+}
+
+.container-film {
+    // background-color: black;
+    // height: 200px;
+    // width: 220px;
+    // position: relative;
+    // top: 100px;
+    // left: 80px;
+    // opacity: 0.9;
+}
+
+.main-page-slogan.slogan-top {
+    height: 100px;
+    text-align: center;
+}
+
+#slogan {
+  font-weight: bold;
+  padding: 15px 0px;
+  font-size: 26pt;
+}
+
+.search-top {
+  display: none;
+}
+
+.slogan-bottom {
+  display: none;
+}
 //
 //
 // .nav-login a {
@@ -122,7 +199,8 @@ i#main-drop-menu-icon {
 //
 .login-signup-btns {
   position: relative;
-  top: 140px;
+  top: 130px;
+  // left: -23%;
   width: 100%;
   text-align: center
 }
@@ -131,29 +209,29 @@ h2.login-btn, .signup-btn {
   color: white;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.02);
     padding: 17px;
+    font-size: 30px;
     cursor: pointer;
-    // border: 1px solid;
     width: 175px;
     height: 60px;
     box-sizing: border-box;
     position: relative;
-    left: 15%;
-    // top: 240px;
-    background-color: $beep_colour;
+    left: 25%;
+    background-color: black;
+    border: 1px solid;
 }
 
 h2.login-btn {
   // float: right;
   // right: 39%;
-  border-bottom: 1px solid;
-  border-top: 4px solid $beep_accent;
+  border-bottom: 2px solid;
+  // border-top: 4px solid $beep_accent;
 }
 
-h2.signup-btn {
-  // float: left;
-  // left: 39%;
-
+.search-bottom {
+  position: relative;
+  top: -30px;
 }
+
 //
 // h1.homepage-heading {
 //     text-align: left;
@@ -207,24 +285,27 @@ button.close-button {
 .homepage-search {
     text-align: center;
     position: relative;
-
+    // display: none;
 }
 
-#slogan, #about, #contact{
+#about, #contact{
   font-weight: bold;
   font-size: 32pt;
-  padding-bottom: 10px;
-  padding-top: 10px;
+  padding: 0px 10px;
+  background-color: goldenrod;
+  color: white;
 }
 
 #about-container {
   // background-color: yellow;
   height: 500px;
+  position: relative;
+  top: 70px;
 }
 
 .about-image {
-  width: 40%;
-  float: left;
+  // width: 40%;
+  // float: left;
 
 }
 
@@ -233,15 +314,49 @@ button.close-button {
 }
 
 .about-content {
-  float: right;
-  width: 50%;
+  // float: right;
+  // width: 50%;
+}
+.about-content, .contact-content {
+  padding: 10px;
 }
 
 #contact-container {
-  background-color: green;
+  // background-color: green;
+  height: 300px;
+  position: relative;
+  top: 100px;
 }
 // // ============== USER SHOW PAGE ==================
 //
+.profile-details {
+    // padding: 10px;
+}
+
+.user-info-h2 {
+    padding: 0px 0px 10px 0px;
+}
+
+.user-info {
+    background-color: $mobile_bg_color_1;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.reservation-vehicle-show {
+    background-color: yellow;
+    padding: 10px;
+}
+
+.user-info-h3 {
+    font-size: 25px;
+}
+
+.user-info-h3 span {
+    display: block;
+    padding: 15px 0px 5px 0px;
+    font-size: 20px;
+}
 // .profile-details {
 //     clear: both;
 //     position: relative;
@@ -332,6 +447,9 @@ button.close-button {
 //   width: 40%;
 // }
 
+
+
+
 @media (min-width: 480px) {
   .homepage-login-container {
     // background-image: none;
@@ -351,13 +469,15 @@ button.close-button {
     background-size: 100%;
     height: 400px;
   }
+
+  #slogan {
+    padding: 30px 0px;
+  }
 }
 
 @media (min-width: 740px) {
   .homepage-login-container {
     height: 360px;
-    // background-image: none;
-    // background-color: black;
   }
   .dropdown {
     float: right;
@@ -368,7 +488,7 @@ button.close-button {
       display: block;
       background-color: grey;
       width: 500px;
-      right: -90px;
+      left: 45%;
       top: 0px;
       z-index: 400;
   }
@@ -387,10 +507,33 @@ button.close-button {
       color: white;
   }
   .homepage-login-container {
-    background-image: url(http://www.c4dcafe.com/ipb/uploads/monthly_2015_07/Car-Light-Trails-Traffic-in-Urban-City.jpg.29ad68d1d226d391fe611f894f33b0cc.jpg);
+    background-image: url(mainpage-lights-large.jpg);
+    // background-image: url(http://www.c4dcafe.com/ipb/uploads/monthly_2015_07/Car-Light-Trails-Traffic-in-Urban-City.jpg.29ad68d1d226d391fe611f894f33b0cc.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
     height: 600px;
+  }
+  .slogan-top, .search-bottom {
+    display: none;
+  }
+
+  .search-top {
+    display: block;
+  }
+
+  form.navbar-form.navbar-left.search-form {
+      top: -15px;
+  }
+
+  h2.login-btn, .signup-btn {
+    top: 80px;
+  }
+
+  .container-film {
+    // background: none;
+    // opacity: 1;
+    // width: 80%;
+    // top: 70px;
   }
 }
 

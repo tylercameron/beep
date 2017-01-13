@@ -1,4 +1,4 @@
-@import "variables", "user", "vehicles";
+@import "variables", "user", "vehicles", "reservations", "availabilities";
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
@@ -50,7 +50,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
-ol, ul {
+ol, ul, li {
 	list-style: none;
 }
 blockquote, q {
@@ -66,13 +66,24 @@ table {
 	border-spacing: 0;
 }
 
+////
+
+// html {
+//  box-sizing: border-box;
+// }
+// *,
+// *:before,
+// *:after {
+//  box-sizing: inherit;
+// }
+
 /*/// STYLING BELOW ///*/
-p {
-  padding: 10px;
-}
+// p {
+//   padding: 10px;
+// }
 
 header {
-  height: 75px;
+  // height: 75px;
 }
 
 .nav-bar {
@@ -81,11 +92,10 @@ header {
   box-sizing: border-box;
   margin: 0;
   height: 60px;
-	border-bottom: 1px solid grey;
+	border-bottom: 2px solid grey;
 	padding-top: 14px;
   padding-bottom: 65px;
 }
-
 
 .beep-title a {
   width: 30%;
@@ -111,12 +121,21 @@ header {
   box-sizing: border-box;
 }
 .nav-login {
-  float: right;
   margin: 0;
-  width: 75%;
+  width: 100%;
   list-style-type: none;
-  padding-top: 18px;
-  text-align: right;
+  padding: 18px;
+  text-align: center;;
+}
+
+.nav-login a {
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+}
+
+.login-line {
+    font-size: 27px;
 }
 
 #drop-menu-icon {
@@ -149,7 +168,7 @@ header {
     background-color: $beep_accent;
     min-width: 130px;
     right: 0;
-    top: 62px;
+    top: 65px;
     z-index: 400;
 }
 
@@ -183,11 +202,24 @@ header {
   color: white;
 }
 
+.footer {
+  height: 30px;
+  padding: 7px;
+  position: relative;
+  bottom: 0;
+  border-top: 2px solid;
+}
+.homepage-footer {
+  height: 30px;
+  padding: 7px;
+  position: relative;
+  bottom: -100px;
+}
 footer {
   background: white;
   height: 11px;
   text-align: center;
-  color: purple;
+  color: black;
   font-family: monospace;
   padding: 5px;
   position: relative;

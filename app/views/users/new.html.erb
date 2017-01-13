@@ -1,144 +1,168 @@
+<div class="main-page-slogan slogan-top">
+  <h1 id='slogan'>The car is yours for the ride.</h1>
+</div>
+
 <div class="homepage-login-container">
+  <!-- <div class="container-film"> -->
 
-  <div class="homepage-search">
-    <%= form_tag vehicles_path, method: :get, class: "navbar-form navbar-left search-form" do %>
-      <%= text_field_tag(
-          :search,
-          params[:search],
-          placeholder: "Where would you like to go?",
-          class: "homepage-form-control"
-      ) %>
-       <%= submit_tag "Search", class: "btn-btn-primary" %>
-    <% end %>
-
-    <% if @vehicles.present? %>
-      <% render :vehicles %>
-    <% end %>
-  </div>
-
-  <div class="login-signup-btns">
-    <% if current_user %>
-      <h2><%= link_to 'Log Out', sessions_path, method: :delete %></h2>
-    <% else %>
-      <h2 class='login-btn'>Login</h2> <h2 class='signup-btn'>Signup</h2>
-    <% end %>
-  </div>
-
-  <div class="signup-container">
-
-    <h1>Sign Up</h1>
-
-    <%= form_for(@user, url: user_path) do |f| %>
-      <%if @user.errors.any? %>
-        <div class="error_messages">
-          <h2>Entry is invalid</h2>
-          <ul>
-            <% @user.errors.full_messages.each do |message| %>
-              <li> <%= message %></li>
-            <% end %>
-          </ul>
-        </div>
+    <div class="homepage-search search-top">
+      <%= form_tag vehicles_path, method: :get, class: "navbar-form navbar-left search-form" do %>
+        <%= text_field_tag(
+            :search,
+            params[:search],
+            placeholder: "Where would you like to go?",
+            class: "homepage-form-control"
+        ) %>
+         <%= submit_tag "Search", class: "btn-btn-primary" %>
       <% end %>
 
-      <div class="account-info">
-        <h2>Account Info</h2>
+      <% if @vehicles.present? %>
+        <% render :vehicles %>
+      <% end %>
+    </div>
 
-        <button type="button" class="close-button">x</button>
 
-        <div class="">
-          <%= f.label :email %>
-          <%= f.email_field :email %>
+    <div class="login-signup-btns">
+      <% if current_user %>
+        <h2><%= link_to 'Log Out', sessions_path, method: :delete %></h2>
+      <% else %>
+        <h2 class='login-btn'>Login</h2> <h2 class='signup-btn'>Signup</h2>
+      <% end %>
+    </div>
+
+    <div class="signup-container">
+
+      <h1>Sign Up</h1>
+
+      <%= form_for(@user, url: user_path) do |f| %>
+        <%if @user.errors.any? %>
+          <div class="error_messages">
+            <h2>Entry is invalid</h2>
+            <ul>
+              <% @user.errors.full_messages.each do |message| %>
+                <li> <%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+        <div class="account-info">
+          <h2>Account Info</h2>
+
+          <button type="button" class="close-button">x</button>
+
+          <div class="form-line">
+            <%= f.label :email %>
+            <%= f.email_field :email %>
+          </div>
+
+          <div class="form-line">
+            <%= f.label :password %>
+            <%= f.password_field :password %>
+          </div>
+
+          <div class="form-line">
+            <%= f.label :password_confirmation %>
+            <%= f.password_field :password_confirmation %>
+          </div>
         </div>
 
-        <div class="">
-          <%= f.label :password %>
-          <%= f.password_field :password %>
+
+        <div class="personal-info">
+
+          <h2>Personal Information</h2>
+
+          <div class="form-line">
+            <%= f.label :first_name %>
+            <%= f.text_field :first_name %>
+          </div>
+
+          <div class="form-line">
+            <%= f.label :last_name %>
+            <%= f.text_field :last_name %>
+          </div>
+
+          <div class="form-line">
+            <%= f.label :phone_number %>
+            <%= f.telephone_field :phone_number %>
+          </div>
+
+          <div class="form-line">
+            <%= f.label :date_of_birth %>
+            <%= select_year(Date.today, start_year: 1920, end_year: 1998) %>
+            <%= select_month DateTime.now %>
+            <%= select_day DateTime.now  %>
+          </div>
+
+          <div class="signup-button">
+            <%= f.submit 'Submit', class: "signup-button" %>
+          </div>
         </div>
+      <% end %>
+    </div>
 
-        <div class="">
-          <%= f.label :password_confirmation %>
-          <%= f.password_field :password_confirmation %>
+    <div class="login-container">
+
+      <h1>Login</h1>
+
+      <button type="button" class="close-button">x</button>
+      <%= form_tag sessions_path do%>
+        <div class="form-line">
+          <%= label_tag :email %><%= text_field_tag :email, params[:email] %>
         </div>
-      </div>
-
-
-      <div class="personal-info">
-
-        <h2>Personal Information</h2>
-
-        <div class="">
-          <%= f.label :first_name %>
-          <%= f.text_field :first_name %>
+        <div class="form-line">
+          <%= label_tag :password %><%= password_field_tag :password %>
         </div>
-
-        <div class="">
-          <%= f.label :last_name %>
-          <%= f.text_field :last_name %>
+        <div class="login-button">
+          <%= submit_tag "Login", class: "login-button" %>
         </div>
-
-        <div class="">
-          <%= f.label :phone_number %>
-          <%= f.telephone_field :phone_number %>
-        </div>
-
-        <div class="">
-          <%= f.label :date_of_birth %>
-          <%= select_year(Date.today, start_year: 1920, end_year: 1998) %>
-          <%= select_month DateTime.now %>
-          <%= select_day DateTime.now  %>
-        </div>
-
-        <div class="signup-button">
-          <%= f.submit 'Submit', class: "signup-button" %>
-        </div>
-      </div>
-    <% end %>
-  </div>
-
-  <div class="login-container">
-
-    <h1>Login</h1>
-
-    <button type="button" class="close-button">x</button>
-    <%= form_tag sessions_path do%>
-      <div class="">
-        <%= label_tag :email %><%= text_field_tag :email, params[:email] %>
-      </div>
-      <div class="">
-        <%= label_tag :password %><%= password_field_tag :password %>
-      </div>
-      <div class="login-button">
-        <%= submit_tag "Login", class: "login-button" %>
-      </div>
-    <% end %>
-  </div>
+      <% end %>
+    </div>
+  <!-- </div> -->
 
 </div>
 
-<div class="main-page-slogan">
+<div class="homepage-search search-bottom">
+  <%= form_tag vehicles_path, method: :get, class: "navbar-form navbar-left search-form" do %>
+    <%= text_field_tag(
+        :search,
+        params[:search],
+        placeholder: "Where would you like to go?",
+        class: "homepage-form-control"
+    ) %>
+     <%= submit_tag "Search", class: "btn-btn-primary" %>
+  <% end %>
+
+  <% if @vehicles.present? %>
+    <% render :vehicles %>
+  <% end %>
+</div>
+
+<div class="main-page-slogan slogan-bottom">
   <h1 id='slogan'>The car is yours for the ride.</h1>
 </div>
 
 <div id="about-container">
 
+  <h1 id='about'>About</h1>
+  <div class="about-content">
+    <p>
+      Car sharing for the New Age. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+  </div>
+
   <div class="about-image">
     <img src="https://s-media-cache-ak0.pinimg.com/originals/27/33/16/27331688760948ec9adfcd99ba62bf59.jpg" alt="">
   </div>
-  <div class="about-content">
-  <h1 id='about'>About</h1>
-  <p>
-    Car sharing for the New Age. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  </p>
-</div>
+
 </div>
 
 <div id="contact-container">
   <h1 id ='contact'>Contact</h1>
-  <p>Jessica's Info</p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  </p>
+  <div class="contact-content">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+  </div>
 
 </div>
-
-<footer class="homepage-footer"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i><i class="fa fa-instagram fa-2x" aria-hidden="true"></i><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i> Beep &copy; 2016 </footer>

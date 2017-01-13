@@ -3,7 +3,7 @@
 <% if current_user %>
 <div class="reserve">
   <div class="reserve-container">
-    <h1>When do you need a ride?</h1>
+    <h1 id='reserv-header'>When do you need a ride?</h1>
 
       <div class="">
         <%= render 'form' %>
@@ -19,13 +19,13 @@
 
   <div class="reserve-con">
 
-    <p> Please Signup or Login to make a reservation</p>
+    <p id='signin-alert-reserv'> Please Signup or Login to make a reservation</p>
 
   <div class="usersignup-container">
 
   <div class="login-reserv">
 
-    <h1>Login</h1>
+    <h1 id='login-signup-header'>Login</h1>
     <%= form_tag sessions_path do%>
     <div class="">
       <%= label_tag :email %><%= text_field_tag :email, params[:email] %>
@@ -33,15 +33,15 @@
     <div class="">
       <%= label_tag :password %><%= password_field_tag :password %>
     </div>
-    <div class="login-button">
-      <%= submit_tag "Login", class: "login-button" %>
+    <div class="login-button-reserv">
+      <%= submit_tag "Submit", class: "login-btn-text" %>
     </div>
   <%end%>
   </div>
 
   <div class="signup-reserv">
 
-    <h1>Sign Up</h1>
+    <h1 id='login-signup-header'>Sign Up</h1>
 
     <%= form_for(@user, url: user_path) do |f| %>
       <%if @user.errors.any? %>
@@ -92,14 +92,14 @@
           </div>
 
           <div class="">
-            <%= f.label :date_of_birth %>
+            <%= f.label :date_of_birth %><br>
             <%= select_year(Date.today, start_year: 1920, end_year: 1998) %>
             <%= select_month DateTime.now %>
             <%= select_day DateTime.now  %>
           </div>
 
-          <div class="signup-button">
-            <%= f.submit 'Submit', class: "signup-button" %>
+          <div class="signup-button-reserv">
+            <%= f.submit 'Submit', class: "signup-btn-text" %>
           </div>
 
       </div>
