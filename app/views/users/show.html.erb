@@ -11,15 +11,15 @@
       <h3 class="user-info-h3"><span>Email</span> <%= current_user.email %></h3>
       <h3 class="user-info-h3"><span>Birthdate</span> <%= current_user.date_of_birth.strftime("%A %B %d, %Y") %></h3>
 
-      <p id="show-links"><%= link_to 'Edit Profile', edit_user_path %></p>
+      <p id="edit-user-link"><%= link_to 'Edit Profile', edit_user_path %></p>
     </section>
 
     <% if current_user.owned_vehicles.any? do |vehicle| %>
       <section class="reservation-vehicle-show">
         <h2 class="user-info-h2">Your Vehicle</h2>
         <li><h3 class="user-info-h3"><%= vehicle.vehicle_year %> <%= vehicle.vehicle_make %> <%= vehicle.vehicle_model %></h3></li>
-        <p id="show-links"><%= link_to 'Vehicle Page', vehicle_path(vehicle) %></p>
-        <p id="show-links"><%= link_to 'Edit Vehicle', edit_vehicle_path(vehicle) %></p>
+        <p id="show-vehicle-link"><%= link_to 'Vehicle Page', vehicle_path(vehicle) %></p>
+        <p id="edit-vehicle-link"><%= link_to 'Edit Vehicle', edit_vehicle_path(vehicle) %></p>
         <% end %>
       </section>
     <% end %>
