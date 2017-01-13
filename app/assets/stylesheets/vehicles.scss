@@ -100,6 +100,26 @@ h1#slogan2 {
   color: black;
 }
 
+.vehicle-link {
+  display: inline-block;
+  border: solid 1px darkgoldenrod;
+  color: darkgoldenrod;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  background: beige;
+ }
+
+ .vehicle-link a {
+  text-decoration: none;
+  color: black;
+ }
+
+ #no-search-results {
+   text-align: center;
+   padding-bottom: 50px;
+ }
+
 // .map-div {
 //   display: none;
 // }
