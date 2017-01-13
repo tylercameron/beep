@@ -82,7 +82,7 @@
   color: $mobile_font_2;
   font-size: 16pt;
   text-align: center;
-  padding: 20px 0px;
+    padding: 20px 0px;
 }
 
 select {
@@ -92,9 +92,16 @@ select {
     line-height: 2em;
 }
 
-input#reservation_start_location, input#reservation_destination, input#reservation_seats {
-    border: 1px solid darkgoldenrod;
-    width: 80%;
-    height: 20px;
-    margin-bottom: 10px;
+
+.reserv-form-input{
+  padding: 10px 0px;
+}
+
+input#reservation_start_location, input#reservation_destination, input#reservation_seats, select#date_hour, select#date_minute {
+  font-size: 20px;
+  border: 0px;
+  border-radius: 1px;
+  background: none;
+  border-bottom: 3px solid;
+  padding: 0px 5% 0px 0px;
 }
