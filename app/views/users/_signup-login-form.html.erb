@@ -1,68 +1,58 @@
-<div class="">
-
 <!-- <div class="">
   <h2 class=''></h2> <h2 class=''></h2>
 </div> -->
 
-<div class="">
+<div class="edit-user-container">
 
-<h1>Sign Up</h1>
+  <%= form_for current_user do |f| %>
+    <%if current_user.errors.any? %>
+      <div class="error_messages">
+        <h2>Entry is invalid</h2>
+        <ul>
+          <% current_user.errors.full_messages.each do |message| %>
+            <li> <%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
 
-<%= form_for current_user do |f| %>
-  <%if current_user.errors.any? %>
-    <div class="error_messages">
-      <h2>Entry is invalid</h2>
-      <ul>
-        <% current_user.errors.full_messages.each do |message| %>
-          <li> <%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="">
+  <!-- <div class="">
     <h2>Account Info</h2>
-
-    <!-- <button type="button" class="close-button">x</button> -->
-
     <div class="">
-      <%= f.label :password %>
-      <%= f.password_field :password %>
+      <%#= f.label :password %>
+      <%#= f.password_field :password %>
     </div>
-
     <div class="">
-      <%= f.label :password_confirmation %>
-      <%= f.password_field :password_confirmation %>
+      <%#= f.label :password_confirmation %>
+      <%#= f.password_field :password_confirmation %>
     </div>
-  </div>
+  </div> -->
 
-  <div class="">
+  <div class="edit-user-form">
 
-    <h2>Personal Information</h2>
-
-      <div class="">
+      <div class="user-attr">
         <%= f.label :first_name %>
         <%= f.text_field :first_name %>
       </div>
 
-      <div class="">
+      <div class="user-attr">
         <%= f.label :last_name %>
         <%= f.text_field :last_name %>
       </div>
 
-      <div class="">
+      <div class="user-attr">
         <%= f.label :phone_number %>
         <%= f.telephone_field :phone_number %>
       </div>
 
-      <div class="">
+      <div class="user-attr">
         <%= f.label :date_of_birth %>
         <%= select_year(Date.today, start_year: 1920, end_year: 1998) %>
         <%= select_month DateTime.now %>
         <%= select_day DateTime.now  %>
       </div>
 
-      <div class="signup-button">
+      <div class="signup-button edit-button">
         <%= f.submit 'Submit', class: "signup-button" %>
       </div>
 
@@ -103,7 +93,3 @@
     <% render :vehicles %>
   <% end %>
 </div> -->
-
-</div>
-
-<footer class="homepage-footer"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i><i class="fa fa-instagram fa-2x" aria-hidden="true"></i><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i> Beep &copy; 2016 </footer>

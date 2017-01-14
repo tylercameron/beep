@@ -13,11 +13,13 @@ class Reservation < ApplicationRecord
   end
 
   def capacity
-    if self.seats > 0 && self.vehicle.seats >= seats
-      return true
-    else
-      errors.add(:seats, "Number of passengers for this vehicle must be between 1 and #{self.vehicle.seats}")
-      return false
+    if seats
+      if self.vehicle.seats > 0 && self.vehicle.seats >= seats
+        return true
+      else
+        errors.add(:seats, "Number of passengers for this vehicle must be between 1 and #{self.vehicle.seats}")
+        return false
+      end
     end
   end
 
@@ -49,5 +51,5 @@ class Reservation < ApplicationRecord
       end
     end
   end
-  
+
 end

@@ -25,24 +25,19 @@
     <% end %>
   </div>
 
-
-
   <% current_user.trips.each do |trip| %>
-<div class="reserv-container">
-    <div class="reservations-vehicle-details">
+    <div class="user-reservations-container">
       <section class="reservation-profile">
         <h2 id="profile-heading">Reservations</h2>
-        <h3>Date: <%= trip.start_time.strftime("%A %B %d, %Y") %></h3><h3>Time: <%= trip.start_time.in_time_zone('Eastern Time (US & Canada)').strftime("%l:%M %p") %></h3>
-        <h3>From: <%= trip.start_location %></h3>
-        <h3>To: <%= trip.destination %></h3>
-        <h3>Number of Passengers: <%= trip.seats %></h3>
-        <p id="show-links"><%= link_to 'Edit Reservation', edit_vehicle_reservation_path(trip.vehicle_id, trip) %></p>
-        <p id="show-links"><%= link_to 'View Reservation', vehicle_reservation_path(trip.vehicle_id, trip) %></p>
+        <h3 class="user-info-h3"><span>Date:</span> <%= trip.start_time.strftime("%A %B %d, %Y") %></h3><h3 class="user-info-h3"><span>Time:</span> <%= trip.start_time.in_time_zone('Eastern Time (US & Canada)').strftime("%l:%M %p") %></h3>
+        <h3 class="user-info-h3"><span>From:</span> <%= trip.start_location %></h3>
+        <h3 class="user-info-h3"><span>To:</span> <%= trip.destination %></h3>
+        <h3 class="user-info-h3"><span>Number of Passengers:</span> <%= trip.seats %></h3>
+        <p id="edit-reservation-link"><%= link_to 'Edit Reservation', edit_vehicle_reservation_path(trip.vehicle_id, trip) %></p>
+        <p id="view-reservation-link"><%= link_to 'View Reservation', vehicle_reservation_path(trip.vehicle_id, trip) %></p>
       </section>
     </div>
-
   <% end %>
-</div>
 <% end %>
 
 </div>
