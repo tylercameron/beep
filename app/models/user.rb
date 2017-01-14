@@ -9,8 +9,8 @@ class User < ApplicationRecord
 	has_many :rented_vehicles, class_name: 'Vehicle', source: :vehicle, through: :trips
 
 	validates :email, presence: true, uniqueness: true
-	validates :password, presence: true
-	validates :password_confirmation, presence: true
+	validates :password, presence: true, on: :create
+	validates :password_confirmation, presence: true, on: :create
 	validates :first_name, :last_name, :phone_number, :email, :date_of_birth, presence: true
 
 end
