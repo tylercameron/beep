@@ -61,7 +61,7 @@
   padding-bottom: 18px;
 }
 
-.login-button-reserv, .signup-button-reserv, .reserv-btn {
+.login-button-reserv, .signup-button-reserv {
     border: 1px solid $mobile_bg_color_1;
     border-radius: 5px;
     padding: 7px;
@@ -72,7 +72,16 @@
     text-align: center;
 }
 
-.signup-btn-text, .login-btn-text, .reserve-btn-text{
+.reserv-btn {
+  margin-top: 20px;
+  text-align: center;
+  padding: 7px;
+}
+.reserve-btn-text {
+  font-size: 15pt;
+  color: black;
+}
+.signup-btn-text, .login-btn-text {
   font-size: 15pt;
   color: $mobile_font_2;
 }
