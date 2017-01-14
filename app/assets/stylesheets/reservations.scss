@@ -63,14 +63,14 @@
 
 .login-button-reserv, .signup-button-reserv {
 // =====
-//     border: 1px solid $mobile_bg_color_1;
-//     border-radius: 5px;
-//     padding: 7px;
-//     margin-top: 36px;
-//     background: goldenrod;
-//     color: $mobile_font_2;
-//     opacity: 0.9;
-//     text-align: center;
+    border: 1px solid $mobile_bg_color_1;
+    border-radius: 5px;
+    // padding: 7px;
+    // margin-top: 36px;
+    background: goldenrod;
+    color: $mobile_font_2;
+    // opacity: 0.9;
+    // text-align: center;
 // =======
   padding: 11px;
   margin-top: 10px;
@@ -108,7 +108,6 @@ select {
     line-height: 2em;
 }
 
-
 .reserv-form-input{
   padding: 10px 0px;
 }
@@ -122,8 +121,6 @@ input#reservation_start_location, input#reservation_destination, input#reservati
   padding: 0px 5% 0px 0px;
 }
 
-// =======
-
 .reserve-form-input {
     padding: 10px 15px;
     line-height: 1.5;
@@ -133,8 +130,7 @@ input#reservation_start_location, input#reservation_destination, input#reservati
 input#reservation_start_location, input#reservation_destination, input#reservation_seats {
     width: 95%;
     text-align: center;
-// =======
+}
 input.reserve-btn-text,input.login-btn-text,input.signup-btn-text  {
     color: black;
-// ========
 }
