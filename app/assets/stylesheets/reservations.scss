@@ -105,3 +105,15 @@ input#reservation_start_location, input#reservation_destination, input#reservati
   border-bottom: 3px solid;
   padding: 0px 5% 0px 0px;
 }
+
+
+.reserve-form-input {
+    padding: 10px 15px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+input#reservation_start_location, input#reservation_destination, input#reservation_seats {
+    width: 95%;
+    text-align: center;
+}
