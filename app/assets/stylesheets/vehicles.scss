@@ -74,8 +74,8 @@ h1#slogan2 {
 }
 
 .vehicle_forms {
-      background: lightgrey;
-      border: 1px solid $mobile_bg_color_1;
+      border: 2px solid $mobile_bg_color_1;
+        // border-bottom: 1px solid $mobile_bg_color_1;
       padding: 10px;
       line-height: 1.5em;
       margin: 16px auto;
@@ -83,15 +83,15 @@ h1#slogan2 {
       text-align: center;
 }
 
-.new-vehicle-button{
-  border: 1px solid $mobile_bg_color_1;
-  border-radius: 5px;
-  padding: 7px;
+.new-vehicle-button, .reserv-btn{
+  padding: 11px;
   margin-top: 10px;
-  background: goldenrod;
-  color: $mobile_font_2;
   opacity: 0.9;
   text-align: center;
+}
+
+.new-veh-btn-text input{
+    border: 0px;
 }
 
 #new-veh-header {
@@ -120,6 +120,14 @@ h1#slogan2 {
    padding-bottom: 50px;
  }
 
+input#vehicle_vehicle_year, input#vehicle_vehicle_make, input#vehicle_vehicle_model, input#vehicle_seats, input#vehicle_street_address, input#vehicle_city, input#vehicle_province, input#vehicle_postal_code{
+  font-size: 20px;
+  border: 0px;
+  border-radius: 1px;
+  background: none;
+  border-bottom: 2px solid;
+  padding: 0px 5% 0px 5px;
+}
 // .map-div {
 //   display: none;
 // }
