@@ -34,7 +34,7 @@ input.btn.btn-primary {
     font-size: 30pt;
     text-align: center;
     /* border: 3px solid; */
-    background: lightgoldenrodyellow;
+    background: $mobile_bg_color_2;
     margin: 10px 0px;
     padding: 7px 0px;
     color: black;
@@ -49,7 +49,7 @@ input.btn.btn-primary {
     text-align: center;
     // border-top: solid 1px darkgoldenrod;
     border-bottom: solid 1px darkgoldenrod;
-    background-color: white;
+    background-color: $mobile_font_2;
     padding: 10px 0px;
     margin: 10px auto;
     width: 100%;
@@ -107,7 +107,7 @@ h1#slogan2 {
   padding: 5px;
   margin: 5px;
   border-radius: 5px;
-  background: beige;
+  background: $mobile_bg_color_2;
  }
 
  .vehicle-link a {

@@ -165,7 +165,8 @@ html {
 .dropdown-contents {
     display: none;
     position: absolute;
-    background-color: $beep_accent;
+    background-color: black;
+		opacity: 0.9;
     min-width: 130px;
     right: 0;
     top: 65px;
@@ -173,7 +174,7 @@ html {
 }
 
 .dropdown-contents a {
-    color: white;
+    color: $mobile_font_2;
     padding: 10px;
     text-decoration: none;
     display: block;
@@ -183,8 +184,8 @@ html {
   display:block;
 }
 .dropdown-contents a:hover {
-    background: white;
-    color: white;
+    background: darkgoldenrod;
+    color: $mobile_font_2;
 
 }
 

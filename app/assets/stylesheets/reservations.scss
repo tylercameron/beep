@@ -44,9 +44,10 @@
 }
 
 .login-reserv, .signup-reserv, .reserve-container {
-    background: beige;
+    background: $mobile_bg_color_2;
     border: 0px;
     border-bottom: 1px solid $mobile_bg_color_1;
+    border-top: 1px solid $mobile_bg_color_1;
     padding: 10px;
     line-height: 1.5em;
     margin: 16px auto;
@@ -63,15 +64,15 @@
 
 .login-button-reserv, .signup-button-reserv {
 // =====
-    border: 1px solid $mobile_bg_color_1;
-    border-radius: 5px;
-    // padding: 7px;
-    // margin-top: 36px;
-    background: goldenrod;
-    color: $mobile_font_2;
-    // opacity: 0.9;
-    // text-align: center;
-// =======
+//     border: 1px solid $mobile_bg_color_1;
+//     border-radius: 5px;
+//     // padding: 7px;
+//     // margin-top: 36px;
+//     background: goldenrod;
+//     color: $mobile_font_2;
+//     // opacity: 0.9;
+//     // text-align: center;
+// // =======
   padding: 11px;
   margin-top: 10px;
   opacity: 0.9;
