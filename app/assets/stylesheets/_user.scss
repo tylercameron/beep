@@ -152,6 +152,7 @@ input.login-button, input.signup-button {
 
 .search-top {
   display: none;
+  top: 80px;
 }
 
 .slogan-bottom {
@@ -206,7 +207,7 @@ input.login-button, input.signup-button {
   text-align: center
 }
 
-h2.login-btn, .signup-btn {
+h2.login-btn, .signup-btn, .logout-btn-mainpage {
   color: white;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.02);
     padding: 17px;
@@ -218,7 +219,7 @@ h2.login-btn, .signup-btn {
     position: relative;
     left: 25%;
     background-color: black;
-    border: 1px solid;
+    border: 2px solid;
 }
 
 h2.login-btn {
@@ -227,7 +228,15 @@ h2.login-btn {
   border-bottom: 2px solid;
   // border-top: 4px solid $beep_accent;
 }
-
+.logout-btn-mainpage {
+  // left: 40%;
+  border-color: black;
+  border-radius: 3px;
+}
+.logout-btn-mainpage a {
+    text-decoration: none;
+    color: white;
+}
 .search-bottom {
   position: relative;
   top: -30px;
@@ -539,6 +548,9 @@ button.close-button {
   }
   .about-image {
     height: 400px;
+  }
+  h2.login-btn, .signup-btn, .logout-btn-mainpage {
+    left: 40%;
   }
 }
 
