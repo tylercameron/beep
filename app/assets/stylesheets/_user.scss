@@ -382,7 +382,7 @@ button.close-button {
 }
 
 #edit-user-link a, #show-vehicle-link a, #edit-vehicle-link a,
-#view-reservation-link a, #edit-reservation-link a {
+#view-reservation-link a, #edit-reservation-link a, #availability-link a {
     text-decoration: none;
     border: 2px solid black;
     padding: 8px;
@@ -390,7 +390,7 @@ button.close-button {
     color: white;
     background: black;
 }
-#view-reservation-link a, #edit-reservation-link a {
+#view-reservation-link a, #edit-reservation-link a, #availability-link a {
   display: block;
   margin: 5px;
 }
@@ -412,6 +412,24 @@ button.close-button {
     float: right;
     width: 50%;
     /* background: red; */
+}
+#availability-link {
+  // float: left;
+  // padding: 30px 2px 12px 2px;
+  box-sizing: border-box;
+  text-align: center;
+  // width: 50%;
+}
+.availability-link-button {
+  margin: auto;width: 80%;
+  height: 30px;
+  overflow: hidden;
+  padding: 20px;
+}
+
+p#availability-link {
+    width: 120px;
+    margin: auto;
 }
 #profile-heading {
     text-align: center;
