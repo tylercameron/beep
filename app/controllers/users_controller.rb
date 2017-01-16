@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     @user.date_of_birth = Date.new(params[:date][:year].to_i, params[:date][:month].to_i,params[:date][:day].to_i).in_time_zone('Eastern Time (US & Canada)')
     if @user.save
       session[:user_id] = @user.id
-      redirect_to vehicles_url
+      redirect_back fallback_location: vehicles_url
     else
       # flash[:notice] = "Invalid Email or Password"
       # redirect_to new_users_url
