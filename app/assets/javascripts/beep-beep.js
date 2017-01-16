@@ -46,12 +46,17 @@ $(document).ready(function() {
   $('.homepage-search').on('click', function () {
     var input = document.getElementById ("search")
     input.placeholder = ""
+    event.stopPropagation();
   });
   $('.search-bar').on('click', function () {
     var input = document.getElementById ("search")
     input.placeholder = ""
+    event.stopPropagation();
   });
-
+  $('body').on('click', function () {
+    var input = document.getElementById ("search")
+    input.placeholder = "Where would you like to go?"
+  });
 
   // function ModifyPlaceHolder () {
   //          var input = document.getElementById ("myText");
