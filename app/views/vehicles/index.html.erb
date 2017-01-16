@@ -3,22 +3,22 @@
 
 	<div class="search-header">
 
-	</div>
-	<div class="vehicle-search">
-		<h1 id='slogan2'>Enjoy a carefree ride. </h1>
-		<%= form_tag vehicles_path, method: :get, class: "search-bar" do %>
-			<%= text_field_tag(
-					:search,
-					params[:search],
-					placeholder: "Where would you like to travel?",
-					class: "form-control search-bar",
+
+		<div class="vehicle-search">
+			<h1 id='slogan2'>Enjoy a carefree ride. </h1>
+			<%= form_tag vehicles_path, method: :get, class: "search-bar" do %>
+				<%= text_field_tag(
+						:search,
+						params[:search],
+						placeholder: "Where would you like to travel?",
+						class: "form-control search-bar",
 
 
-			) %>
-			 <%= submit_tag "Search", class: "btn btn-primary ttl" %>
-		<% end %>
-	</div>
-
+				) %>
+				 <%= submit_tag "Search", class: "btn btn-primary ttl" %>
+			<% end %>
+		</div>
+  </div>
 	<h3 class="map-title">Vehicle Locator</h3>
 	<div id="map"></div>
 
