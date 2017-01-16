@@ -578,7 +578,7 @@ p#availability-link {
     padding: 20px;
   }
 
-  .edit-user-container {
+  .edit-user-container, .reserve-form {
       width: 300px;
       margin: auto;
       border: 2px solid;
@@ -587,15 +587,18 @@ p#availability-link {
       background-color: white;
       opacity: 0.9;
   }
+  .reserve-form {
+    width: 500px;
+  }
   .user-edit-container {
     background-image: url('http://edge.alluremedia.com.au/m/g/2015/07/shutterstock_217393057_1080.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
   }
-  .signup-button.edit-button input {
-    color: $mobile_bg_color_1;
-    background-color: black;
+  .signup-button.edit-button input, input.reserve-btn-text {
+    color: $mobile_bg_color_1 !important;
+    background-color: black !important;
   }
   #availability-link a {
     margin: 0;
