@@ -642,9 +642,15 @@ button.close-button {
   section.user-info, .reservation-vehicle-show, .reservation-profile {
       padding: 10px 10px;
       border-radius: 12px;
-      background-color: red;
+      background-color: black;
+      color: $mobile_bg_color_1;
+      opacity: 0.9;
       border: 3px solid;
       margin: 10px;
+  }
+  #edit-user-link a, #show-vehicle-link a, #edit-vehicle-link a,
+  #view-reservation-link a, #edit-reservation-link a {
+      border: 2px solid white;
   }
   section.reservation-vehicle-show {
     margin-top: 20px;
@@ -653,7 +659,12 @@ button.close-button {
       overflow: hidden;
       /* width: 300px; */
   }
+  .profile-container {
+    background-image: url('http://il9.picdn.net/shutterstock/videos/6521480/thumb/1.jpg');
+    background-size: cover;
+  }
   .profile-page {
+      overflow: hidden;
       width: 750px;
       margin: auto;
       padding: 15px;
