@@ -128,6 +128,79 @@ input#vehicle_vehicle_year, input#vehicle_vehicle_make, input#vehicle_vehicle_mo
   border-bottom: 2px solid;
   padding: 0px 5% 0px 5px;
 }
+
+@media (min-width: 740px){
+  .search-header{
+    height: 360px;
+    background-image: url(search_image.jpg);
+    width: 100%;
+    background-size: cover;
+  }
+  // img{
+  //   max-width: 100%;
+  //   max-height: 100%;
+  // }
+
+  h1#slogan2 {
+    // margin-top: 10px;
+    color: rgba(246, 246, 237, 0.68);
+    font-size: 32pt;
+    padding-bottom: 25px;
+    padding-left: 40px;
+    padding-top: 20px;
+    background: rgba(19, 16, 16, 0.6);
+    opacity: 0.8;
+    /* margin: 0px; */
+  }
+  .vehicle-search {
+      background: transparent;
+  }
+
+  .login-buttons-header {
+    display: none;
+  }
+
+   input#search.search-bar {
+    height: 45px;
+    width: 70%;
+    font-size: 20px;
+    background: rgba(82, 30, 30, 0.56);
+    border: 0px;
+    position: relative;
+    top: 66px;
+    /* color: white; */
+  }
+
+  i#drop-menu-icon {
+    color: #632731;
+  }
+
+  // .beep-title a{
+  //   color: #632731;
+  // }
+  .map-title {
+    background: #090909;
+    color: #938e8e;
+  }
+  // .nav-login a {
+  //   color: #632731;
+  // }
+
+  .search-background {
+    background: black;
+  }
+
+  .nav-login a {
+      text-decoration: none;
+      font-size: 20px;
+      color: #632731;
+  }
+
+  .header {
+    background: black;
+    // display: none;
+  }
+}
 // .map-div {
 //   display: none;
 // }
