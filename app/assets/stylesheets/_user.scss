@@ -597,6 +597,20 @@ p#availability-link {
     color: $mobile_bg_color_1;
     background-color: black;
   }
+  #availability-link a {
+    margin: 0;
+  }
+  .availability-link-button {
+    margin: auto;
+    width: 33%;
+    float: left;
+    height: 65px;
+    box-sizing: border-box;
+  }
+  #edit-vehicle-link, #show-vehicle-link {
+    width: 33%;
+    float: left;
+  }
 
 }
 
@@ -720,6 +734,23 @@ p#availability-link {
   .reservation-vehicle-show p, .reservation-profile h2,
   .reservation-profile h3, .reservation-profile p {
     color: white;
+  }
+  #availability-link a {
+    margin: 5;
+  }
+  .availability-link-button {
+    margin: auto;
+    width: 100%;
+    float: left;
+    height: 65px;
+    box-sizing: border-box;
+  }
+  #edit-vehicle-link, #show-vehicle-link {
+    width: 50%;
+    float: left;
+  }
+  #edit-vehicle-link {
+    float: right;
   }
 }
 
