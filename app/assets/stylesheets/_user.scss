@@ -130,13 +130,13 @@ input.login-button, input.signup-button {
 }
 
 .container-film {
-    // background-color: black;
-    // height: 200px;
-    // width: 220px;
-    // position: relative;
-    // top: 100px;
-    // left: 80px;
-    // opacity: 0.9;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 700;
+  height: 100%;
 }
 
 .main-page-slogan.slogan-top {
