@@ -1,43 +1,45 @@
-<div class="profile-page">
+<div class="profile-container">
+  <div class="profile-page">
 
-<% if current_user %>
+  <% if current_user %>
 
-  <div class="profile-details">
+    <div class="profile-details">
 
-    <section class="user-info">
-      <h2 class="user-info-h2">Personal Info</h2>
-      <h3 class="user-info-h3"><span>Name</span> <%= current_user.first_name %> <%= current_user.last_name %></h3>
-      <h3 class="user-info-h3"><span>Phone Number</span> <%= current_user.phone_number %></h3>
-      <h3 class="user-info-h3"><span>Email</span> <%= current_user.email %></h3>
-      <h3 class="user-info-h3"><span>Birthdate</span> <%= current_user.date_of_birth.strftime("%A %B %d, %Y") %></h3>
+      <section class="user-info">
+        <h2 class="user-info-h2">Personal Info</h2>
+        <h3 class="user-info-h3"><span>Name</span> <%= current_user.first_name %> <%= current_user.last_name %></h3>
+        <h3 class="user-info-h3"><span>Phone Number</span> <%= current_user.phone_number %></h3>
+        <h3 class="user-info-h3"><span>Email</span> <%= current_user.email %></h3>
+        <h3 class="user-info-h3"><span>Birthdate</span> <%= current_user.date_of_birth.strftime("%A %B %d, %Y") %></h3>
 
-      <p id="edit-user-link"><%= link_to 'Edit Profile', edit_user_path %></p>
-    </section>
-
-    <% if current_user.owned_vehicles.any? do |vehicle| %>
-      <section class="reservation-vehicle-show">
-        <h2 class="user-info-h2">Your Vehicle</h2>
-        <li><h3 class="vehicle-info-h3"><%= vehicle.vehicle_year %> <%= vehicle.vehicle_make %> <%= vehicle.vehicle_model %></h3></li>
-        <p id="show-vehicle-link"><%= link_to 'Vehicle Page', vehicle_path(vehicle) %></p>
-        <p id="edit-vehicle-link"><%= link_to 'Edit Vehicle', edit_vehicle_path(vehicle) %></p>
-        <% end %>
+        <p id="edit-user-link"><%= link_to 'Edit Profile', edit_user_path %></p>
       </section>
-    <% end %>
-  </div>
 
-  <% current_user.trips.each do |trip| %>
-    <div class="user-reservations-container">
-      <section class="reservation-profile">
-        <h2 id="profile-heading">Reservations</h2>
-        <h3 class="user-info-h3"><span>Date:</span> <%= trip.start_time.strftime("%A %B %d, %Y") %></h3><h3 class="user-info-h3"><span>Time:</span> <%= trip.start_time.in_time_zone('Eastern Time (US & Canada)').strftime("%l:%M %p") %></h3>
-        <h3 class="user-info-h3"><span>From:</span> <%= trip.start_location %></h3>
-        <h3 class="user-info-h3"><span>To:</span> <%= trip.destination %></h3>
-        <h3 class="user-info-h3"><span>Number of Passengers:</span> <%= trip.seats %></h3>
-        <p id="edit-reservation-link"><%= link_to 'Edit Reservation', edit_vehicle_reservation_path(trip.vehicle_id, trip) %></p>
-        <p id="view-reservation-link"><%= link_to 'View Reservation', vehicle_reservation_path(trip.vehicle_id, trip) %></p>
-      </section>
+      <% if current_user.owned_vehicles.any? do |vehicle| %>
+        <section class="reservation-vehicle-show">
+          <h2 class="user-info-h2">Your Vehicle</h2>
+          <li><h3 class="vehicle-info-h3"><%= vehicle.vehicle_year %> <%= vehicle.vehicle_make %> <%= vehicle.vehicle_model %></h3></li>
+          <p id="show-vehicle-link"><%= link_to 'Vehicle Page', vehicle_path(vehicle) %></p>
+          <p id="edit-vehicle-link"><%= link_to 'Edit Vehicle', edit_vehicle_path(vehicle) %></p>
+          <% end %>
+        </section>
+      <% end %>
     </div>
-  <% end %>
-<% end %>
 
+    <% current_user.trips.each do |trip| %>
+      <div class="user-reservations-container">
+        <section class="reservation-profile">
+          <h2 id="profile-heading">Reservations</h2>
+          <h3 class="user-info-h3"><span>Date:</span> <%= trip.start_time.strftime("%A %B %d, %Y") %></h3><h3 class="user-info-h3"><span>Time:</span> <%= trip.start_time.in_time_zone('Eastern Time (US & Canada)').strftime("%l:%M %p") %></h3>
+          <h3 class="user-info-h3"><span>From:</span> <%= trip.start_location %></h3>
+          <h3 class="user-info-h3"><span>To:</span> <%= trip.destination %></h3>
+          <h3 class="user-info-h3"><span>Number of Passengers:</span> <%= trip.seats %></h3>
+          <p id="edit-reservation-link"><%= link_to 'Edit Reservation', edit_vehicle_reservation_path(trip.vehicle_id, trip) %></p>
+          <p id="view-reservation-link"><%= link_to 'View Reservation', vehicle_reservation_path(trip.vehicle_id, trip) %></p>
+        </section>
+      </div>
+    <% end %>
+  <% end %>
+
+  </div>
 </div>
