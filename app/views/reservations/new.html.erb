@@ -23,7 +23,7 @@
 
   <div class="usersignup-container">
 
-  <div class="login-reserv">
+  <div class="login-reserv login-reserv-lg">
 
     <h1 id='login-signup-header'>Login</h1>
     <%= form_tag sessions_path do%>
@@ -57,17 +57,17 @@
 
       <div class="">
 
-        <div class="">
+        <div class="reserv-label">
           <%= f.label :email %>
           <%= f.email_field :email %>
         </div>
 
-        <div class="">
+        <div class="reserv-label">
           <%= f.label :password %>
           <%= f.password_field :password %>
         </div>
 
-        <div class="">
+        <div class="reserv-label">
           <%= f.label :password_confirmation %>
           <%= f.password_field :password_confirmation %>
         </div>
@@ -76,22 +76,22 @@
 
       <div class="">
 
-          <div class="">
+          <div class="reserv-label">
             <%= f.label :first_name %>
             <%= f.text_field :first_name %>
           </div>
 
-          <div class="">
+          <div class="reserv-label">
             <%= f.label :last_name %>
             <%= f.text_field :last_name %>
           </div>
 
-          <div class="">
+          <div class="reserv-label">
             <%= f.label :phone_number %>
             <%= f.telephone_field :phone_number %>
           </div>
 
-          <div class="">
+          <div class="reserv-label">
             <%= f.label :date_of_birth %><br>
             <%= select_year(Date.today, start_year: 1920, end_year: 1998) %>
             <%= select_month DateTime.now %>
