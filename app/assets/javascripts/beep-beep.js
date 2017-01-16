@@ -4,7 +4,6 @@ $(document).ready(function() {
 
     $('.login-btn').hide();
     $('.signup-btn').hide();
-    $('.homepage-search').hide();
     $('.login-container').fadeIn('slow');
     $('.homepage').addClass('container-film')
   });
@@ -13,7 +12,6 @@ $(document).ready(function() {
 
     $('.login-btn').hide();
     $('.signup-btn').hide();
-    $('.homepage-search').hide();
     $('.signup-container').fadeIn('slow');
     $('.homepage').addClass('container-film')
   });
@@ -24,7 +22,6 @@ $(document).ready(function() {
     $('.signup-container').hide();
     $('.login-btn').show();
     $('.signup-btn').show();
-    $('.homepage-search').show();
     $('.homepage').removeClass('container-film')
   });
 
