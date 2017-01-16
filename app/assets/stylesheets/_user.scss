@@ -241,7 +241,7 @@ h2.login-btn {
 }
 .search-bottom {
   position: relative;
-  top: -30px;
+  padding: 20px 0px;
 }
 
 //
@@ -279,7 +279,7 @@ input#search.homepage-form-control, input#search.form-control {
 
 form.navbar-form.navbar-left.search-form {
     position: relative;
-    top: 50px;
+    // top: 50px;
 }
 button.close-button {
   position: absolute;
@@ -306,12 +306,13 @@ button.close-button {
   padding: 0px 10px;
   background-color: goldenrod;
   color: white;
+  text-align: center;
 }
 
 #about-container {
   overflow: hidden;
   position: relative;
-  top: 70px;
+  // top: 70px;
 }
 
 .about-image {
@@ -325,9 +326,8 @@ button.close-button {
   height: 100%;
 }
 
-.about-content {
-  // float: right;
-  // width: 50%;
+.about-content p {
+    padding-bottom: 20px;
 }
 .about-content, .contact-content {
   padding: 10px;
@@ -337,7 +337,7 @@ button.close-button {
   // background-color: green;
   // height: 300px;
   position: relative;
-  top: 100px;
+  // top: 100px;
 }
 // // ============== USER SHOW PAGE ==================
 //
@@ -616,14 +616,16 @@ button.close-button {
     height: 300px;
   }
   .about-content {
-    float: left;
-    width: 30%;
+    float: right;
+    width: 40%;
+    padding: 10px;
     box-sizing: border-box;
   }
 
   .about-image {
-      float: right;
-      width: 70%;
+      float: left;
+      width: 60%;
+      padding: 10px;
       box-sizing: border-box;
   }
 }
