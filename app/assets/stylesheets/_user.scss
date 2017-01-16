@@ -157,6 +157,7 @@ input.login-button, input.signup-button {
 
 .slogan-bottom {
   display: none;
+  text-align: center;
 }
 //
 //
@@ -225,7 +226,8 @@ h2.login-btn, .signup-btn, .logout-btn-mainpage {
 h2.login-btn {
   // float: right;
   // right: 39%;
-  border-bottom: 2px solid;
+  border-bottom: 0px solid;
+
   // border-top: 4px solid $beep_accent;
 }
 .logout-btn-mainpage {
@@ -544,7 +546,7 @@ button.close-button {
   }
 
   #slogan {
-    padding: 30px 0px;
+    padding: 35px 0px;
   }
   .about-image {
     height: 400px;
