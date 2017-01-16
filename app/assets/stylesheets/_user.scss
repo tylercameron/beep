@@ -645,7 +645,7 @@ button.close-button {
       background-color: black;
       color: $mobile_bg_color_1;
       opacity: 0.9;
-      border: 3px solid;
+      border: 2px solid;
       margin: 10px;
   }
   #edit-user-link a, #show-vehicle-link a, #edit-vehicle-link a,
@@ -672,6 +672,12 @@ button.close-button {
   .user-reservations-container {
       width: 400px;
       float: right;
+  }
+  .user-info h2, .user-info h3, .user-info p,
+  .reservation-vehicle-show h2, .reservation-vehicle-show li,
+  .reservation-vehicle-show p, .reservation-profile h2,
+  .reservation-profile h3, .reservation-profile p {
+    color: white;
   }
 }
 
