@@ -594,6 +594,10 @@ button.close-button {
     background-size: 100%;
     height: 500px;
   }
+  .login-container, .signup-container {
+    width: 60%;
+    margin: auto;
+  }
   .slogan-top, .search-bottom {
     display: none;
   }
@@ -608,13 +612,6 @@ button.close-button {
 
   h2.login-btn, .signup-btn {
     top: 80px;
-  }
-
-  .container-film {
-    // background: none;
-    // opacity: 1;
-    // width: 80%;
-    // top: 70px;
   }
   .about-image {
     height: 300px;
