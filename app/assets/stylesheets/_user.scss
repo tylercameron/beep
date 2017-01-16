@@ -390,10 +390,13 @@ button.close-button {
     color: white;
     background: black;
 }
-
+#view-reservation-link a, #edit-reservation-link a {
+  display: block;
+  margin: 5px;
+}
 #show-vehicle-link, #edit-vehicle-link,
 #view-reservation-link, #edit-reservation-link {
-    padding: 30px 0px 12px 0px;
+    padding: 30px 2px 12px 2px;
     box-sizing: border-box;
     text-align: center;
 
@@ -627,6 +630,37 @@ button.close-button {
       width: 60%;
       padding: 10px;
       box-sizing: border-box;
+  }
+
+  .profile-details {
+    width: 350px;
+    /* background-color: red; */
+    /* text-align: center; */
+    float: left;
+  }
+
+  section.user-info, .reservation-vehicle-show, .reservation-profile {
+      padding: 10px 10px;
+      border-radius: 12px;
+      background-color: red;
+      border: 3px solid;
+      margin: 10px;
+  }
+  section.reservation-vehicle-show {
+    margin-top: 20px;
+  }
+  section.reservation-profile {
+      overflow: hidden;
+      /* width: 300px; */
+  }
+  .profile-page {
+      width: 750px;
+      margin: auto;
+      padding: 15px;
+  }
+  .user-reservations-container {
+      width: 400px;
+      float: right;
   }
 }
 
