@@ -21,6 +21,9 @@
           <li><h3 class="vehicle-info-h3"><%= vehicle.vehicle_year %> <%= vehicle.vehicle_make %> <%= vehicle.vehicle_model %></h3></li>
           <p id="show-vehicle-link"><%= link_to 'Vehicle Page', vehicle_path(vehicle) %></p>
           <p id="edit-vehicle-link"><%= link_to 'Edit Vehicle', edit_vehicle_path(vehicle) %></p>
+          <div class="availability-link-button">
+            <p id="availability-link"><%= link_to 'Availability', vehicle_availabilities_path(vehicle) %></p>
+          </div>
           <% end %>
         </section>
       <% end %>
