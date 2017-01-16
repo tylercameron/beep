@@ -309,8 +309,7 @@ button.close-button {
 }
 
 #about-container {
-  // background-color: yellow;
-  height: 500px;
+  overflow: hidden;
   position: relative;
   top: 70px;
 }
@@ -632,9 +631,12 @@ button.close-button {
 @media (min-width: 870px) {
   .homepage-login-container {
     height: 500px;
-    // background-image: none;
-    // background-color: black;
   }
+  .about-image, .about-content {
+    width: 50%;
+    padding: 20px;
+  }
+
 }
 
 @media (min-width: 1200px) {
