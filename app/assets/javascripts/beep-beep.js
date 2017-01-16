@@ -34,16 +34,29 @@ $(document).ready(function() {
 
   $(".ttl").on('reload', function(){
      window.location="#avail-header";
- });
+  });
 
 
-if ($("#search").val() != "") {
- $('html,body').animate({
-    scrollTop: $("#avail-header").offset().top
- });
-}
+  if ($("#search").val() != "") {
+    $('html,body').animate({
+      scrollTop: $("#avail-header").offset().top
+    });
+  }
+
+  $('.homepage-search').on('click', function () {
+    var input = document.getElementById ("search")
+    input.placeholder = ""
+  });
+  $('.search-bar').on('click', function () {
+    var input = document.getElementById ("search")
+    input.placeholder = ""
+  });
 
 
+  // function ModifyPlaceHolder () {
+  //          var input = document.getElementById ("myText");
+  //          input.placeholder = "No need to fill this field";
+  //      }
 
 
   $('.map-btn').on('click', function() {
