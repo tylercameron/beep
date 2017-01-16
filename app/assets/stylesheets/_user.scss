@@ -574,6 +574,30 @@ p#availability-link {
   h2.login-btn, .signup-btn, .logout-btn-mainpage {
     left: 40%;
   }
+  h2.edit-user-h2 {
+    padding: 20px;
+  }
+
+  .edit-user-container {
+      width: 300px;
+      margin: auto;
+      border: 2px solid;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      background-color: white;
+      opacity: 0.9;
+  }
+  .user-edit-container {
+    background-image: url('http://edge.alluremedia.com.au/m/g/2015/07/shutterstock_217393057_1080.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+  }
+  .signup-button.edit-button input {
+    color: $mobile_bg_color_1;
+    background-color: black;
+  }
+
 }
 
 @media (min-width: 740px) {
