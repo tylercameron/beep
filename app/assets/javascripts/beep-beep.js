@@ -5,7 +5,8 @@ $(document).ready(function() {
     $('.login-btn').hide();
     $('.signup-btn').hide();
     $('.homepage-search').hide();
-    $('.login-container').show();
+    $('.login-container').fadeIn('slow');
+    $('.homepage').addClass('container-film')
   });
 
   $('.signup-btn').on('click', function() {
@@ -13,7 +14,8 @@ $(document).ready(function() {
     $('.login-btn').hide();
     $('.signup-btn').hide();
     $('.homepage-search').hide();
-    $('.signup-container').show();
+    $('.signup-container').fadeIn('slow');
+    $('.homepage').addClass('container-film')
   });
 
   $('.close-button').on('click', function() {
@@ -23,7 +25,7 @@ $(document).ready(function() {
     $('.login-btn').show();
     $('.signup-btn').show();
     $('.homepage-search').show();
-
+    $('.homepage').removeClass('container-film')
   });
 
   $('#header-login').on('click', function(eventObject) {
