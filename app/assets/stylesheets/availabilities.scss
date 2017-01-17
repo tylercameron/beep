@@ -242,11 +242,79 @@ section.vehicle-reservations {
   .availability-button input {
     margin: 15px;
   }
+
+  .vehicle-descrip {
+    width: 500px;
+    margin: auto;
+    border: 2px solid;
+    border-radius: 5px;
+  }
+
+  .vehicle-descrip h2 {
+      background-color: goldenrod;
+  }
+
+  section.vehicle-reservations {
+    border-top: 1px solid goldenrod;
+    width: 500px;
+    margin: auto;
+    border: 2px solid;
+    border-radius: 7px;
+  }
 }
 @media (min-width: 740px) {
   section.availabilities-container {
     width: 650px;
   }
+
+  section.vehicle-reservations {
+    width: 400px;
+    color: white;
+    border: 1px solid goldenrod;
+    margin: auto;
+  }
+
+  .vehicle-container-reservations a {
+      border: 2px solid goldenrod;
+  }
+
+  .vehicle-container-reservations {
+      border-top: 2px solid goldenrod;
+  }
+
+  .vehicle-descrip {
+    width: 650px;
+  }
+  .vehicle-image {
+    display: block;
+  }
+  .vehicle-image {
+    width: 300px;
+    float: right;
+  }
+
+  img {
+      width: 100%;
+  }
+  article.vehicle-details {
+    overflow: hidden;
+  }
+
+  .vehicle-descrip {
+      overflow: hidden;
+  }
+
+  .vehicle-descrip h3 {
+      width: 340px;
+      float: left;
+  }
+
+  p.map-btn {
+      float: left;
+      margin-top: -30px;
+  }
+
+
 }
 @media (min-width: 870px) {
 
