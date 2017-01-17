@@ -36,11 +36,7 @@ $(document).ready(function() {
   });
 
 
-  if ($("#search").val() != "") {
-    $('html,body').animate({
-      scrollTop: $("#avail-header").offset().top
-    });
-  }
+
 
   $('.homepage-search').on('click', function () {
     var input = document.getElementById ("search")
@@ -64,10 +60,17 @@ $(document).ready(function() {
 
 
   $('.map-btn').on('click', function() {
+    console.log('clicked!');
     $('.map-div').show();
     $('#map').show();
     $('.map-btn').hide();
     initMap();
   });
+
+  if ($("#search").val() != "") {
+    $('html,body').animate({
+      scrollTop: $("#avail-header").offset().top
+    });
+  }
 
 });
