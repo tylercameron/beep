@@ -132,7 +132,7 @@ input#vehicle_vehicle_year, input#vehicle_vehicle_make, input#vehicle_vehicle_mo
 @media (min-width: 740px){
   .search-header{
     height: 360px;
-    background-image: url("search_image.jpg");
+    background-image: image-url("search_image.jpg");
     width: 100%;
     background-size: cover;
   }
