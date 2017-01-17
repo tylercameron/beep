@@ -108,7 +108,9 @@ input[type="submit"] {
 .user-info {
     border-top: 2px solid;
 }
-
+.availability-button input {
+ cursor: pointer;
+}
 
 
 @media (min-width: 480px) {
@@ -139,7 +141,7 @@ input[type="submit"] {
     height: 500px;
     position: relative;
   }
-  .weekday-time a {
+  .weekday-time a, .availability-button input {
     border-radius: 3px;
     color: white;
     background-color: black;
