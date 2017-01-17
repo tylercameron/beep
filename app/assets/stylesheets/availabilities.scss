@@ -66,7 +66,7 @@
 
 // ======== EDIT AVAILABILITY PAGE BELOW ============
 
-.edit_availability {
+.vehicle_availability_form {
     padding: 20px 0px;
 }
 
@@ -115,7 +115,7 @@ input[type="submit"] {
 
 }
 @media (min-width: 510px) {
-  section.availabilities-container {
+  section.availabilities-container, .vehicle_availability_form {
       width: 500px;
       margin: auto;
       border: 2px solid;
@@ -123,11 +123,21 @@ input[type="submit"] {
       background-color: white;
       opacity: 0.9;
   }
-  .availabilities-index {
+  .vehicle_availability_form {
+      padding: 0px;
+      position: relative;
+      top: 100px;
+  }
+
+  .availabilities-index, .edit-availability-container {
     background-image: url('http://edge.alluremedia.com.au/m/g/2015/07/shutterstock_217393057_1080.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
+  }
+  .edit-availability-container {
+    height: 500px;
+    position: relative;
   }
   .weekday-time a {
     border-radius: 3px;
@@ -135,9 +145,14 @@ input[type="submit"] {
     background-color: black;
     border: 2px solid goldenrod;
   }
+  .availability-button input {
+    margin: 15px;
+  }
 }
 @media (min-width: 740px) {
-
+  section.availabilities-container {
+    width: 650px;
+  }
 }
 @media (min-width: 870px) {
 
