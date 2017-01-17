@@ -1,23 +1,25 @@
 <div class="reserve" id="reserve-show-page">
-  <div class="reserve-container" id="reserve-show-container">
-    <h2>Your Reservation</h2>
+  <div class="reserve_show_container">
+    <div class="reserve-container" id="reserve-show-container">
+      <h2>Your Reservation</h2>
 
-    <p>Date: <%= @reservation.start_time.strftime("%A %B %d, %Y") %></p>
-    <p>Start Time: <%= @reservation.start_time.in_time_zone('Eastern Time (US & Canada)').strftime("%l:%M %p") %></p>
-    <p>Start Location: <span id="start-address"><%= @reservation.start_location %></span></p>
-    <p>Destination: <span id="end-address"><%= @reservation.destination %></span></p>
-    <p>Number of Passengers: <%= @reservation.seats %></p>
+      <p>Date: <%= @reservation.start_time.strftime("%A %B %d, %Y") %></p>
+      <p>Start Time: <%= @reservation.start_time.in_time_zone('Eastern Time (US & Canada)').strftime("%l:%M %p") %></p>
+      <p>Start Location: <span id="start-address"><%= @reservation.start_location %></span></p>
+      <p>Destination: <span id="end-address"><%= @reservation.destination %></span></p>
+      <p>Number of Passengers: <%= @reservation.seats %></p>
 
-    <div class="res-btn">
-    <span id="res-link"> <%= link_to "Edit Reservation", edit_vehicle_reservation_path(@vehicle, @reservation) %> </span>
-    <span id="res-link"> <%= link_to "Delete", vehicle_reservation_path(@vehicle, @reservation), method: :delete %> </span>
-    <span id="res-link">  <%= link_to "Back", user_url(@user) %> </span>
+      <div class="res-btn">
+      <span id="res-link"> <%= link_to "Edit Reservation", edit_vehicle_reservation_path(@vehicle, @reservation) %> </span>
+      <span id="res-link"> <%= link_to "Delete", vehicle_reservation_path(@vehicle, @reservation), method: :delete %> </span>
+      <span id="res-link">  <%= link_to "Back", user_url(@user) %> </span>
+      </div>
     </div>
+    <div id="res-map"></div>
   </div>
 </div>
 
 
-<div id="res-map"></div>
 
 <script>
   function initMap() {
@@ -26,6 +28,86 @@
     var map = new google.maps.Map(document.getElementById('res-map'), {
       zoom: 7,
       scrollwheel: false,
+      styles: [
+        {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+        {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+        {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+        {
+          featureType: 'administrative.locality',
+          elementType: 'labels.text.fill',
+          stylers: [{color: '#d59563'}]
+        },
+        {
+          featureType: 'poi',
+          elementType: 'labels.text.fill',
+          stylers: [{color: '#d59563'}]
+        },
+        {
+          featureType: 'poi.park',
+          elementType: 'geometry',
+          stylers: [{color: '#263c3f'}]
+        },
+        {
+          featureType: 'poi.park',
+          elementType: 'labels.text.fill',
+          stylers: [{color: '#6b9a76'}]
+        },
+        {
+          featureType: 'road',
+          elementType: 'geometry',
+          stylers: [{color: '#38414e'}]
+        },
+        {
+          featureType: 'road',
+          elementType: 'geometry.stroke',
+          stylers: [{color: '#212a37'}]
+        },
+        {
+          featureType: 'road',
+          elementType: 'labels.text.fill',
+          stylers: [{color: '#9ca5b3'}]
+        },
+        {
+          featureType: 'road.highway',
+          elementType: 'geometry',
+          stylers: [{color: '#746855'}]
+        },
+        {
+          featureType: 'road.highway',
+          elementType: 'geometry.stroke',
+          stylers: [{color: '#1f2835'}]
+        },
+        {
+          featureType: 'road.highway',
+          elementType: 'labels.text.fill',
+          stylers: [{color: '#f3d19c'}]
+        },
+        {
+          featureType: 'transit',
+          elementType: 'geometry',
+          stylers: [{color: '#2f3948'}]
+        },
+        {
+          featureType: 'transit.station',
+          elementType: 'labels.text.fill',
+          stylers: [{color: '#d59563'}]
+        },
+        {
+          featureType: 'water',
+          elementType: 'geometry',
+          stylers: [{color: '#17263c'}]
+        },
+        {
+          featureType: 'water',
+          elementType: 'labels.text.fill',
+          stylers: [{color: '#515c6d'}]
+        },
+        {
+          featureType: 'water',
+          elementType: 'labels.text.stroke',
+          stylers: [{color: '#17263c'}]
+        }
+      ]
     });
     directionsDisplay.setMap(map);
     calculateAndDisplayRoute(directionsService, directionsDisplay);

@@ -262,6 +262,10 @@ footer {
   i#drop-menu-icon {
     color: white;
   }
+  #res-map {
+    margin-bottom: 40px;
+    margin-top: 20px;
+  }
 }
 @media (min-width: 870px) {
   footer {
@@ -269,6 +273,21 @@ footer {
   }
   .nav-links {
     // right: -1%;
+  }
+  #res-map {
+    width: 400px;
+    height: 400px;
+    float: left;
+    padding: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .reserve-container {
+    float: right;
+  }
+  .reserve_show_container {
+    width: 900px;
+    margin: auto;
   }
 }
 @media (min-width: 1200px) {
@@ -280,6 +299,18 @@ footer {
   .footer {
     width: 1186px;
   }
+  // #res-map {
+  //   width: 450px;
+  //   height: 450px;
+  //   float: left;
+  // }
+  // .reserve-container {
+  //   float: right;
+  // }
+  // .reserve_show_container {
+  //   width: 900px;
+  //   margin: auto;
+  // }
 }
 @media
 only screen and (-webkit-min-device-pixel-ratio: 1.5),
