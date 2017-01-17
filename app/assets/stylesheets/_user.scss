@@ -729,6 +729,7 @@ p#availability-link {
   .profile-container {
     background-image: url('http://il2.picdn.net/shutterstock/videos/7513246/thumb/4.jpg');
     background-size: cover;
+    height: 100%;
   }
   .profile-page {
       overflow: hidden;
@@ -790,6 +791,7 @@ p#availability-link {
   }
   .homepage-search.search-top {
     /* margin: auto; */
-    left: 15%;
+    // left: 15%;
   }
+
 }
