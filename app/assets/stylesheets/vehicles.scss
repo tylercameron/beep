@@ -219,6 +219,19 @@ input#vehicle_vehicle_year, input#vehicle_vehicle_make, input#vehicle_vehicle_mo
    background: #1f1d1d;
  }
 
+ .vehicle-container {
+  text-align: center;
+  border-bottom: solid 1px darkgrey;
+  background-color: white;
+  padding: 27px 0px;
+  margin: 10px auto;
+  width: 60%;
+  line-height: 1.5em;
+  border-radius: 21px;
+  /* height: 146px; */
+}
+
+
 }
 // .map-div {
 //   display: none;
