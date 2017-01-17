@@ -23,9 +23,7 @@
 
 
     <div class="login-signup-btns">
-      <% if current_user %>
-        <h2 class="logout-btn-mainpage"><%= link_to 'Log Out', sessions_path, method: :delete %></h2>
-      <% else %>
+      <% unless current_user %>
         <h2 class='login-btn'>Login</h2> <h2 class='signup-btn'>Signup</h2>
       <% end %>
     </div>
