@@ -20,6 +20,37 @@
     </div>
   </article>
 
+  <section class="availabilities-container">
+    <h3>Availability</h3>
+    <div class="availability-container">
+      <% weekdays = ["Monday", "Tuesday", "Wednesday","Thursday", "Friday", "Saturday", "Sunday"] %>
+      <% weekdays.each do |day| %>
+      <% availability = Availability.find_by(weekday: day) %>
+      <div class="weekday-time">
+        <li class="availability-weekday">
+          <%= day %>
+        </li>
+        <li id="availability-start">
+          <p>
+            <%= availability.start_time %>
+          </p>
+          <p class="availability-p">Availability Start</p>
+        </li>
+        <li id="availability-end">
+          <p>
+            <%= availability.end_time %>
+          </p>
+          <p class="availability-p">Availability End</p>
+        </li>
+        <% if current_user == @vehicle.owner %>
+          <%= link_to "Edit Availability", edit_vehicle_availability_path(@vehicle, availability) %>
+        <% end %>
+      </div>
+      <% end %>
+
+    </div>
+  </section>
+
   <section class="vehicle-reservations">
     <% if current_user == @vehicle.owner %>
       <h2>Your Vehicle's Reservations</h2>
