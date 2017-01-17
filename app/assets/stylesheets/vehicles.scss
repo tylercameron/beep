@@ -132,7 +132,7 @@ input#vehicle_vehicle_year, input#vehicle_vehicle_make, input#vehicle_vehicle_mo
 @media (min-width: 740px){
   .search-header{
     height: 360px;
-    background-image: url(search_image.jpg);
+    background-image: url("search_image.jpg");
     width: 100%;
     background-size: cover;
   }
@@ -201,54 +201,6 @@ input#vehicle_vehicle_year, input#vehicle_vehicle_make, input#vehicle_vehicle_mo
     // display: none;
   }
 
-  .login-reserv,.signup-reserv, .reserve-container{
-  background: black !important;
-  border: 2px solid darkgoldenrod !important;
-  padding: 10px;
-  line-height: 1.5em;
-  // margin: 16px 33px;
-  border-radius: 20px;
-  padding-left: 31px;
-  color: white;
-  padding-right: 24px;
-  }
-
-  .login-reserv-lg {
-    height: 250px;
-    width: 300px;
-    float: left;
-    margin: 16px 33px !important;
-  }
-
-  .signup-reserv {
-    height: 600px;
-    width: 300px;
-    float: right;
-    margin: 16px 33px !important;
-  }
-
-  .reserv-label {
-    border: 1px solid #1f1d1d;
-    margin: 10px;
-    color: white;
-    background: #1f1d1d;
- }
-
-
- .signup-btn-text, .login-btn-text {
-   color: white !important;
- }
-
- .reserve {
-     height: 700px;
-     background-image: url(search_image.jpg);
-     width: 100%;
-     background-size: cover;
-   }
-
-   #signin-alert-reserv {
-  opacity: 0.7;
-  }
 }
 // .map-div {
 //   display: none;

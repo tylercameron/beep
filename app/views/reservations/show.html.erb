@@ -9,11 +9,13 @@
     <p>Number of Passengers: <%= @reservation.seats %></p>
 
     <div class="res-btn">
-      <%= link_to "Edit Reservation", edit_vehicle_reservation_path(@vehicle, @reservation) %>
-      <%= link_to "Delete Reservation", vehicle_reservation_path(@vehicle, @reservation), method: :delete %>
+    <span id="res-link"> <%= link_to "Edit Reservation", edit_vehicle_reservation_path(@vehicle, @reservation) %> </span>
+    <span id="res-link"> <%= link_to "Delete", vehicle_reservation_path(@vehicle, @reservation), method: :delete %> </span>
+    <span id="res-link">  <%= link_to "Back", user_url(@user) %> </span>
     </div>
   </div>
 </div>
+
 
 <div id="res-map"></div>
 
