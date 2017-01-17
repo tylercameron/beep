@@ -214,7 +214,17 @@ input.reserve-btn-text,input.login-btn-text,input.signup-btn-text  {
       color: white;
       background: #1f1d1d;
    }
+   .reserve-form {
+     background: transparent;
+     border-color: transparent;
+   }
 
+   .reserve-form-input {
+     border: 1px solid #1f1d1d !important;
+     margin: 10px;
+     color: white;
+     background: #1f1d1d;
+   }
     label {
       text-align: left !important;
    }
@@ -239,12 +249,14 @@ input.reserve-btn-text,input.login-btn-text,input.signup-btn-text  {
     opacity: 0.7;
     }
 
+
     .reserve-container {
-    text-align: center;
-    width: 331px;
-    // padding-top: 22px;
-    margin: auto;
-   }
+        text-align: center;
+        width: 409px;
+        margin: auto;
+        height: 600px;
+    }
+
 
      select, input {
         border-bottom-color: #1f1d1d !important;
@@ -257,5 +269,17 @@ input.reserve-btn-text,input.login-btn-text,input.signup-btn-text  {
     .reserve-con {
     overflow: hidden;
     clear: both;
-}
+   }
+   .reserve-back-btn {
+    // padding: 4px;
+    // border: 2px solid;
+    // background: none;
+    // font-size: 17px;
+    // border-radius: 3px;
+    // text-decoration: none;
+    color: #eee;
+  }
+
+
+
 }
