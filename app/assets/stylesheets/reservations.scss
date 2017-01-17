@@ -39,8 +39,9 @@
 // }
 //
 #res-map {
-  width: 500px;
-  height: 500px;
+  width: 450px;
+  height: 450px;
+  margin: auto;
 }
 
 .login-reserv,.signup-reserv
@@ -230,6 +231,7 @@ input.reserve-btn-text,input.login-btn-text,input.signup-btn-text  {
    .reserve {
        height: 700px;
        background-image: url(search_image.jpg);
+       background-size: cover;
        width: 100%;
        background-size: cover;
        padding-top: 38px;
