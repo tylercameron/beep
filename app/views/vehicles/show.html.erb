@@ -2,12 +2,12 @@
 
   <h1 class="owner-title"><%= @vehicle.owner.first_name %>'s Ride</h1>
   <article class="vehicle-details">
-    <div class="vehicle-image">
-      <%= image_tag "#{@vehicle.image}" %>
-    </div>
     <div class="vehicle-descrip">
 
       <h2><%= @vehicle.vehicle_year %> <%= @vehicle.vehicle_make %> <%= @vehicle.vehicle_model %></h2>
+      <div class="vehicle-image">
+        <%= image_tag "#{@vehicle.image}" %>
+      </div>
     	<h3><span>Seats</span> <%= @vehicle.seats %></h3>
     	<h3><span>Address</span> <%= @vehicle.street_address %></h3>
     	<h3><span>City</span> <%= @vehicle.city %></h3>
