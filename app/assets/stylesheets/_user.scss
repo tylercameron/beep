@@ -29,7 +29,7 @@
 }
 
 #main-drop-menu a:hover {
-    background: $beep_colour;
+    background: $mobile_bg_color_1;
     color: white;
 }
 
@@ -653,7 +653,7 @@ p#availability-link {
   }
   #main-drop-menu a:hover {
       background: none;
-      border-bottom: 3px solid $beep_colour;
+      border-bottom: 3px solid $mobile_bg_color_1;
       color: white;
   }
   .homepage-login-container {
