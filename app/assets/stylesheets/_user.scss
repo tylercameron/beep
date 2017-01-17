@@ -368,7 +368,7 @@ button.close-button {
     text-align: center;
 }
 
-.user-info-h3 span, .vehicle-descrip span {
+.user-info-h3 span, .vehicle-descrip span, .vehicle-container-reservations span {
     display: block;
     padding: 15px 0px 5px 0px;
     font-size: 17px;
@@ -382,7 +382,8 @@ button.close-button {
 }
 
 #edit-user-link a, #show-vehicle-link a, #edit-vehicle-link a,
-#view-reservation-link a, #edit-reservation-link a, #availability-link a, .map-btn {
+#view-reservation-link a, #edit-reservation-link a, #availability-link a, .map-btn,
+.vehicle-container-reservations a {
     text-decoration: none;
     border: 2px solid black;
     padding: 8px;
