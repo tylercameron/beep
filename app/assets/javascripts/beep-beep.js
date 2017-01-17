@@ -58,6 +58,13 @@ $(document).ready(function() {
   //          input.placeholder = "No need to fill this field";
   //      }
 
+  $(".dropdown").on("click", function(){
+     if ($($($(".dropdown").children())[1]).css("display") === "block") {
+       $($($(this).children())[1]).css("display", "none")
+     } else {
+       $($($(this).children())[1]).css("display", "block")
+     }
+  })
 
   $('.map-btn').on('click', function() {
     console.log('clicked!');
@@ -67,10 +74,12 @@ $(document).ready(function() {
     initMap();
   });
 
-  if ($("#search").val() != "") {
-    $('html,body').animate({
-      scrollTop: $("#avail-header").offset().top
-    });
-  }
+
+
+  // if ($("#search").val() != "") {
+  //   $('html,body').animate({
+  //     scrollTop: $("#avail-header").offset().top
+  //   });
+  // }
 
 });
