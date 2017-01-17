@@ -119,12 +119,13 @@ html {
 }
 
 .nav-links {
-  width: 70%;
+  // width: 100%;
   font-size: 20px;
   float: right;
   color: purple;
   position: relative;
-  right: 2%;
+  // top: -47px;
+  // right: 2%;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -252,18 +253,30 @@ footer {
     width: 98%;
   }
 }
+
+@media (min-width: 740px) {
+  .beep-title a {
+    color: white;
+  }
+
+  i#drop-menu-icon {
+    color: white;
+  }
+}
 @media (min-width: 870px) {
   footer {
     width: 100%;
   }
   .nav-links {
-    right: -1%;
+    // right: -1%;
   }
 }
 @media (min-width: 1000px) {
-  .nav-links {
-    right: -12%;
-  }
+
+  // html, body, .header {
+  //   width: 1000px;
+  //   margin: auto;
+  // }
 }
 @media
 only screen and (-webkit-min-device-pixel-ratio: 1.5),
