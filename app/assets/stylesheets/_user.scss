@@ -556,7 +556,7 @@ p#availability-link {
   }
   input#search.homepage-form-control, input#search.form-control {
     height: 45px;
-    width: 70%;
+    // width: 70%;
     font-size: 20px;
   }
 }
@@ -778,6 +778,9 @@ p#availability-link {
     padding: 20px;
   }
 
+  input#search.homepage-form-control {
+    // width: 100%;
+  }
 }
 
 @media (min-width: 1200px) {
