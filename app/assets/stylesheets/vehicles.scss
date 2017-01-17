@@ -201,6 +201,24 @@ input#vehicle_vehicle_year, input#vehicle_vehicle_make, input#vehicle_vehicle_mo
     // display: none;
   }
 
+  .vehicle_forms {
+  height: 100%;
+  width: 400px !important;
+  border: 2px solid black !important;
+  background: black !important;
+  padding: 10px;
+  line-height: 1.5em;
+  margin: 16px auto;
+  color: white !important;
+  text-align: center;
+ }
+
+ .vehicle-form-input {
+   margin: 10px;
+   color: white;
+   background: #1f1d1d;
+ }
+
 }
 // .map-div {
 //   display: none;
