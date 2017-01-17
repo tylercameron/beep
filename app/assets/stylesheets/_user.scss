@@ -29,7 +29,7 @@
 }
 
 #main-drop-menu a:hover {
-    background: $beep_colour;
+    background: $mobile_bg_color_1;
     color: white;
 }
 
@@ -368,7 +368,7 @@ button.close-button {
     text-align: center;
 }
 
-.user-info-h3 span {
+.user-info-h3 span, .vehicle-descrip span, .vehicle-container-reservations span {
     display: block;
     padding: 15px 0px 5px 0px;
     font-size: 17px;
@@ -382,7 +382,8 @@ button.close-button {
 }
 
 #edit-user-link a, #show-vehicle-link a, #edit-vehicle-link a,
-#view-reservation-link a, #edit-reservation-link a {
+#view-reservation-link a, #edit-reservation-link a, #availability-link a, .map-btn,
+.vehicle-container-reservations a {
     text-decoration: none;
     border: 2px solid black;
     padding: 8px;
@@ -390,7 +391,7 @@ button.close-button {
     color: white;
     background: black;
 }
-#view-reservation-link a, #edit-reservation-link a {
+#view-reservation-link a, #edit-reservation-link a, #availability-link a {
   display: block;
   margin: 5px;
 }
@@ -412,6 +413,24 @@ button.close-button {
     float: right;
     width: 50%;
     /* background: red; */
+}
+#availability-link {
+  // float: left;
+  // padding: 30px 2px 12px 2px;
+  box-sizing: border-box;
+  text-align: center;
+  // width: 50%;
+}
+.availability-link-button {
+  margin: auto;width: 80%;
+  height: 30px;
+  overflow: hidden;
+  padding: 20px;
+}
+
+p#availability-link {
+    width: 120px;
+    margin: auto;
 }
 #profile-heading {
     text-align: center;
@@ -556,6 +575,54 @@ button.close-button {
   h2.login-btn, .signup-btn, .logout-btn-mainpage {
     left: 40%;
   }
+  h2.edit-user-h2 {
+    padding: 20px;
+  }
+
+  .edit-user-container, .reserve-form {
+      width: 300px;
+      margin: auto;
+      border: 2px solid;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      background-color: white;
+      opacity: 0.9;
+  }
+  .reserve-form {
+    width: 500px;
+  }
+  .user-edit-container, .edit-reservation-container {
+    background-image: url('http://edge.alluremedia.com.au/m/g/2015/07/shutterstock_217393057_1080.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+  }
+  h2.edit-reservation-h2 {
+    background-color: black;
+    opacity: 0.7;
+    color: white;
+    padding: 20px;
+    font-weight: 800;
+  }
+  .signup-button.edit-button input, input.reserve-btn-text {
+    color: $mobile_bg_color_1 !important;
+    background-color: black !important;
+  }
+  #availability-link a {
+    margin: 0;
+  }
+  .availability-link-button {
+    margin: auto;
+    width: 33%;
+    float: left;
+    height: 65px;
+    box-sizing: border-box;
+  }
+  #edit-vehicle-link, #show-vehicle-link {
+    width: 33%;
+    float: left;
+  }
+
 }
 
 @media (min-width: 740px) {
@@ -586,7 +653,7 @@ button.close-button {
   }
   #main-drop-menu a:hover {
       background: none;
-      border-bottom: 3px solid $beep_colour;
+      border-bottom: 3px solid $mobile_bg_color_1;
       color: white;
   }
   .homepage-login-container {
@@ -639,7 +706,7 @@ button.close-button {
     float: left;
   }
 
-  section.user-info, .reservation-vehicle-show, .reservation-profile {
+  section.user-info, .reservation-vehicle-show, .reservation-profile, .vehicle-reservations {
       padding: 10px 10px;
       border-radius: 12px;
       background-color: black;
@@ -649,7 +716,7 @@ button.close-button {
       margin: 10px;
   }
   #edit-user-link a, #show-vehicle-link a, #edit-vehicle-link a,
-  #view-reservation-link a, #edit-reservation-link a {
+  #view-reservation-link a, #edit-reservation-link a, #availability-link a {
       border: 2px solid white;
   }
   section.reservation-vehicle-show {
@@ -678,6 +745,23 @@ button.close-button {
   .reservation-vehicle-show p, .reservation-profile h2,
   .reservation-profile h3, .reservation-profile p {
     color: white;
+  }
+  #availability-link a {
+    margin: 5;
+  }
+  .availability-link-button {
+    margin: auto;
+    width: 100%;
+    float: left;
+    height: 65px;
+    box-sizing: border-box;
+  }
+  #edit-vehicle-link, #show-vehicle-link {
+    width: 50%;
+    float: left;
+  }
+  #edit-vehicle-link {
+    float: right;
   }
 }
 

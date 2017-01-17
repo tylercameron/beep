@@ -10,7 +10,7 @@
     line-height: 1.5;
     text-align: center;
 }
-.availabilities-container h3 {
+.availabilities-container h3, .vehicle-reservations h2 {
     font-size: 24px;
     padding: 15px;
     background-color: darkgoldenrod;
@@ -66,7 +66,7 @@
 
 // ======== EDIT AVAILABILITY PAGE BELOW ============
 
-.edit_availability {
+.vehicle_availability_form {
     padding: 20px 0px;
 }
 
@@ -107,4 +107,218 @@ input[type="submit"] {
 }
 .user-info {
     border-top: 2px solid;
+}
+.availability-button input {
+ cursor: pointer;
+}
+
+// ========== vehicles show ============
+.vehicle-image {
+    display: none;
+}
+h1.owner-title {
+    padding: 15px 20px;
+    font-size: 22px;
+}
+
+article.vehicle-details {
+    padding: 20px;
+    font-size: 20px;
+    line-height: 1.4;
+    border-top: 1px solid goldenrod;
+    /* text-align: center; */
+}
+
+.vehicle-descrip h2 {
+    text-align: center;
+    font-size: 25px;
+    padding: 2px;
+}
+
+.vehicle-descrip h3 {
+    padding: 2px;
+    font-size: 25px;
+    text-align: center;
+}
+.vehicle-descrip span {
+  line-height: 1;
+}
+#map {
+    // display: none;
+}
+.map-div {
+    display: none;
+}
+.map-btn {
+  // display: inline-block;
+  // box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.02);
+  // padding: 10px;
+  cursor: pointer;
+  // border: 1px solid;
+  // width: 170px;
+  box-sizing: border-box;
+  // color: black;
+  // margin-top: 0;
+  // margin-left: 10px;
+  // opacity: 0.6;
+  // background-color: #00D486;
+  // border-radius: 3px;
+    border: 2px solid goldenrod;
+    width: 120px;
+    text-align: center;
+    border-radius: 3px;
+    margin: auto;
+    margin-top: 20px;
+
+}
+.vehicle-reservations h2 {
+    text-align: center;
+    font-size: 20px;
+    padding: 15px;
+}
+
+section.vehicle-reservations {
+    border-top: 1px solid goldenrod;
+}
+.vehicle-container-reservations span {
+    font-size: 14px;
+}
+
+.vehicle-container-reservations li {
+    margin: 10px;
+    border-bottom: 2px solid black;
+    font-size: 17px;
+}
+.vehicle-container-reservations {
+  overflow: hidden;
+    padding-bottom: 20px;
+
+}
+.vehicle-container-reservations a {
+  float: left;
+  width: 40%;
+  margin-left: 2.5%;
+  text-align: center;
+}
+
+
+
+
+
+@media (min-width: 480px) {
+
+}
+@media (min-width: 510px) {
+  section.availabilities-container, .vehicle_availability_form {
+      width: 500px;
+      margin: auto;
+      border: 2px solid;
+      border-radius: 5px;
+      background-color: white;
+      opacity: 0.9;
+  }
+  .vehicle_availability_form {
+      padding: 0px;
+      position: relative;
+      top: 100px;
+  }
+
+  .availabilities-index, .edit-availability-container {
+    background-image: url('http://edge.alluremedia.com.au/m/g/2015/07/shutterstock_217393057_1080.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+  }
+  .edit-availability-container {
+    height: 500px;
+    position: relative;
+  }
+  .weekday-time a, .availability-button input {
+    border-radius: 3px;
+    color: white;
+    background-color: black;
+    border: 2px solid goldenrod;
+  }
+  .availability-button input {
+    margin: 15px;
+  }
+
+  .vehicle-descrip {
+    width: 500px;
+    margin: auto;
+    border: 2px solid;
+    border-radius: 5px;
+  }
+
+  .vehicle-descrip h2 {
+      background-color: goldenrod;
+  }
+
+  section.vehicle-reservations {
+    border-top: 1px solid goldenrod;
+    width: 500px;
+    margin: auto;
+    border: 2px solid;
+    border-radius: 7px;
+  }
+}
+@media (min-width: 740px) {
+  section.availabilities-container {
+    width: 650px;
+  }
+
+  section.vehicle-reservations {
+    width: 400px;
+    color: white;
+    border: 1px solid goldenrod;
+    margin: auto;
+  }
+
+  .vehicle-container-reservations a {
+      border: 2px solid goldenrod;
+  }
+
+  .vehicle-container-reservations {
+      border-top: 2px solid goldenrod;
+  }
+
+  .vehicle-descrip {
+    width: 650px;
+  }
+  .vehicle-image {
+    display: block;
+  }
+  .vehicle-image {
+    width: 300px;
+    float: right;
+  }
+
+  img {
+      width: 100%;
+  }
+  article.vehicle-details {
+    overflow: hidden;
+  }
+
+  .vehicle-descrip {
+      overflow: hidden;
+  }
+
+  .vehicle-descrip h3 {
+      width: 340px;
+      float: left;
+  }
+
+  p.map-btn {
+      float: left;
+      margin-top: -30px;
+  }
+
+
+}
+@media (min-width: 870px) {
+
+}
+@media (min-width: 1200px) {
+
 }

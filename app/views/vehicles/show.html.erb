@@ -1,37 +1,73 @@
-<h1 class="owner-title"><%= @vehicle.owner.first_name %>'s Ride</h1>
-<article class="vehicle-details">
-  <%= image_tag "#{@vehicle.image}" %>
-  <div class="vehicle-descrip">
+<div class="vehicle_show_container">
 
-    <h2><%= @vehicle.vehicle_year %> <%= @vehicle.vehicle_make %> <%= @vehicle.vehicle_model %></h2>
-  	<h3>Seats: <%= @vehicle.seats %></h3>
-  	<h3>Address: <%= @vehicle.street_address %></h3>
-  	<h3>City: <%= @vehicle.city %></h3>
-  	<h3>Province: <%= @vehicle.province %></h3>
-  	<h3>Postal Code: <%= @vehicle.postal_code %></h3>
-    <% if current_user != @vehicle.owner %>
-      <p class="res-btn"><%= link_to 'Make a Reservation', new_vehicle_reservation_path(@vehicle) %></p>
-    <% end %>
-    <p class="map-btn">See Car on Map</p>
-  </div>
-</article>
+  <h1 class="owner-title"><%= @vehicle.owner.first_name %>'s Ride</h1>
+  <article class="vehicle-details">
+    <div class="vehicle-descrip">
 
-<section class="vehicle-reservations">
-  <% if current_user == @vehicle.owner %>
-    <h2>Your Vehicle's Reservations</h2>
-    <% @vehicle.reservations.each do |reservation| %>
-    <div class="vehicle-container">
-      <ul>
-        <li>Date: <%= reservation.start_time.strftime("%A %B %d, %Y") %> : <%= reservation.start_time.in_time_zone('Eastern Time (US & Canada)').strftime("%l:%M %p") %></li>
-        <li>From: <%= reservation.start_location %></li>
-        <li>To: <%= reservation.destination %></li>
-      </ul>
-    <% end %>
-    <p><%= link_to 'Edit Vehicle Details', edit_vehicle_path(@vehicle) %></p>
-    <p><%= link_to 'Delete Vehicle', vehicle_path(@vehicle), method: :delete %></p>
+      <h2><%= @vehicle.vehicle_year %> <%= @vehicle.vehicle_make %> <%= @vehicle.vehicle_model %></h2>
+      <div class="vehicle-image">
+        <%= image_tag "#{@vehicle.image}" %>
+      </div>
+    	<h3><span>Seats</span> <%= @vehicle.seats %></h3>
+    	<h3><span>Address</span> <%= @vehicle.street_address %></h3>
+    	<h3><span>City</span> <%= @vehicle.city %></h3>
+    	<h3><span>Province</span> <%= @vehicle.province %></h3>
+    	<h3><span>Postal Code</span> <%= @vehicle.postal_code %></h3>
+      <% if current_user != @vehicle.owner %>
+        <p class="res-btn"><%= link_to 'Make a Reservation', new_vehicle_reservation_path(@vehicle) %></p>
+      <% end %>
+      <p class="map-btn">See Car on Map</p>
     </div>
-  <% end %>
-</section>
+  </article>
+
+  <section class="availabilities-container">
+    <h3>Availability</h3>
+    <div class="availability-container">
+      <% weekdays = ["Monday", "Tuesday", "Wednesday","Thursday", "Friday", "Saturday", "Sunday"] %>
+      <% weekdays.each do |day| %>
+      <% availability = Availability.find_by(weekday: day) %>
+      <div class="weekday-time">
+        <li class="availability-weekday">
+          <%= day %>
+        </li>
+        <li id="availability-start">
+          <p>
+            <%= availability.start_time %>
+          </p>
+          <p class="availability-p">Availability Start</p>
+        </li>
+        <li id="availability-end">
+          <p>
+            <%= availability.end_time %>
+          </p>
+          <p class="availability-p">Availability End</p>
+        </li>
+        <% if current_user == @vehicle.owner %>
+          <%= link_to "Edit Availability", edit_vehicle_availability_path(@vehicle, availability) %>
+        <% end %>
+      </div>
+      <% end %>
+
+    </div>
+  </section>
+
+  <section class="vehicle-reservations">
+    <% if current_user == @vehicle.owner %>
+      <h2>Your Vehicle's Reservations</h2>
+      <% @vehicle.reservations.each do |reservation| %>
+      <div class="vehicle-container-reservations">
+        <ul>
+          <li><span>Date</span> <%= reservation.start_time.strftime("%A %B %d, %Y") %> : <%= reservation.start_time.in_time_zone('Eastern Time (US & Canada)').strftime("%l:%M %p") %></li>
+          <li><span>From</span> <%= reservation.start_location %></li>
+          <li><span>To</span> <%= reservation.destination %></li>
+        </ul>
+      <% end %>
+      <p><%= link_to 'Edit Vehicle', edit_vehicle_path(@vehicle) %></p>
+      <p><%= link_to 'Delete Vehicle', vehicle_path(@vehicle), method: :delete %></p>
+      </div>
+    <% end %>
+  </section>
+</div>
 
   <div class="map-div">
     <div id="map"></div>
