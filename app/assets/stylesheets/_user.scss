@@ -630,15 +630,15 @@ p#availability-link {
     height: 360px;
   }
   .dropdown {
-    float: right;
+    // float: right;
   }
   #main-drop-menu {
       // float: left;
       position: relative;
       display: block;
       background-color: grey;
-      width: 500px;
-      left: 45%;
+      // width: 500px;
+      // left: 40%;
       top: 0px;
       z-index: 400;
   }
@@ -777,8 +777,19 @@ p#availability-link {
 }
 
 @media (min-width: 1200px) {
+  html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+  }
   .homepage-login-container {
     // background-image: none;
     // background-color: black;
+  }
+  .homepage-search.search-top {
+    /* margin: auto; */
+    left: 15%;
   }
 }
