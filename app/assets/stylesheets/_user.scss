@@ -637,8 +637,8 @@ p#availability-link {
       position: relative;
       display: block;
       background-color: grey;
-      width: 500px;
-      left: 40%;
+      // width: 500px;
+      // left: 40%;
       top: 0px;
       z-index: 400;
   }
@@ -787,5 +787,9 @@ p#availability-link {
   .homepage-login-container {
     // background-image: none;
     // background-color: black;
+  }
+  .homepage-search.search-top {
+    /* margin: auto; */
+    left: 15%;
   }
 }
