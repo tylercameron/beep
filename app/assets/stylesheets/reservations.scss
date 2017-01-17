@@ -43,7 +43,7 @@
   height: 500px;
 }
 
-.login-reserv,
+.login-reserv,.signup-reserv
 
  {
     background: $mobile_bg_color_2;
@@ -171,12 +171,15 @@ input.reserve-btn-text,input.login-btn-text,input.signup-btn-text  {
   color: black;
 }
 
+.reserve-form {
+        width: 400px;
+        margin: auto;
+    };
+
+
 @media (min-width: 740px){
 
-  .reserve-form {
-      width: 400px;
-      margin: auto;
-  }
+
 
 
     .login-reserv,.signup-reserv, .reserve-container{
@@ -193,19 +196,19 @@ input.reserve-btn-text,input.login-btn-text,input.signup-btn-text  {
 
     .login-reserv-lg {
       height: 250px;
-      width: 300px;
+      width: 35%;
       float: left;
       margin: 16px 33px !important;
     }
 
     .signup-reserv {
       height: 600px;
-      width: 300px;
+      width: 35%;
       float: right;
       margin: 16px 33px !important;
     }
 
-    .reserv-label, .reserve-form-input {
+    .reserv-label {
       border: 1px solid #1f1d1d;
       margin: 10px;
       color: white;
@@ -240,7 +243,7 @@ input.reserve-btn-text,input.login-btn-text,input.signup-btn-text  {
     text-align: center;
     width: 331px;
     // padding-top: 22px;
-    margin: auto; 
+    margin: auto;
    }
 
      select, input {
@@ -250,4 +253,9 @@ input.reserve-btn-text,input.login-btn-text,input.signup-btn-text  {
     form#new_reservation {
         text-align: left;
     }
+
+    .reserve-con {
+    overflow: hidden;
+    clear: both;
+}
 }
