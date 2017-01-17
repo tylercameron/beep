@@ -165,7 +165,10 @@ html {
 	margin-right: 10px;
 }
 
-
+.search-background, .profile-container, .reserve,
+.availabilities-index {
+  margin-bottom: 40px;
+}
 
 
 .dropdown{
@@ -286,7 +289,7 @@ footer {
     float: right;
   }
   .reserve_show_container {
-    width: 900px;
+    width: 1000px;
     margin: auto;
   }
 }

@@ -5,7 +5,7 @@
       <div class="availability-container">
         <% weekdays = ["Monday", "Tuesday", "Wednesday","Thursday", "Friday", "Saturday", "Sunday"] %>
         <% weekdays.each do |day| %>
-        <% availability = Availability.find_by(weekday: day) %>
+        <% availability = @vehicle.availabilities.find_by(weekday: day) %>
         <div class="weekday-time">
           <li class="availability-weekday">
             <%= day %>
