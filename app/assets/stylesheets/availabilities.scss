@@ -179,6 +179,7 @@ article.vehicle-details {
 
 section.vehicle-reservations {
     border-top: 1px solid goldenrod;
+    margin-bottom: 40px;
 }
 .vehicle-container-reservations span {
     font-size: 14px;
@@ -217,6 +218,7 @@ section.vehicle-reservations {
       background-color: white;
       // opacity: 0.9;
   }
+
   .vehicle_availability_form {
       padding: 0px;
       position: relative;
@@ -261,6 +263,9 @@ section.vehicle-reservations {
     border: 2px solid;
     border-radius: 7px;
   }
+  section.vehicle-reservations {
+      margin-bottom: 40px;
+  }
 }
 @media (min-width: 740px) {
   section.availabilities-container {
@@ -269,8 +274,8 @@ section.vehicle-reservations {
 
   section.vehicle-reservations {
     width: 400px;
-    color: white;
-    border: 1px solid goldenrod;
+    color: black;
+    border: 2px solid black;
     margin: auto;
   }
 
@@ -313,7 +318,9 @@ section.vehicle-reservations {
       float: left;
       margin-top: -30px;
   }
-
+  section.vehicle-reservations {
+      margin-bottom: 40px;
+  }
 
 }
 @media (min-width: 870px) {
