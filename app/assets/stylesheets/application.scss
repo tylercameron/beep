@@ -1,4 +1,4 @@
-@import "variables", "user", "vehicles", "reservations", "availabilities";
+@import "variables";
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
@@ -47,8 +47,16 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-body {
+html {
+
+}
+html, body {
 	line-height: 1;
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
 }
 ol, ul, li {
 	list-style: none;
@@ -65,7 +73,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
+@import "user", "vehicles", "reservations", "availabilities";
 ////
 
 // html {
@@ -123,7 +131,7 @@ html {
 }
 .nav-login {
   margin: 0;
-  width: 100%;
+  // width: 100%;
   list-style-type: none;
   padding: 18px;
   text-align: center;;
@@ -227,7 +235,7 @@ footer {
   padding: 5px;
   position: relative;
   bottom: 0;
-  width: 100%;
+  width: 96%;
 }
 .footer a {
     text-decoration: none;
@@ -238,4 +246,35 @@ footer {
     position: relative;
     bottom: 5px;
     left: 40px;
+}
+@media (min-width: 510px) {
+  footer {
+    width: 98%;
+  }
+}
+@media (min-width: 870px) {
+  footer {
+    width: 100%;
+  }
+  .nav-links {
+    right: -1%;
+  }
+}
+@media (min-width: 1000px) {
+  .nav-links {
+    right: -12%;
+  }
+}
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5){
+
+  html,
+  body{
+    width:100%;
+    overflow-x:hidden;
+  }
+
 }
