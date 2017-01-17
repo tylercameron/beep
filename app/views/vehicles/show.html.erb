@@ -24,14 +24,14 @@
     <% if current_user == @vehicle.owner %>
       <h2>Your Vehicle's Reservations</h2>
       <% @vehicle.reservations.each do |reservation| %>
-      <div class="vehicle-container">
+      <div class="vehicle-container-reservations">
         <ul>
-          <li>Date: <%= reservation.start_time.strftime("%A %B %d, %Y") %> : <%= reservation.start_time.in_time_zone('Eastern Time (US & Canada)').strftime("%l:%M %p") %></li>
-          <li>From: <%= reservation.start_location %></li>
-          <li>To: <%= reservation.destination %></li>
+          <li><span>Date</span> <%= reservation.start_time.strftime("%A %B %d, %Y") %> : <%= reservation.start_time.in_time_zone('Eastern Time (US & Canada)').strftime("%l:%M %p") %></li>
+          <li><span>From</span> <%= reservation.start_location %></li>
+          <li><span>To</span> <%= reservation.destination %></li>
         </ul>
       <% end %>
-      <p><%= link_to 'Edit Vehicle Details', edit_vehicle_path(@vehicle) %></p>
+      <p><%= link_to 'Edit Vehicle', edit_vehicle_path(@vehicle) %></p>
       <p><%= link_to 'Delete Vehicle', vehicle_path(@vehicle), method: :delete %></p>
       </div>
     <% end %>
