@@ -154,3 +154,11 @@
 <script async defer
 	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-Sq6ZBy9oC33y1vxqvw6p42Yw-UUfwws&callback=initMap">
 </script>
+
+<script type="text/javascript">
+  if ($("#search").val() != "") {
+    $('html,body').animate({
+      scrollTop: $("#avail-header").offset().top
+    });
+  }
+</script>
